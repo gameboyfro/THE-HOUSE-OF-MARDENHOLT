@@ -2,6 +2,30 @@
 
 Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, and affected files. Only actual completed changes belong under Added/Changed/Fixed/Removed.
 
+## [v1.0.3] — 2026-11-07 — Published Visitor content uploaded (not live)
+### Added
+- `index.html` containing the three approved, published Chronicle chapters: 4, 5 and 6 November 2026.
+- Seven Chronicle illustrations and fourteen House artwork images in `assets/`.
+- `.nojekyll` for static GitHub Pages publishing.
+
+### Changed
+- Moved embedded image data out of the exported Visitor HTML into the corresponding image files for faster loading and manageable GitHub uploads.
+- Updated README with accurate repository status and GitHub Pages instructions.
+- **No changes to chapter text, artwork pixels, character descriptions, or the site's design.**
+
+### Fixed
+- Removed dependence on a single approximately 10 MB HTML file for deployment. Verified all local image references and JavaScript syntax; verified the uploaded `index.html` against the prepared source.
+
+### Removed
+- Nothing from the published stories or imagery.
+
+### Pending
+- GitHub Pages has **not** been enabled; the repository is **Private**. Public launch requires the owner's explicit decision and Pages configuration.
+- Moderated notes beneath individual chapters.
+- The Wanderer's Map linked to journal locations and activities.
+
+**Files affected:** `index.html`, `assets/` (21 images), `.nojekyll`, `README.md`, `CHANGELOG.md`.
+
 ## [v1.0.2] — 2026-11-07 — Repository preparation (unpublished)
 ### Added
 - Expanded repository README with safe publishing steps and project status.
