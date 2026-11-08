@@ -3,5 +3,23 @@
 <header><nav><a href="./index.html">House Archive</a><a href="./timeline.html">Timeline</a><a href="./atlas.html">Azeroth Atlas</a></nav><h1>The Companions Ledger</h1><p>Those who walked beside Ser Atte Mardenholt</p></header>
 <main><p class="note">Profiles below are generated from confirmed names appearing in published chapters. Race, class, portraits, and personal histories are intentionally left unassigned until verified with their players.</p><div class="grid" id="grid"></div></main><footer>The Oath Outlives the Crown ⚔</footer>
 <script src="./chapters.js"></script><script>
-(()=>{const chapters=Array.isArray(window.MARDENHOLT_PUBLISHED_CHAPTERS)?window.MARDENHOLT_PUBLISHED_CHAPTERS:[];const people=new Map();chapters.forEach((c,i)=>{String(c.companions||'').split(',').map(x=>x.trim()).filter(Boolean).forEach(name=>{const id=name.toLocaleLowerCase();if(!people.has(id))people.set(id,{name,appearances:[]});people.get(id).appearances.push({title:c.title,date:c.date,index:i})})});const grid=document.getElementById('grid');if(!people.size){grid.textContent='No companions recorded yet.';return}for(const p of people.values()){const card=document.createElement('article');card.className='dossier';const seal=document.createElement('div');seal.className='seal';seal.textContent='⚔';const title=document.createElement('h2');title.textContent=p.name;const meta=document.createElement('p');meta.className='meta';meta.textContent='Race · Class · Portrait · Biography: Awaiting confirmation';const label=document.createElement('strong');label.textContent='Recorded appearances';card.append(seal,title,meta,label);p.appearances.forEach(a=>{const row=document.createElement('div');row.className='chapter';const link=document.createElement('a');link.href='./index.html#chronicle';link.textContent=a.title||'Untitled chapter';row.append(link);if(a.date){const d=document.createElement('div');d.className='meta';d.textContent=a.date;row.append(d)}card.append(row)});grid.append(card)}})();
+(async()=>{
+const chapters=Array.isArray(window.MARDENHOLT_PUBLISHED_CHAPTERS)?window.MARDENHOLT_PUBLISHED_CHAPTERS:[];
+let extras=[];try{const r=await fetch('./data/companions.json',{cache:'no-store'});if(r.ok){const d=await r.json();if(Array.isArray(d.companions))extras=d.companions}}catch(e){console.warn('Companion metadata unavailable',e)}
+const people=new Map();
+chapters.forEach((c,i)=>{String(c.companions||'').split(',').map(x=>x.trim()).filter(Boolean).forEach(name=>{const id=name.toLocaleLowerCase();if(!people.has(id))people.set(id,{name,appearances:[]});people.get(id).appearances.push({title:c.title,date:c.date,index:i})})});
+extras.forEach(p=>{if(!p||!p.name)return;const id=p.name.trim().toLocaleLowerCase();const current=people.get(id)||{name:p.name,appearances:[]};Object.assign(current,{name:p.name,race:p.race||'',characterClass:p.class||'',biography:p.biography||'',portrait:p.portrait||''});people.set(id,current)});
+const grid=document.getElementById('grid');if(!people.size){grid.textContent='No companions recorded yet.';return}
+for(const p of people.values()){
+const card=document.createElement('article');card.className='dossier';
+if(p.portrait && /^assets\/[a-zA-Z0-9_./-]+\.(png|jpg|jpeg|webp)$/i.test(p.portrait) && !p.portrait.includes('..')){const img=document.createElement('img');img.src=p.portrait;img.alt='Portrait of '+p.name;img.loading='lazy';img.style.cssText='width:100%;max-height:260px;object-fit:contain;margin-bottom:10px';card.append(img)}
+else{const seal=document.createElement('div');seal.className='seal';seal.textContent='⚔';card.append(seal)}
+const title=document.createElement('h2');title.textContent=p.name;card.append(title);
+const meta=document.createElement('p');meta.className='meta';meta.textContent=[p.race||'Race unconfirmed',p.characterClass||'Class unconfirmed'].join(' · ');card.append(meta);
+if(p.biography){const bio=document.createElement('p');bio.textContent=p.biography;card.append(bio)}
+const label=document.createElement('strong');label.textContent='Recorded appearances';card.append(label);
+if(!p.appearances.length){const empty=document.createElement('p');empty.className='meta';empty.textContent='No published chapter appearances yet.';card.append(empty)}
+p.appearances.forEach(a=>{const row=document.createElement('div');row.className='chapter';const link=document.createElement('a');link.href='./index.html#journal';link.textContent=a.title||'Untitled chapter';row.append(link);if(a.date){const d=document.createElement('div');d.className='meta';d.textContent=a.date;row.append(d)}card.append(row)});grid.append(card)
+}
+})();
 </script></body></html>
