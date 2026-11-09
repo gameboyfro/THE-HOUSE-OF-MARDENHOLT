@@ -1,4 +1,70 @@
 {
   "version": 2,
-  "locations": []
+  "locations": [
+    {
+      "id": "elwynn-forest",
+      "name": "Elwynn Forest",
+      "continent": "Eastern Kingdoms"
+    },
+    {
+      "id": "stormwind-city",
+      "name": "Stormwind City",
+      "continent": "Eastern Kingdoms"
+    },
+    {
+      "id": "westfall",
+      "name": "Westfall",
+      "continent": "Eastern Kingdoms"
+    },
+    {
+      "id": "redridge-mountains",
+      "name": "Redridge Mountains",
+      "continent": "Eastern Kingdoms"
+    },
+    {
+      "id": "duskwood",
+      "name": "Duskwood",
+      "continent": "Eastern Kingdoms"
+    },
+    {
+      "id": "ironforge",
+      "name": "Ironforge",
+      "continent": "Eastern Kingdoms"
+    },
+    {
+      "id": "wetlands",
+      "name": "Wetlands",
+      "continent": "Eastern Kingdoms"
+    },
+    {
+      "id": "the-hall-of-thanes",
+      "name": "The Hall of Thanes",
+      "continent": "Eastern Kingdoms"
+    },
+    {
+      "id": "deadmines",
+      "name": "Deadmines",
+      "continent": "Eastern Kingdoms"
+    },
+    {
+      "id": "ruins-of-lordaeron",
+      "name": "Ruins of Lordaeron",
+      "continent": "Eastern Kingdoms"
+    },
+    {
+      "id": "shadowfang-keep",
+      "name": "Shadowfang Keep",
+      "continent": "Eastern Kingdoms"
+    },
+    {
+      "id": "blackfathom-deeps",
+      "name": "Blackfathom Deeps",
+      "continent": "Kalimdor"
+    },
+    {
+      "id": "darnassus",
+      "name": "Darnassus",
+      "continent": "Kalimdor"
+    }
+  ]
 }
