@@ -19,7 +19,7 @@ const meta=document.createElement('p');meta.className='meta';meta.textContent=[p
 if(p.biography){const bio=document.createElement('p');bio.textContent=p.biography;card.append(bio)}
 const label=document.createElement('strong');label.textContent='Recorded appearances';card.append(label);
 if(!p.appearances.length){const empty=document.createElement('p');empty.className='meta';empty.textContent='No published chapter appearances yet.';card.append(empty)}
-p.appearances.forEach(a=>{const row=document.createElement('div');row.className='chapter';const link=document.createElement('a');link.href='./index.html#journal';link.textContent=a.title||'Untitled chapter';row.append(link);if(a.date){const d=document.createElement('div');d.className='meta';d.textContent=a.date;row.append(d)}card.append(row)});grid.append(card)
+p.appearances.forEach(a=>{const row=document.createElement('div');row.className='chapter';const link=document.createElement('a');link.href='./index.html?chapter='+encodeURIComponent(a.index+1)+'#journal';link.textContent=a.title||'Untitled chapter';row.append(link);if(a.date){const d=document.createElement('div');d.className='meta';d.textContent=a.date;row.append(d)}card.append(row)});grid.append(card)
 }
 })();
 </script></body></html>
