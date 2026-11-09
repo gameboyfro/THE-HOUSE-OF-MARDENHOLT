@@ -1,25 +1,182 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Companions Ledger | House Mardenholt</title><style>
-*{box-sizing:border-box}body{margin:0;background:#e9dfca;color:#29372d;font:17px/1.6 Georgia,serif}header{background:#19342e;color:#f3e7cb;padding:38px 20px;text-align:center;border-bottom:4px solid #c2a16b}h1,h2{font-weight:normal}h1{font-size:clamp(32px,5vw,49px);margin:10px}nav a{color:#e3c990;margin:0 10px}main{max-width:1080px;margin:30px auto;padding:0 18px 60px}.note{background:#f7eedb;padding:17px;border-left:4px solid #a98a50}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;margin-top:25px}.dossier{background:#f7eedb;border:1px solid #bda77c;padding:23px;box-shadow:0 7px 20px #4537211c}.seal{display:flex;align-items:center;justify-content:center;width:60px;height:60px;border:2px solid #9e8556;border-radius:50%;color:#6e5a38;font-size:25px}.meta{color:#72654c;font-size:14px}.chapter{border-top:1px solid #d5c4a4;padding:8px 0}.chapter a{color:#29594d}footer{text-align:center;padding:20px}</style></head><body>
-<header><nav><a href="./index.html">House Archive</a><a href="./timeline.html">Timeline</a><a href="./atlas.html">Azeroth Atlas</a></nav><h1>The Companions Ledger</h1><p>Those who walked beside Ser Atte Mardenholt</p></header>
-<main><p class="note">Profiles below are generated from confirmed names appearing in published chapters. Race, class, portraits, and personal histories are intentionally left unassigned until verified with their players.</p><div class="grid" id="grid"></div></main><footer>The Oath Outlives the Crown ⚔</footer>
-<script src="./chapters.js"></script><script>
-(async()=>{
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#132c27">
+<meta name="description" content="The companions and guildmates whose journeys intersected with Ser Atte Mardenholt in WoW Forever.">
+<title>Companions Ledger | House Mardenholt</title>
+<style>
+:root{--forest:#152f2a;--pine:#25443a;--gold:#c2a16b;--lightgold:#e5c98e;--parchment:#f1e7d1;--paper:#faf1df;--ink:#29392f;--quiet:#716851}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 48% 0%,#345146 0%,#1e342f 42%,#10231f 100%);color:var(--paper);font:16px/1.55 Georgia,'Times New Roman',serif}
+a{color:inherit}
+header{background:linear-gradient(125deg,#0e2421,#29463a 55%,#152a25);border-bottom:3px solid var(--gold);padding:28px 20px 45px;text-align:center}
+nav{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+nav a{font:12px Arial,sans-serif;letter-spacing:.06em;color:#eed6a3;text-decoration:none;padding:8px 13px;border:1px solid #c2a16b75}
+nav a:hover,nav a:focus-visible{background:#d4b77e2f}
+.kicker{font:11px Arial,sans-serif;letter-spacing:.26em;color:var(--lightgold);margin:30px 0 6px;text-transform:uppercase}
+header h1{font-weight:normal;line-height:1.13;font-size:clamp(34px,5vw,55px);margin:9px 0}
+header p:last-child{color:#d4c5a6;margin:8px auto;max-width:650px}
+main{max-width:1210px;margin:0 auto;padding:32px 22px 75px}
+.intro{border:1px solid #af9162;background:#f2e8d2;color:var(--ink);padding:20px 25px;display:flex;align-items:center;gap:22px;justify-content:space-between;flex-wrap:wrap}
+.intro p{max-width:760px;margin:0}
+.record-count{white-space:nowrap;color:#675439;font:13px Arial,sans-serif;text-align:center}
+.record-count strong{display:block;font:35px Georgia,serif;color:#355145}
+.tools{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:20px 0 23px}
+.tools label{font:13px Arial,sans-serif;letter-spacing:.03em;color:#e9dab7}
+.tools input,.tools select{font:15px Georgia,serif;border:1px solid #af9867;background:#f6ecd8;color:#27382e;border-radius:2px;padding:10px 12px}
+.tools input{min-width:230px;width:min(100%,350px)}
+.filters{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+#resultCount{font:12px Arial,sans-serif;color:#d8c3a0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:23px}
+.dossier{position:relative;border:1px solid #a58b5c;background:var(--paper);color:var(--ink);box-shadow:0 15px 38px #051a1566;min-width:0;overflow:hidden}
+.dossier:before{content:"";position:absolute;inset:6px;border:1px solid #b4a08067;pointer-events:none}
+.head{display:grid;grid-template-columns:158px minmax(0,1fr);gap:19px;padding:22px 22px 13px}
+.portrait{position:relative;aspect-ratio:3/4;background:linear-gradient(140deg,#c6bb9e,#e4d6b8 45%,#baae8c);border:3px solid #b3996e;outline:1px solid #544b39;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.placeholder{height:100%;width:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:10px;color:#766243;background:radial-gradient(ellipse at center,#eadfca,#b8aa8b)}
+.placeholder .seal{font:50px Georgia,serif;line-height:1;color:#7d704e}
+.placeholder small{font:10px/1.5 Arial,sans-serif;letter-spacing:.13em;margin-top:13px;text-transform:uppercase}
+.name-area{min-width:0}
+.ordinal{color:#80694d;font:10px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;margin:2px 0 5px}
+.dossier h2{font-size:clamp(22px,2.2vw,30px);font-weight:normal;line-height:1.13;overflow-wrap:anywhere;margin:4px 0 13px;color:#243b31}
+.identity{display:grid;grid-template-columns:auto 1fr;gap:5px 10px;margin:0}
+.identity dt{color:#766950;font:11px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;align-self:center}
+.identity dd{margin:0;color:#304c3d;font:15px Georgia,serif}
+.bio{border-top:1px solid #d0c0a0;margin:0 22px;padding:10px 0 13px}
+.section-label{display:block;color:#695a41;font:11px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;margin-bottom:5px}
+.bio p{margin:0;font-style:italic;color:#887b67;font-size:14px}
+.journeys{border-top:1px solid #c7b38e;background:#eae0ca;padding:14px 22px 19px}
+.journeys ol{margin:8px 0 0;padding:0;list-style:none}
+.journey{position:relative;margin:0;padding:0 0 13px 18px;border-left:2px solid #b5a079}
+.journey:last-child{padding-bottom:0}
+.journey:before{content:"";position:absolute;left:-5px;top:7px;width:8px;height:8px;border-radius:50%;background:#86683e}
+.journey a{display:inline-block;color:#28594b;text-decoration:underline;text-decoration-color:#9f966c;text-underline-offset:3px;font-weight:bold;line-height:1.25}
+.journey a:hover{text-decoration-color:#28594b}
+.journey time{font:11px Arial,sans-serif;display:block;color:#706953;margin:4px 0}
+.journey p{margin:5px 0 0;font-size:14px;line-height:1.5;color:#3e473c}
+.empty{padding:22px;text-align:center;border:1px solid #bbab89;color:#dbcdb1}
+footer{text-align:center;color:#c4aa7b;padding:15px 20px 30px;border-top:1px solid #8c744f;font-size:14px}
+@media(max-width:920px){.grid{grid-template-columns:1fr}.head{grid-template-columns:165px minmax(0,1fr)}}
+@media(max-width:490px){main{padding:18px 12px 50px}.head{grid-template-columns:120px minmax(0,1fr);gap:13px;padding:15px}.bio{margin:0 15px}.journeys{padding:14px 15px}.dossier h2{font-size:23px}.identity{gap:3px 7px}.identity dd{font-size:14px}.placeholder .seal{font-size:38px}}
+@media(max-width:355px){.head{grid-template-columns:1fr}.portrait{width:175px;margin:0 auto}.name-area{text-align:center}.identity{text-align:left}}
+</style>
+</head>
+<body>
+<header>
+<nav aria-label="Archive navigation"><a href="./index.html">House Archive</a><a href="./index.html#journal">Chronicle</a><a href="./timeline.html">Journey Timeline</a><a href="./atlas.html">Azeroth Atlas</a></nav>
+<div class="kicker">House Mardenholt · Plot Armor Crew</div>
+<h1>The Companions Ledger</h1>
+<p>The people whose paths crossed with Ser Atte Mardenholt — from the first road to the newest chapter.</p>
+</header>
+<main>
+<section class="intro" aria-label="About the companions ledger">
+<p>Each dossier records confirmed character details and encounters from the published Chronicle. Portraits and personal biographies will be added only when supplied or approved; an empty portrait frame is not a depiction of the character.</p>
+<div class="record-count"><strong id="totalCount">—</strong>RECORDED COMPANIONS</div>
+</section>
+<div class="tools">
+<label for="search">Find a companion <input type="search" id="search" placeholder="Search by name, race or class" autocomplete="off"></label>
+<div class="filters"><label for="classFilter">Class</label><select id="classFilter"><option value="">All classes</option></select><span id="resultCount" aria-live="polite"></span></div>
+</div>
+<div class="grid" id="grid" aria-live="polite"></div>
+</main>
+<footer>The Oath Outlives the Crown ⚔</footer>
+<script src="./chapters.js"></script>
+<script>
+(async function(){
+'use strict';
 const chapters=Array.isArray(window.MARDENHOLT_PUBLISHED_CHAPTERS)?window.MARDENHOLT_PUBLISHED_CHAPTERS:[];
-let extras=[];try{const r=await fetch('./data/companions.json',{cache:'no-store'});if(r.ok){const d=await r.json();if(Array.isArray(d.companions))extras=d.companions}}catch(e){console.warn('Companion metadata unavailable',e)}
+const grid=document.getElementById('grid'),search=document.getElementById('search'),filter=document.getElementById('classFilter');
+const norm=s=>String(s||'').trim().toLocaleLowerCase();
+const make=(tag,cls,value)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(value!==undefined)node.textContent=String(value);return node};
+const validPortrait=s=>typeof s==='string'&&/^assets\/[a-z0-9_-]+(?:\/[a-z0-9_-]+)*\.(?:png|jpe?g|webp)$/i.test(s);
 const people=new Map();
-chapters.forEach((c,i)=>{String(c.companions||'').split(',').map(x=>x.trim()).filter(Boolean).forEach(name=>{const id=name.toLocaleLowerCase();if(!people.has(id))people.set(id,{name,appearances:[]});people.get(id).appearances.push({title:c.title,date:c.date,index:i})})});
-extras.forEach(p=>{if(!p||!p.name)return;const id=p.name.trim().toLocaleLowerCase();const current=people.get(id)||{name:p.name,appearances:[]};Object.assign(current,{name:p.name,race:p.race||'',characterClass:p.class||'',biography:p.biography||'',portrait:p.portrait||''});people.set(id,current)});
-const grid=document.getElementById('grid');if(!people.size){grid.textContent='No companions recorded yet.';return}
-for(const p of people.values()){
-const card=document.createElement('article');card.className='dossier';
-if(p.portrait && /^assets\/[a-zA-Z0-9_./-]+\.(png|jpg|jpeg|webp)$/i.test(p.portrait) && !p.portrait.includes('..')){const img=document.createElement('img');img.src=p.portrait;img.alt='Portrait of '+p.name;img.loading='lazy';img.style.cssText='width:100%;max-height:260px;object-fit:contain;margin-bottom:10px';card.append(img)}
-else{const seal=document.createElement('div');seal.className='seal';seal.textContent='⚔';card.append(seal)}
-const title=document.createElement('h2');title.textContent=p.name;card.append(title);
-const meta=document.createElement('p');meta.className='meta';meta.textContent=[p.race||'Race unconfirmed',p.characterClass||'Class unconfirmed'].join(' · ');card.append(meta);
-if(p.biography){const bio=document.createElement('p');bio.textContent=p.biography;card.append(bio)}
-const label=document.createElement('strong');label.textContent='Recorded appearances';card.append(label);
-if(!p.appearances.length){const empty=document.createElement('p');empty.className='meta';empty.textContent='No published chapter appearances yet.';card.append(empty)}
-p.appearances.forEach(a=>{const row=document.createElement('div');row.className='chapter';const link=document.createElement('a');link.href='./index.html?chapter='+encodeURIComponent(a.index+1)+'#journal';link.textContent=a.title||'Untitled chapter';row.append(link);if(a.date){const d=document.createElement('div');d.className='meta';d.textContent=a.date;row.append(d)}card.append(row)});grid.append(card)
+let records=[];
+try{
+const response=await fetch('./data/companions.json',{cache:'no-store'});
+if(!response.ok)throw Error('Companion records unavailable');
+const data=await response.json();
+if(Array.isArray(data.companions))records=data.companions;
+}catch(err){console.warn('Displaying chapter-derived companion names without additional profile details',err)}
+for(const raw of records){
+if(!raw||typeof raw.name!=='string'||!raw.name.trim())continue;
+const id=norm(raw.name);
+if(!people.has(id))people.set(id,{name:raw.name.trim(),race:String(raw.race||''),gender:String(raw.gender||''),characterClass:String(raw.class||''),biography:String(raw.biography||''),portrait:String(raw.portrait||''),encounters:Array.isArray(raw.encounters)?raw.encounters:[]});
 }
+chapters.forEach((chapter,index)=>{
+String(chapter.companions||'').split(',').map(s=>s.trim()).filter(Boolean).forEach(name=>{
+const key=norm(name);
+if(!people.has(key))people.set(key,{name,race:'',gender:'',characterClass:'',biography:'',portrait:'',encounters:[]});
+const person=people.get(key);
+if(!person.encounters.some(e=>Number(e.chapter)===index+1))person.encounters.push({chapter:index+1,summary:'Recorded as a companion in this chapter.'});
+});
+});
+const companions=[...people.values()];
+const classes=[...new Set(companions.map(p=>p.characterClass).filter(Boolean))].sort();
+for(const name of classes){const option=make('option','',name);option.value=name;filter.append(option)}
+document.getElementById('totalCount').textContent=companions.length;
+function appendPortrait(card,p){
+const frame=make('div','portrait');
+const placeholder=make('div','placeholder');
+const seal=make('span','seal','♧');
+const message=make('small','','Portrait awaiting\nreference screenshot');
+message.style.whiteSpace='pre-line';
+placeholder.append(seal,message);
+if(validPortrait(p.portrait)){
+const image=make('img');
+image.src=p.portrait;image.alt='Approved portrait of '+p.name;image.loading='lazy';
+image.addEventListener('error',()=>frame.replaceChildren(placeholder));
+frame.append(image);
+}else frame.append(placeholder);
+card.append(frame);
+}
+function render(){
+grid.replaceChildren();
+const term=norm(search.value),selected=filter.value;
+const matches=companions.filter(p=>(!selected||p.characterClass===selected)&&(!term||[p.name,p.race,p.gender,p.characterClass].some(x=>norm(x).includes(term))));
+document.getElementById('resultCount').textContent=matches.length+' shown';
+if(!matches.length){grid.append(make('p','empty','No companions match those filters.'));return}
+matches.forEach((p,i)=>{
+const card=make('article','dossier');
+const head=make('div','head');
+appendPortrait(head,p);
+const nameArea=make('div','name-area');
+nameArea.append(make('div','ordinal','Companion dossier · '+String(companions.indexOf(p)+1).padStart(2,'0')),make('h2','',p.name));
+const dl=make('dl','identity');
+for(const [label,value] of [['Race',p.race],['Gender',p.gender],['Class',p.characterClass]]){
+dl.append(make('dt','',label),make('dd','',value||'Unconfirmed'));
+}
+nameArea.append(dl);head.append(nameArea);card.append(head);
+const bio=make('div','bio');bio.append(make('span','section-label','Biography'),make('p','',p.biography||'Biography to be confirmed.'));card.append(bio);
+const journeys=make('section','journeys');
+journeys.append(make('span','section-label','Meetings & shared adventures'));
+const encounterList=make('ol','');
+const encounterByChapter=new Map();
+for(const item of p.encounters||[]){
+if(!item||!Number.isInteger(Number(item.chapter)))continue;
+const idx=Number(item.chapter)-1;
+if(idx<0||idx>=chapters.length)continue;
+encounterByChapter.set(idx,{chapter:chapters[idx],index:idx,summary:String(item.summary||'').trim()});
+}
+if(!encounterByChapter.size){journeys.append(make('p','', 'No confirmed chapter encounters yet.'))}
+else{
+[...encounterByChapter.values()].sort((a,b)=>a.index-b.index).forEach(({chapter,index,summary})=>{
+const li=make('li','journey');
+const a=make('a','',chapter.title||('Chapter '+(index+1)));
+a.href='./index.html?chapter='+encodeURIComponent(index+1)+'#journal';
+const date=make('time','',chapter.date||'Date not recorded');
+if(chapter.date)date.dateTime=chapter.date;
+li.append(a,date);
+if(summary)li.append(make('p','',summary));
+encounterList.append(li);
+});journeys.append(encounterList);
+}
+card.append(journeys);grid.append(card);
+});
+}
+search.addEventListener('input',render);filter.addEventListener('change',render);render();
 })();
-</script></body></html>
+</script>
+</body>
+</html>
