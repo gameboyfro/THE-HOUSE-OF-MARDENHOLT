@@ -103,7 +103,7 @@
       "class": "Warrior",
       "biography": "",
       "gender": "Female",
-      "portrait": "",
+      "portrait": "assets/civa-warrior.webp",
       "encounters": [
         {
           "chapter": 3,
