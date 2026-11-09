@@ -175,6 +175,9 @@
 <div class="nav-label second-label">THE LIVING CHRONICLE</div>
 <nav aria-label="Published chronicles navigation" class="main-nav">
 <button class="nav-link journal-nav" data-page="journal"><span class="nav-icon">✎</span> Wanderer's Chronicle <span class="count-chip" id="navCount">0</span></button>
+<a class="nav-link" href="./timeline.html" style="text-decoration:none;display:flex;align-items:center"><span class="nav-icon">⌛</span> Journey Timeline</a>
+<a class="nav-link" href="./atlas.html" style="text-decoration:none;display:flex;align-items:center"><span class="nav-icon">◈</span> Azeroth Atlas</a>
+<a class="nav-link" href="./companions.html" style="text-decoration:none;display:flex;align-items:center"><span class="nav-icon">⚔</span> Companions Ledger</a>
 </nav>
 <div class="sidebar-bottom"><span class="flourish">❦</span><p>THE OATH OUTLIVES<br/>THE CROWN</p><small>Published visitor edition · read-only</small></div>
 </aside>
@@ -220,6 +223,8 @@
 <article class="timeline-event" data-kind="draft"><div class="timeline-year">YEAR 21–22</div><div class="timeline-body"><span class="status draft">PROPOSED JOURNEY</span><h3>The road south</h3><p>Atte seeks refuge among his mother's kin in Hillsbrad, travels through the dwarven territories and enters Stormwind's service.</p></div></article>
 <article class="timeline-event" data-kind="draft"><div class="timeline-year">YEAR 23</div><div class="timeline-body"><span class="status draft">WORKING KNIGHTHOOD STORY</span><h3>The Escort at Redridge</h3><p>Atte chooses a fighting withdrawal to protect nine civilians. A wagon and supplies are lost; a soldier survives with a lasting injury. Mentor Garran Vale and the later Stormwind knighting remain provisional.</p></div></article>
 <article class="timeline-event" data-kind="fixed"><div class="timeline-year">YEAR 25</div><div class="timeline-body"><span class="status fixed">PLAYABLE START</span><h3>The Wanderer sets forth</h3><p>Atte, about 28, begins his Vanilla adventures as a human Alliance Arms Warrior. The next chapters will follow your actual gameplay.</p></div></article>
+<article class="timeline-event" data-kind="fixed"><div class="timeline-year">YEAR 25 · DAY ONE</div><div class="timeline-body"><span class="status fixed">RECORDED JOURNEY · 4 NOVEMBER 2026</span><h3>The Fellowship of the Road</h3><p>From the quiet paths of Northshire to the forests of Elwynn, Ser Atte Mardenholt found that an oath is carried not by one sword alone. Alongside Sumtingwong Hammer, Thundrus Cheeklapper, and Quilby Picklepocket, he began a new chapter of service, friendship, and shared adventure. Their roads would not always run together, yet the bonds forged upon that first day became part of the House's living chronicle.</p></div></article>
+<article class="timeline-event" data-kind="fixed"><div class="timeline-year">YEAR 25 · DAY THREE</div><div class="timeline-body"><span class="status fixed">RECORDED JOURNEY · 6 NOVEMBER 2026</span><h3>Among the Ruins of Lordaeron</h3><p>After victories against the Defias Brotherhood and travels far beyond Elwynn, Atte came at last to the shattered seat of the kingdom his house had served. In the Ruins of Lordaeron, duty and remembrance met: the stones of the old realm had fallen, but the vow of House Mardenholt endured. He departed not with a restored crown, but with renewed purpose upon the road.</p></div></article>
 </div>
 <div class="notice-note"><strong>About dates</strong><span>Years refer to the conventional Warcraft timeline relative to the Dark Portal. Personal ages and original house events are approximate. This archive does not claim House Mardenholt is official Blizzard canon.</span></div>
 </section>
@@ -300,7 +305,7 @@ const published=Array.isArray(window.MARDENHOLT_PUBLISHED_CHAPTERS)?window.MARDE
 $('#publicChaptersCount').textContent=published.length;
 $('#navCount').textContent=published.length;
 $('#publicJournalEmpty').hidden=published.length>0;
-$('#publicPlacesCount').textContent=new Set(published.map(e=>String(e.zone||'').trim().toLowerCase()).filter(Boolean)).size;
+$('#publicPlacesCount').textContent=new Set(published.flatMap(e=>String(e.zone||'').split(/\s*·\s*|\s*,\s*|\s+and\s+/i).map(z=>z.trim().toLowerCase()).filter(Boolean))).size;
 $('#publicCompanionsCount').textContent=new Set(published.flatMap(e=>String(e.companions||'').split(',').map(x=>x.trim().toLowerCase()).filter(Boolean))).size;
 const shelf=$('#publishedChronicle');
 function visitorPhotos(e){return (Array.isArray(e.photos)?e.photos:[]).map(p=>({src:typeof p==='string'?p:p?.src,caption:typeof p==='object'?String(p?.caption||''):''})).filter(p=>typeof p.src==='string'&&(/^(?:assets\/[^?#]+\.(?:webp|jpe?g|png)|data:image\/(?:webp|jpeg|png);base64,[a-z0-9+/=]+)$/i.test(p.src))).concat((e.image&&(!Array.isArray(e.photos)||!e.photos.length)&&(/^(?:assets\/[^?#]+\.(?:webp|jpe?g|png)|data:image\/(?:webp|jpeg|png);base64,[a-z0-9+/=]+)$/i.test(e.image)))?[{src:e.image,caption:''}]:[]);}
@@ -311,7 +316,15 @@ function openVisitorReader(i){if(i<0||i>=published.length)return;activeReaderInd
 $('#readerClose').addEventListener('click',()=>$('#chronicleReader').close());$('#readerPrev').addEventListener('click',()=>openVisitorReader(activeReaderIndex-1));$('#readerNext').addEventListener('click',()=>openVisitorReader(activeReaderIndex+1));
 published.forEach((e,i)=>{const card=document.createElement('article');card.className='journal-card reader-chapter';const images=visitorPhotos(e);const preview=String(e.story||'').replace(/\s+/g,' ').slice(0,330);card.innerHTML=`<div class="journal-card-top"><div><span class="chapter-number">CHAPTER ${String(i+1).padStart(2,'0')}</span><h3>${escapeHtml(e.title)}</h3><div class="meta">${escapeHtml(prettyDate(e.date))}${e.zone?' · '+escapeHtml(e.zone):''}</div></div><span style="color:#ad9561;font-size:27px">❧</span></div>${e.companions?`<div class="journal-card-extra"><strong>Traveling with:</strong> ${escapeHtml(e.companions)}</div>`:''}<p class="chronicle-preview">${escapeHtml(preview)}${e.story?.length>330?'…':''}</p><div class="chapter-photo-count">✥ ${images.length} illustration${images.length===1?'':'s'}</div><button class="chronicle-read-button" type="button" data-read-public="${i}">Read this chapter →</button>`;shelf.appendChild(card)});
 shelf.addEventListener('click',e=>{const b=e.target.closest('[data-read-public]');if(b)openVisitorReader(Number(b.dataset.readPublic))});
-pageSwitch(location.hash.replace('#','')||'home');
+// Direct links from the Timeline, Atlas and Companions Ledger open the selected chapter.
+const linkedChapter = new URLSearchParams(location.search).get('chapter');
+const linkedNumber = linkedChapter === null ? NaN : Number(linkedChapter);
+if (Number.isInteger(linkedNumber) && linkedNumber >= 1 && linkedNumber <= published.length) {
+  pageSwitch('journal');
+  openVisitorReader(linkedNumber - 1);
+} else {
+  pageSwitch(location.hash.replace('#','')||'home');
+}
 
 
 </script>

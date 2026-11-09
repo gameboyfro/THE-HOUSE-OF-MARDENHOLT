@@ -1,0 +1,61 @@
+{
+  "version": 2,
+  "companions": [
+    {
+      "id": "sumtingwong-hammer",
+      "name": "Sumtingwong Hammer",
+      "race": "",
+      "class": "",
+      "biography": "Joined Atte during the first day's travels from Northshire through Elwynn Forest."
+    },
+    {
+      "id": "thundrus-cheeklapper",
+      "name": "Thundrus Cheeklapper",
+      "race": "",
+      "class": "",
+      "biography": "Traveled alongside Atte on the first day; reunited with him during the third day's adventures."
+    },
+    {
+      "id": "quilby-picklepocket",
+      "name": "Quilby Picklepocket",
+      "race": "",
+      "class": "",
+      "biography": "Traveled with Atte on the first day and met him again during the third day's adventures."
+    },
+    {
+      "id": "furrassic-maul",
+      "name": "Furrassic Maul",
+      "race": "Night Elf",
+      "class": "Druid",
+      "biography": "A companion during the Westfall and Ironforge journeys, the Deadmines, and separate Duskwood quests on the fourth day."
+    },
+    {
+      "id": "lilbigmenace-thornwhisper",
+      "name": "Lilbigmenace Thornwhisper",
+      "race": "",
+      "class": "Hunter",
+      "biography": "Questing companion in Duskwood on the third and fourth days, accompanied by the hunter pet Milfhunter."
+    },
+    {
+      "id": "civa-warrior",
+      "name": "Civa Warrior",
+      "race": "Night Elf",
+      "class": "Warrior",
+      "biography": "A Plot Armor Crew companion who assisted with equipment crafting and fought a friendly duel with Atte outside Menethil Harbor on the fourth day."
+    },
+    {
+      "id": "bu-shwacker",
+      "name": "Bu Shwacker",
+      "race": "",
+      "class": "",
+      "biography": "A guild member whom Atte assisted with gear and tailoring-related crafting in Ironforge on the fourth day."
+    },
+    {
+      "id": "fat-dwarf",
+      "name": "Fat Dwarf",
+      "race": "",
+      "class": "",
+      "biography": "A guild member who added spikes to Atte's shield in Stormwind on the fourth day."
+    }
+  ]
+}

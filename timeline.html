@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Journey Timeline | House Mardenholt</title>
+<style>
+:root{--ink:#26362f;--gold:#b28b4b;--paper:#f3ead7;--forest:#17352f}*{box-sizing:border-box}body{margin:0;background:#e5dac2;color:var(--ink);font:17px/1.6 Georgia,serif}header{background:var(--forest);color:#f7edda;text-align:center;padding:46px 20px 35px;border-bottom:5px solid var(--gold)}header h1{font-size:clamp(30px,5vw,52px);font-weight:normal;margin:0}header p{color:#d6c49f}a{color:inherit}nav a{display:inline-block;padding:8px 15px;border:1px solid #bda473;border-radius:4px;text-decoration:none}main{max-width:940px;margin:35px auto;padding:0 20px 60px}.intro{background:var(--paper);padding:24px;border:1px solid #c9b78e}.timeline{position:relative;margin:35px 0 0 18px;padding-left:34px;border-left:3px solid var(--gold)}article{position:relative;background:var(--paper);border:1px solid #cbb994;padding:22px 24px;margin-bottom:25px;box-shadow:0 6px 18px #3d301b15}article:before{content:'';position:absolute;left:-44px;top:28px;width:15px;height:15px;border-radius:50%;background:var(--gold);border:3px solid var(--forest)}.date{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#78633e}h2{font-weight:normal;margin:6px 0 10px;font-size:27px}small{display:block;color:#5b665f}p{margin:10px 0}.tag{display:inline-block;background:#d8cba9;padding:3px 9px;margin:6px 6px 0 0;font-size:13px;border-radius:3px}.return{display:inline-block;margin-top:12px;color:#194f48}footer{text-align:center;padding:20px;color:#6c6658}@media(max-width:550px){.timeline{margin-left:10px;padding-left:22px}article:before{left:-32px}article{padding:18px}}
+</style></head><body>
+<header><nav><a href="./index.html">← House Archive</a> <a href="./atlas.html">Azeroth Atlas</a> <a href="./companions.html">Companions</a></nav><h1>The Wanderer's Timeline</h1><p>The Oath Outlives the Crown</p></header>
+<main><section class="intro"><h2>A Chronicle of Roads Taken</h2><p>These entries are drawn from the published adventures of Ser Atte Mardenholt. Dates refer to the recorded Chronicle, not an invented in-universe calendar.</p></section><div class="timeline" id="timeline" aria-live="polite"></div></main>
+<footer>House Mardenholt · The Oath Outlives the Crown</footer>
+<script src="./chapters.js"></script><script>
+(function(){
+const list=document.getElementById('timeline');
+const chapters=Array.isArray(window.MARDENHOLT_PUBLISHED_CHAPTERS)?window.MARDENHOLT_PUBLISHED_CHAPTERS:[];
+const ordered=chapters.map((chapter,index)=>({chapter,index})).sort((a,b)=>String(a.chapter.date||'').localeCompare(String(b.chapter.date||''))||a.index-b.index);
+if(!ordered.length){list.textContent='No public chapters have been recorded yet.';return}
+function el(tag,cls,value){const n=document.createElement(tag);if(cls)n.className=cls;if(value!=null)n.textContent=value;return n}
+ordered.forEach(({chapter,index})=>{
+const card=el('article');
+card.append(el('div','date',chapter.date||'Date not recorded'),el('h2','',chapter.title||'Untitled chapter'));
+if(chapter.zone)card.append(el('small','', 'Location: '+chapter.zone));
+if(chapter.companions)card.append(el('p','', 'Traveling with: '+chapter.companions));
+const excerpt=String(chapter.story||chapter.quests||'').replace(/\s+/g,' ').slice(0,320);
+if(excerpt)card.append(el('p','',excerpt+(excerpt.length===320?'…':'')));
+const a=el('a','return','Read in the Chronicle →');a.href='./index.html?chapter='+encodeURIComponent(index+1)+'#journal';card.append(a);
+list.append(card)
+})
+})();
+</script></body></html>
