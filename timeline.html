@@ -20,7 +20,7 @@ if(chapter.zone)card.append(el('small','', 'Location: '+chapter.zone));
 if(chapter.companions)card.append(el('p','', 'Traveling with: '+chapter.companions));
 const excerpt=String(chapter.story||chapter.quests||'').replace(/\s+/g,' ').slice(0,320);
 if(excerpt)card.append(el('p','',excerpt+(excerpt.length===320?'…':'')));
-const a=el('a','return','Read in the Chronicle →');a.href='./index.html#chronicle';card.append(a);
+const a=el('a','return','Read in the Chronicle →');a.href='./index.html?chapter='+encodeURIComponent(index+1)+'#journal';card.append(a);
 list.append(card)
 })
 })();
