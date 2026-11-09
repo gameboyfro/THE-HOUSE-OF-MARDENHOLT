@@ -84,7 +84,7 @@
       "class": "Hunter",
       "biography": "",
       "gender": "Female",
-      "portrait": "",
+      "portrait": "assets/lilbigmenace-thornwhisper.webp",
       "encounters": [
         {
           "chapter": 3,
