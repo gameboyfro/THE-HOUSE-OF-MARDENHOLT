@@ -305,7 +305,7 @@ const published=Array.isArray(window.MARDENHOLT_PUBLISHED_CHAPTERS)?window.MARDE
 $('#publicChaptersCount').textContent=published.length;
 $('#navCount').textContent=published.length;
 $('#publicJournalEmpty').hidden=published.length>0;
-$('#publicPlacesCount').textContent=new Set(published.map(e=>String(e.zone||'').trim().toLowerCase()).filter(Boolean)).size;
+$('#publicPlacesCount').textContent=new Set(published.flatMap(e=>String(e.zone||'').split(/\s*·\s*|\s*,\s*|\s+and\s+/i).map(z=>z.trim().toLowerCase()).filter(Boolean))).size;
 $('#publicCompanionsCount').textContent=new Set(published.flatMap(e=>String(e.companions||'').split(',').map(x=>x.trim().toLowerCase()).filter(Boolean))).size;
 const shelf=$('#publishedChronicle');
 function visitorPhotos(e){return (Array.isArray(e.photos)?e.photos:[]).map(p=>({src:typeof p==='string'?p:p?.src,caption:typeof p==='object'?String(p?.caption||''):''})).filter(p=>typeof p.src==='string'&&(/^(?:assets\/[^?#]+\.(?:webp|jpe?g|png)|data:image\/(?:webp|jpeg|png);base64,[a-z0-9+/=]+)$/i.test(p.src))).concat((e.image&&(!Array.isArray(e.photos)||!e.photos.length)&&(/^(?:assets\/[^?#]+\.(?:webp|jpe?g|png)|data:image\/(?:webp|jpeg|png);base64,[a-z0-9+/=]+)$/i.test(e.image)))?[{src:e.image,caption:''}]:[]);}
