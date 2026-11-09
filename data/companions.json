@@ -132,12 +132,12 @@
     },
     {
       "id": "fat-dwarf",
-      "name": "Fat Dwarf",
+      "name": "Fat Dwarfs",
       "race": "Dwarf",
       "class": "Paladin",
       "biography": "",
       "gender": "Male",
-      "portrait": "",
+      "portrait": "assets/fat-dwarfs.webp",
       "encounters": [
         {
           "chapter": 4,
