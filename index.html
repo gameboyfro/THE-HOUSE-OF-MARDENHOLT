@@ -316,7 +316,15 @@ function openVisitorReader(i){if(i<0||i>=published.length)return;activeReaderInd
 $('#readerClose').addEventListener('click',()=>$('#chronicleReader').close());$('#readerPrev').addEventListener('click',()=>openVisitorReader(activeReaderIndex-1));$('#readerNext').addEventListener('click',()=>openVisitorReader(activeReaderIndex+1));
 published.forEach((e,i)=>{const card=document.createElement('article');card.className='journal-card reader-chapter';const images=visitorPhotos(e);const preview=String(e.story||'').replace(/\s+/g,' ').slice(0,330);card.innerHTML=`<div class="journal-card-top"><div><span class="chapter-number">CHAPTER ${String(i+1).padStart(2,'0')}</span><h3>${escapeHtml(e.title)}</h3><div class="meta">${escapeHtml(prettyDate(e.date))}${e.zone?' · '+escapeHtml(e.zone):''}</div></div><span style="color:#ad9561;font-size:27px">❧</span></div>${e.companions?`<div class="journal-card-extra"><strong>Traveling with:</strong> ${escapeHtml(e.companions)}</div>`:''}<p class="chronicle-preview">${escapeHtml(preview)}${e.story?.length>330?'…':''}</p><div class="chapter-photo-count">✥ ${images.length} illustration${images.length===1?'':'s'}</div><button class="chronicle-read-button" type="button" data-read-public="${i}">Read this chapter →</button>`;shelf.appendChild(card)});
 shelf.addEventListener('click',e=>{const b=e.target.closest('[data-read-public]');if(b)openVisitorReader(Number(b.dataset.readPublic))});
-pageSwitch(location.hash.replace('#','')||'home');
+// Direct links from the Timeline, Atlas and Companions Ledger open the selected chapter.
+const linkedChapter = new URLSearchParams(location.search).get('chapter');
+const linkedNumber = linkedChapter === null ? NaN : Number(linkedChapter);
+if (Number.isInteger(linkedNumber) && linkedNumber >= 1 && linkedNumber <= published.length) {
+  pageSwitch('journal');
+  openVisitorReader(linkedNumber - 1);
+} else {
+  pageSwitch(location.hash.replace('#','')||'home');
+}
 
 
 </script>
