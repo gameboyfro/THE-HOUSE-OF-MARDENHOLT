@@ -4,58 +4,146 @@
     {
       "id": "sumtingwong-hammer",
       "name": "Sumtingwong Hammer",
-      "race": "",
-      "class": "",
-      "biography": "Joined Atte during the first day's travels from Northshire through Elwynn Forest."
+      "race": "Human",
+      "class": "Warlock",
+      "biography": "",
+      "gender": "Male",
+      "portrait": "assets/sumtingwong-hammer.webp",
+      "encounters": [
+        {
+          "chapter": 1,
+          "summary": "Met Atte during the first day's travels; joined him and Thundrus in the hunt for Hogger in Elwynn Forest."
+        }
+      ]
     },
     {
       "id": "thundrus-cheeklapper",
       "name": "Thundrus Cheeklapper",
-      "race": "",
-      "class": "",
-      "biography": "Traveled alongside Atte on the first day; reunited with him during the third day's adventures."
+      "race": "Human",
+      "class": "Warrior",
+      "biography": "",
+      "gender": "Male",
+      "portrait": "assets/thundrus-cheeklapper.webp",
+      "encounters": [
+        {
+          "chapter": 1,
+          "summary": "Met Atte at the start of the journey, hunted Hogger with Sumtingwong, and received equipment crafted by Atte."
+        },
+        {
+          "chapter": 3,
+          "summary": "Reunited with Atte and Quilby in Redridge Mountains, where they also met Civa."
+        }
+      ]
     },
     {
       "id": "quilby-picklepocket",
       "name": "Quilby Picklepocket",
-      "race": "",
-      "class": "",
-      "biography": "Traveled with Atte on the first day and met him again during the third day's adventures."
+      "race": "Human",
+      "class": "Rogue",
+      "biography": "",
+      "gender": "Male",
+      "portrait": "assets/quilby-picklepocket.webp",
+      "encounters": [
+        {
+          "chapter": 1,
+          "summary": "Joined Atte's first fellowship, shared time in Goldshire, and departed before the Hogger hunt."
+        },
+        {
+          "chapter": 3,
+          "summary": "Reunited with Atte and Thundrus in Redridge Mountains, alongside Civa."
+        }
+      ]
     },
     {
       "id": "furrassic-maul",
       "name": "Furrassic Maul",
       "race": "Night Elf",
       "class": "Druid",
-      "biography": "A companion during the Westfall and Ironforge journeys, the Deadmines, and separate Duskwood quests on the fourth day."
+      "biography": "",
+      "gender": "Female",
+      "portrait": "assets/furrassic-maul.webp",
+      "encounters": [
+        {
+          "chapter": 2,
+          "summary": "Travelled with Atte to Ironforge and completed the Hall of Thanes twice."
+        },
+        {
+          "chapter": 3,
+          "summary": "Fought through the Deadmines with Atte, defeated Edwin VanCleef twice, and adventured in Redridge and Duskwood."
+        },
+        {
+          "chapter": 4,
+          "summary": "Completed Duskwood quests with Atte, separately from Lilbigmenace."
+        }
+      ]
     },
     {
       "id": "lilbigmenace-thornwhisper",
       "name": "Lilbigmenace Thornwhisper",
-      "race": "",
+      "race": "Night Elf",
       "class": "Hunter",
-      "biography": "Questing companion in Duskwood on the third and fourth days, accompanied by the hunter pet Milfhunter."
+      "biography": "",
+      "gender": "Female",
+      "portrait": "assets/lilbigmenace-thornwhisper.webp",
+      "encounters": [
+        {
+          "chapter": 3,
+          "summary": "Met Atte in Redridge Mountains with the hunter pet Milfhunter, and joined him for fishing at Lake Everstill."
+        },
+        {
+          "chapter": 4,
+          "summary": "Completed Duskwood quests with Atte, separately from Furrassic."
+        }
+      ]
     },
     {
       "id": "civa-warrior",
       "name": "Civa Warrior",
       "race": "Night Elf",
       "class": "Warrior",
-      "biography": "A Plot Armor Crew companion who assisted with equipment crafting and fought a friendly duel with Atte outside Menethil Harbor on the fourth day."
+      "biography": "",
+      "gender": "Female",
+      "portrait": "assets/civa-warrior.webp",
+      "encounters": [
+        {
+          "chapter": 3,
+          "summary": "First met Atte with Quilby and Thundrus during a gathering in Redridge Mountains."
+        },
+        {
+          "chapter": 4,
+          "summary": "Met Atte outside Menethil Harbor in the Wetlands for gear crafting and a friendly duel, won by Atte."
+        }
+      ]
     },
     {
       "id": "bu-shwacker",
       "name": "Bu Shwacker",
-      "race": "",
-      "class": "",
-      "biography": "A guild member whom Atte assisted with gear and tailoring-related crafting in Ironforge on the fourth day."
+      "race": "Gnome",
+      "class": "Mage",
+      "biography": "",
+      "gender": "Male",
+      "portrait": "assets/bu-shwacker.webp",
+      "encounters": [
+        {
+          "chapter": 4,
+          "summary": "Received Atte's help with gear and crafting in Ironforge."
+        }
+      ]
     },
     {
       "id": "fat-dwarf",
-      "name": "Fat Dwarf",
-      "race": "",
-      "class": "",
-      "biography": "A guild member who added spikes to Atte's shield in Stormwind on the fourth day."
+      "name": "Fat Dwarfs",
+      "race": "Dwarf",
+      "class": "Paladin",
+      "biography": "",
+      "gender": "Male",
+      "portrait": "assets/fat-dwarfs.webp",
+      "encounters": [
+        {
+          "chapter": 4,
+          "summary": "Met Atte in Stormwind and added spikes to his shield."
+        }
+      ]
     }
   ]
 }
