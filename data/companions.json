@@ -42,7 +42,7 @@
       "class": "Rogue",
       "biography": "",
       "gender": "Male",
-      "portrait": "",
+      "portrait": "assets/quilby-picklepocket.webp",
       "encounters": [
         {
           "chapter": 1,
