@@ -23,7 +23,7 @@
       "class": "Warrior",
       "biography": "",
       "gender": "Male",
-      "portrait": "",
+      "portrait": "assets/thundrus-cheeklapper.webp",
       "encounters": [
         {
           "chapter": 1,
