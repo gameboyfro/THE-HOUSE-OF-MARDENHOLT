@@ -19,10 +19,10 @@
     {
       "id": "thundrus-cheeklapper",
       "name": "Thundrus Cheeklapper",
-      "race": "Night Elf",
-      "class": "Druid",
+      "race": "Human",
+      "class": "Warrior",
       "biography": "",
-      "gender": "Female",
+      "gender": "Male",
       "portrait": "",
       "encounters": [
         {
