@@ -61,7 +61,7 @@
       "class": "Druid",
       "biography": "",
       "gender": "Female",
-      "portrait": "",
+      "portrait": "assets/furrassic-maul.webp",
       "encounters": [
         {
           "chapter": 2,
