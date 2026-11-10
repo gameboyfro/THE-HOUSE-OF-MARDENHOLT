@@ -13,6 +13,10 @@
         {
           "chapter": 1,
           "summary": "Met Atte during the first day's travels; joined him and Thundrus in the hunt for Hogger in Elwynn Forest."
+        },
+        {
+          "chapter": 5,
+          "summary": "Quested with Atte, Quilby and Civa in the Wetlands in preparation for the next day's Stockades."
         }
       ]
     },
@@ -51,6 +55,10 @@
         {
           "chapter": 3,
           "summary": "Reunited with Atte and Thundrus in Redridge Mountains, alongside Civa."
+        },
+        {
+          "chapter": 5,
+          "summary": "Quested with Atte, Civa and Sumtingwong in the Wetlands in preparation for the next day's Stockades."
         }
       ]
     },
@@ -112,6 +120,10 @@
         {
           "chapter": 4,
           "summary": "Met Atte outside Menethil Harbor in the Wetlands for gear crafting and a friendly duel, won by Atte."
+        },
+        {
+          "chapter": 5,
+          "summary": "Quested with Atte, Quilby and Sumtingwong in the Wetlands in preparation for the next day's Stockades."
         }
       ]
     },

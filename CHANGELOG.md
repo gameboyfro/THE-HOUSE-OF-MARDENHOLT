@@ -2,6 +2,31 @@
 
 Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, and affected files. Only actual completed changes belong under Added/Changed/Fixed/Removed.
 
+## [v2.1.0 — PREVIEW] — 2026-11-10 — Chapter V and Atlas
+### Added
+- Chapter V in the correct travel order: Darkshore / Master's Glaive → Blackfathom Deeps → Duskwood → Wetlands → Stormwind.
+- Three new Kalimdor location records and Chapter V encounters for Quilby, Civa and Sumtingwong.
+- Original parchment atlas image and clickable location markers across both continents.
+
+### Changed
+- Atlas now presents the illustrated two-continent map; marker placements remain approximate.
+- README now reflects the current deployed visitor website and preview-release workflow.
+
+### Fixed
+- Chapter I illustration caption now spells Quilby correctly.
+- Stormwind and Stormwind City are no longer counted separately in the public places statistic.
+- Hall of Thanes Atlas name matches the recorded location.
+
+### Removed
+- Nothing from previous chapters or approved companion artworks.
+
+### Pending
+- Attach the approved Master's Glaive Chapter V illustration as a website image asset before live publication.
+- Browser/mobile visual QA and owner approval of this preview.
+- Companion biographies and private editor follow-up remain separate tasks.
+
+**Files affected:** `chapters.js`, `data/locations.json`, `data/companions.json`, `atlas.html`, `index.html`, `assets/azeroth-parchment-atlas.webp`, `README.md`, `CHANGELOG.md`.
+
 ## [v1.0.3] — 2026-11-07 — Published Visitor content uploaded (not live)
 ### Added
 - `index.html` containing the three approved, published Chronicle chapters: 4, 5 and 6 November 2026.

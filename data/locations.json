@@ -65,6 +65,21 @@
       "id": "darnassus",
       "name": "Darnassus",
       "continent": "Kalimdor"
+    },
+    {
+      "id": "darkshore",
+      "name": "Darkshore",
+      "continent": "Kalimdor"
+    },
+    {
+      "id": "masters-glaive",
+      "name": "The Master's Glaive",
+      "continent": "Kalimdor"
+    },
+    {
+      "id": "ashenvale",
+      "name": "Ashenvale",
+      "continent": "Kalimdor"
     }
   ]
 }
