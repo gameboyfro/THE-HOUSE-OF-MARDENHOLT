@@ -3,38 +3,34 @@
 *The Wanderer's Chronicle: the recorded adventures of Ser Atte Mardenholt in World of Warcraft: Forever.*
 
 ## Status
-- **Repository documentation:** prepared (7 November 2026).
-- **GitHub Pages website:** **not deployed**.
-- **Visitor HTML:** uploaded as `index.html` (the three-chapter Visitor export, prepared for GitHub Pages).
-- **Published journal chapters:** Chapter I (4 Nov), Chapter II (5 Nov) and Chapter III (6 Nov 2026), including 7 illustrations. All 14 House artwork files are also present.
-- **Per-chapter visitor notes and adventure map:** planned, **not yet implemented**.
+- **Website:** GitHub Pages visitor archive, available at https://gameboyfro.github.io/THE-HOUSE-OF-MARDENHOLT/
+- **Chronicles:** Five dated chapters (4–8 November 2026) once this preview release is approved and merged. Chapter V is on the preview branch only until then.
+- **Features:** Wanderer's Chronicle, Journey Timeline, Azeroth Atlas, and Companions Ledger with eight illustrated dossiers.
+- **Editor:** Private offline HTML editor, not part of the public repository; its browser-local drafts are not automatically synced to GitHub.
+- **Map:** Existing schematic Atlas retained pending a redesign approved by the site owner.
 
 ## Safety first
 This repository is intended to hold only the **public Visitor website** and documentation.
 **Never upload** the private Editor, browser-storage backups, unpublished chapters, credentials, tokens, or personal information here. If the repository is changed to Public, all committed files and their history become publicly visible.
 
-## How to publish
-1. The published Visitor export has been prepared and uploaded. **Keep the private Editor and its backups outside this repository.**
-2. For GitHub Free, change repository visibility to **Public** under **Settings → General → Danger Zone → Change repository visibility**. **Only do this after reviewing the published content.** On eligible paid plans, Pages can also publish from a private repository, but the resulting Pages site is publicly accessible.
-3. Open **Settings → Pages**. Under **Build and deployment**, select **Deploy from a branch**, choose **main**, **/(root)**, and **Save**.
-4. When GitHub says the site is published, verify the **Visit site** link in the Pages settings and check that the journal contains all three chapters and their images.
-
-Expected project Pages URL *after successful deployment*:
-`https://gameboyfro.github.io/THE-HOUSE-OF-MARDENHOLT/`
-This URL is **not verified live**.
+## Publishing and preview workflow
+1. Prepare chapter material and local editor backups privately; do **not** commit the private editor, account tokens, or unpublished drafts.
+2. Open a draft pull request from a feature branch to `main`.
+3. Verify story, artwork assets, chapter metadata, Atlas locations and companion appearances.
+4. Merge only after owner approval. The live visitor site is served from `main`.
 
 ## Update rules
 Every future release must update `CHANGELOG.md` with the date, version, **Added / Changed / Fixed / Removed / Pending**, and list of affected files. Preserve the last working release before overwriting `index.html`.
 Do not modify approved images, journal entries or character details without explicit instructions.
 
-## Future features (not live)
-- **Notes from Fellow Wanderers**: moderated visitor messages beneath each chapter; requires an external comment storage/moderation service.
-- **The Wanderer's Map**: interactive locations and routes compiled from chapter location metadata, updated on publishing.
-- **Companions of the Road**: cross-reference characters and relevant chapters.
+## Future improvements
+- **Notes from Fellow Wanderers**: moderated visitor comments, requiring a separate service.
+- **Atlas accuracy:** replace approximate marker placements with verified geographic coordinates when suitable.
+- **Publishing workflow:** safer synchronization from the private editor and automated validation.
 
 ## Important files
-- `index.html` — published Visitor website with three chapters (uploaded, **not deployed**).
-- `assets/` — 14 House artwork files and 7 Chronicle illustrations, extracted losslessly from the approved Visitor export.
+- `index.html` — live read-only Visitor website and illustrated Chronicle.
+- `assets/` — public site artwork, Chronicles plates, eight approved companion portraits and Chronicle illustrations.
 - `.nojekyll` — serve the static website directly through GitHub Pages.
 - `README.md` — project and deployment guide.
 - `CHANGELOG.md` — version-by-version record.
