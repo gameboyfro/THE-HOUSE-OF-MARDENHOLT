@@ -2,30 +2,29 @@
 
 Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, and affected files. Only actual completed changes belong under Added/Changed/Fixed/Removed.
 
-## [v2.1.0 — PREVIEW] — 2026-11-10 — Chapter V and Atlas
+## [v2.1.0 — PREVIEW] — 2026-11-10 — Chapter V and companion encounters
 ### Added
-- Chapter V in the correct travel order: Darkshore / Master's Glaive → Blackfathom Deeps → Duskwood → Wetlands → Stormwind.
-- Three new Kalimdor location records and Chapter V encounters for Quilby, Civa and Sumtingwong.
-- Original parchment atlas image and clickable location markers across both continents.
+- Chapter V in the confirmed order: Darkshore / Master's Glaive → Blackfathom Deeps → Duskwood → Wetlands → Stormwind.
+- Approved Master's Glaive watercolor illustration attached as the Chapter V plate.
+- Three Kalimdor location records and Chapter V encounters for Quilby, Civa and Sumtingwong.
 
 ### Changed
-- Atlas now presents the illustrated two-continent map; marker placements remain approximate.
-- README now reflects the current deployed visitor website and preview-release workflow.
+- README reflects deployed visitor website and preview workflow.
+- The existing public Atlas layout is preserved; the proposed illustrated Atlas redesign was rejected and removed from this release.
 
 ### Fixed
-- Chapter I illustration caption now spells Quilby correctly.
-- Stormwind and Stormwind City are no longer counted separately in the public places statistic.
-- Hall of Thanes Atlas name matches the recorded location.
+- Chapter I image caption spelling of Quilby.
+- Stormwind and Stormwind City are unified in the public places statistic.
+- "The Hall of Thanes" name is aligned with the location record without changing the map layout.
 
 ### Removed
-- Nothing from previous chapters or approved companion artworks.
+- Proposed new Atlas background artwork from this preview; no previous artwork or journal material removed.
 
 ### Pending
-- Attach the approved Master's Glaive Chapter V illustration as a website image asset before live publication.
-- Browser/mobile visual QA and owner approval of this preview.
-- Companion biographies and private editor follow-up remain separate tasks.
+- Browser/mobile visual QA and owner approval before live publication.
+- Further Atlas redesign deferred; companion biographies and private editor changes remain separate.
 
-**Files affected:** `chapters.js`, `data/locations.json`, `data/companions.json`, `atlas.html`, `index.html`, `assets/azeroth-parchment-atlas.webp`, `README.md`, `CHANGELOG.md`.
+**Files affected:** `chapters.js`, `data/locations.json`, `data/companions.json`, `atlas.html` (name correction only), `index.html`, `assets/chapter-05-plate-01.webp`, `README.md`, `CHANGELOG.md`.
 
 ## [v1.0.3] — 2026-11-07 — Published Visitor content uploaded (not live)
 ### Added

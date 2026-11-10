@@ -7,7 +7,7 @@
 - **Chronicles:** Five dated chapters (4–8 November 2026) once this preview release is approved and merged. Chapter V is on the preview branch only until then.
 - **Features:** Wanderer's Chronicle, Journey Timeline, Azeroth Atlas, and Companions Ledger with eight illustrated dossiers.
 - **Editor:** Private offline HTML editor, not part of the public repository; its browser-local drafts are not automatically synced to GitHub.
-- **Map:** Original artistic parchment interpretation of Azeroth with approximate location markers.
+- **Map:** Existing schematic Atlas retained pending a redesign approved by the site owner.
 
 ## Safety first
 This repository is intended to hold only the **public Visitor website** and documentation.
@@ -30,7 +30,7 @@ Do not modify approved images, journal entries or character details without expl
 
 ## Important files
 - `index.html` — live read-only Visitor website and illustrated Chronicle.
-- `assets/` — public site artwork, Chronicles plates, eight approved companion portraits and Atlas background.
+- `assets/` — public site artwork, Chronicles plates, eight approved companion portraits and Chronicle illustrations.
 - `.nojekyll` — serve the static website directly through GitHub Pages.
 - `README.md` — project and deployment guide.
 - `CHANGELOG.md` — version-by-version record.
