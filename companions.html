@@ -73,6 +73,20 @@ footer{text-align:center;color:#c4aa7b;padding:15px 20px 30px;border-top:1px sol
 .crew-leader h2{margin:0 0 8px;font-size:clamp(20px,3vw,31px);font-weight:normal}
 .crew-leader p{margin:0 0 8px}.crew-leader a{color:#28594b;font-weight:bold}
 @media(max-width:500px){.crew-leader{align-items:flex-start;gap:12px}.crew-leader img{width:37%}}
+
+/* Companion Ledger usability additions: preserve the approved visual layout. */
+.portrait-open{display:block;width:100%;border:0;padding:0;margin:0;background:transparent;cursor:zoom-in;text-align:inherit}
+.portrait-open:focus-visible{outline:3px solid #d3a858;outline-offset:-5px}
+.portrait-open .portrait{pointer-events:none}
+.dossier{scroll-margin-top:24px}
+.dossier:target{outline:3px solid #c6a363;outline-offset:3px}
+.dossier-link{display:inline-flex;margin-top:7px;font:12px Arial,sans-serif;letter-spacing:.04em;color:#376c55;text-decoration:underline;text-underline-offset:3px}
+.encounter-count{font:11px Arial,sans-serif;letter-spacing:.08em;color:#6c5939;margin:7px 0 0}
+.portrait-dialog{max-width:min(95vw,1100px);width:max-content;max-height:95vh;border:3px solid #b89c6c;background:#192e27;color:#f8ead3;padding:10px;box-shadow:0 20px 70px #000b}
+.portrait-dialog::backdrop{background:#061511e6}
+.portrait-dialog img{display:block;max-width:min(90vw,1050px);max-height:80vh;width:auto;height:auto;object-fit:contain}
+.portrait-dialog footer{display:flex;justify-content:space-between;align-items:center;gap:20px;border:0;padding:9px 2px 0;color:#f3e4c5}
+.portrait-dialog button{font:13px Arial,sans-serif;padding:8px 14px;border:1px solid #b99a66;background:#263d32;color:#fae9cc;cursor:pointer}
 </style>
 </head>
 <body>
@@ -95,6 +109,7 @@ footer{text-align:center;color:#c4aa7b;padding:15px 20px 30px;border-top:1px sol
 <div class="grid" id="grid" aria-live="polite"></div>
 </main>
 <footer>The Oath Outlives the Crown ⚔</footer>
+<dialog class="portrait-dialog" id="portraitDialog" aria-label="Companion portrait viewer"><img id="largePortrait" alt=""><footer><span id="portraitLabel"></span><button id="closePortrait" type="button">Close portrait</button></footer></dialog>
 <script src="./chapters.js"></script>
 <script>
 (async function(){
@@ -103,6 +118,17 @@ const chapters=Array.isArray(window.MARDENHOLT_PUBLISHED_CHAPTERS)?window.MARDEN
 const grid=document.getElementById('grid'),search=document.getElementById('search'),filter=document.getElementById('classFilter');
 const norm=s=>String(s||'').trim().toLocaleLowerCase();
 const make=(tag,cls,value)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(value!==undefined)node.textContent=String(value);return node};
+const portraitDialog=document.getElementById('portraitDialog');
+const largePortrait=document.getElementById('largePortrait');
+const portraitLabel=document.getElementById('portraitLabel');
+function openPortrait(p){
+if(!validPortrait(p.portrait))return;
+largePortrait.src=p.portrait;largePortrait.alt='Approved portrait of '+p.name;
+portraitLabel.textContent=p.name+' · '+(p.guildRank||'Guild rank not confirmed');
+if(typeof portraitDialog.showModal==='function')portraitDialog.showModal();
+}
+document.getElementById('closePortrait').addEventListener('click',()=>portraitDialog.close());
+portraitDialog.addEventListener('click',e=>{if(e.target===portraitDialog)portraitDialog.close()});
 const validPortrait=s=>typeof s==='string'&&/^assets\/[a-z0-9_-]+(?:\/[a-z0-9_-]+)*\.(?:png|jpe?g|webp)$/i.test(s);
 const people=new Map();
 let records=[];
@@ -141,8 +167,11 @@ const image=make('img');
 image.src=p.portrait;image.alt='Approved portrait of '+p.name;image.loading='lazy';
 image.addEventListener('error',()=>frame.replaceChildren(placeholder));
 frame.append(image);
-}else frame.append(placeholder);
-card.append(frame);
+const trigger=make('button','portrait-open');trigger.type='button';
+trigger.title='View full-size portrait of '+p.name;
+trigger.setAttribute('aria-label','View full-size portrait of '+p.name);
+trigger.append(frame);trigger.addEventListener('click',()=>openPortrait(p));card.append(trigger);
+}else{frame.append(placeholder);card.append(frame)}
 }
 function render(){
 grid.replaceChildren();
@@ -152,6 +181,7 @@ document.getElementById('resultCount').textContent=matches.length+' shown';
 if(!matches.length){grid.append(make('p','empty','No companions match those filters.'));return}
 matches.forEach((p,i)=>{
 const card=make('article','dossier');
+card.id='companion-'+String(p.name).toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const head=make('div','head');
 appendPortrait(head,p);
 const nameArea=make('div','name-area');
@@ -160,7 +190,11 @@ const dl=make('dl','identity');
 for(const [label,value] of [['Race',p.race],['Gender',p.gender],['Class',p.characterClass],['Guild rank',p.guildRank]]){
 dl.append(make('dt','',label),make('dd','',value||'Unconfirmed'));
 }
-nameArea.append(dl);head.append(nameArea);card.append(head);
+nameArea.append(dl);
+const permalink=make('a','dossier-link','Link to this companion');
+permalink.href='#'+card.id;permalink.setAttribute('aria-label','Link directly to '+p.name);
+nameArea.append(permalink);
+head.append(nameArea);card.append(head);
 const bio=make('div','bio');bio.append(make('span','section-label','Biography'),make('p','',p.biography||'Biography to be confirmed.'));card.append(bio);
 const journeys=make('section','journeys');
 journeys.append(make('span','section-label','Meetings & shared adventures'));
@@ -185,10 +219,17 @@ if(summary)li.append(make('p','',summary));
 encounterList.append(li);
 });journeys.append(encounterList);
 }
+const confirmed=(p.encounters||[]).filter(e=>Number(e.chapter)>=1&&Number(e.chapter)<=chapters.length).length;
+const count=make('p','encounter-count',confirmed+' documented '+(confirmed===1?'adventure':'adventures'));
+nameArea.append(count);
 card.append(journeys);grid.append(card);
 });
 }
 search.addEventListener('input',render);filter.addEventListener('change',render);render();
+if(location.hash.startsWith('#companion-')){
+const el=document.getElementById(decodeURIComponent(location.hash.slice(1)));
+if(el)requestAnimationFrame(()=>el.scrollIntoView({block:'start'}));
+}
 })();
 </script>
 </body>
