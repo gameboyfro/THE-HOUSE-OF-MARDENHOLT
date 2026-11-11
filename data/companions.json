@@ -1,14 +1,14 @@
 {
-  "version": 2,
+  "version": 3,
   "companions": [
     {
-      "id": "sumtingwong-hammer",
-      "name": "Sumtingwong Hammer",
+      "id": "spagetoll-cuh",
+      "name": "Spagetoll Cuh",
       "race": "Human",
       "class": "Warlock",
       "biography": "",
       "gender": "Male",
-      "portrait": "assets/sumtingwong-hammer.webp",
+      "portrait": "assets/crew-2026/spagetoll-cuh.webp",
       "encounters": [
         {
           "chapter": 1,
@@ -16,9 +16,10 @@
         },
         {
           "chapter": 5,
-          "summary": "Quested with Atte, Quilby and Civa in the Wetlands in preparation for the next day's Stockades."
+          "summary": "Quested with Atte, Quillb and Civa in the Wetlands in preparation for the next day's Stockades."
         }
-      ]
+      ],
+      "guildRank": "Officer"
     },
     {
       "id": "thundrus-cheeklapper",
@@ -27,26 +28,27 @@
       "class": "Warrior",
       "biography": "",
       "gender": "Male",
-      "portrait": "assets/thundrus-cheeklapper.webp",
+      "portrait": "assets/crew-2026/thundrus-cheeklapper.webp",
       "encounters": [
         {
           "chapter": 1,
-          "summary": "Met Atte at the start of the journey, hunted Hogger with Sumtingwong, and received equipment crafted by Atte."
+          "summary": "Met Atte at the start of the journey, hunted Hogger with Spagetoll, and received equipment crafted by Atte."
         },
         {
           "chapter": 3,
-          "summary": "Reunited with Atte and Quilby in Redridge Mountains, where they also met Civa."
+          "summary": "Reunited with Atte and Quillb in Redridge Mountains, where they also met Civa."
         }
-      ]
+      ],
+      "guildRank": "Officer"
     },
     {
-      "id": "quilby-picklepocket",
-      "name": "Quilby Picklepocket",
+      "id": "quillb-picklepocket",
+      "name": "Quillb Picklepocket",
       "race": "Human",
       "class": "Rogue",
       "biography": "",
       "gender": "Male",
-      "portrait": "assets/quilby-picklepocket.webp",
+      "portrait": "assets/crew-2026/quillb-picklepocket.webp",
       "encounters": [
         {
           "chapter": 1,
@@ -58,9 +60,10 @@
         },
         {
           "chapter": 5,
-          "summary": "Quested with Atte, Civa and Sumtingwong in the Wetlands in preparation for the next day's Stockades."
+          "summary": "Quested with Atte, Civa and Spagetoll in the Wetlands in preparation for the next day's Stockades."
         }
-      ]
+      ],
+      "guildRank": "Guild Master"
     },
     {
       "id": "furrassic-maul",
@@ -69,7 +72,7 @@
       "class": "Druid",
       "biography": "",
       "gender": "Female",
-      "portrait": "assets/furrassic-maul.webp",
+      "portrait": "assets/crew-2026/furrassic-maul.webp",
       "encounters": [
         {
           "chapter": 2,
@@ -83,7 +86,8 @@
           "chapter": 4,
           "summary": "Completed Duskwood quests with Atte, separately from Lilbigmenace."
         }
-      ]
+      ],
+      "guildRank": "Veteran"
     },
     {
       "id": "lilbigmenace-thornwhisper",
@@ -92,7 +96,7 @@
       "class": "Hunter",
       "biography": "",
       "gender": "Female",
-      "portrait": "assets/lilbigmenace-thornwhisper.webp",
+      "portrait": "assets/crew-2026/lilbigmenace-thornwhisper.webp",
       "encounters": [
         {
           "chapter": 3,
@@ -102,7 +106,8 @@
           "chapter": 4,
           "summary": "Completed Duskwood quests with Atte, separately from Furrassic."
         }
-      ]
+      ],
+      "guildRank": "Officer"
     },
     {
       "id": "civa-warrior",
@@ -111,11 +116,11 @@
       "class": "Warrior",
       "biography": "",
       "gender": "Female",
-      "portrait": "assets/civa-warrior.webp",
+      "portrait": "assets/crew-2026/civa-warrior.webp",
       "encounters": [
         {
           "chapter": 3,
-          "summary": "First met Atte with Quilby and Thundrus during a gathering in Redridge Mountains."
+          "summary": "First met Atte with Quillb and Thundrus during a gathering in Redridge Mountains."
         },
         {
           "chapter": 4,
@@ -123,9 +128,10 @@
         },
         {
           "chapter": 5,
-          "summary": "Quested with Atte, Quilby and Sumtingwong in the Wetlands in preparation for the next day's Stockades."
+          "summary": "Quested with Atte, Quillb and Spagetoll in the Wetlands in preparation for the next day's Stockades."
         }
-      ]
+      ],
+      "guildRank": "Veteran"
     },
     {
       "id": "bu-shwacker",
@@ -134,13 +140,14 @@
       "class": "Mage",
       "biography": "",
       "gender": "Male",
-      "portrait": "assets/bu-shwacker.webp",
+      "portrait": "assets/crew-2026/bu-shwacker.webp",
       "encounters": [
         {
           "chapter": 4,
           "summary": "Received Atte's help with gear and crafting in Ironforge."
         }
-      ]
+      ],
+      "guildRank": "Initiate"
     },
     {
       "id": "fat-dwarf",
@@ -149,13 +156,14 @@
       "class": "Paladin",
       "biography": "",
       "gender": "Male",
-      "portrait": "assets/fat-dwarfs.webp",
+      "portrait": "assets/crew-2026/fat-dwarfs.webp",
       "encounters": [
         {
           "chapter": 4,
           "summary": "Met Atte in Stormwind and added spikes to his shield."
         }
-      ]
+      ],
+      "guildRank": "Officer"
     }
   ]
 }

@@ -61,20 +61,33 @@ footer{text-align:center;color:#c4aa7b;padding:15px 20px 30px;border-top:1px sol
 @media(max-width:920px){.grid{grid-template-columns:1fr}.head{grid-template-columns:165px minmax(0,1fr)}}
 @media(max-width:490px){main{padding:18px 12px 50px}.head{grid-template-columns:120px minmax(0,1fr);gap:13px;padding:15px}.bio{margin:0 15px}.journeys{padding:14px 15px}.dossier h2{font-size:23px}.identity{gap:3px 7px}.identity dd{font-size:14px}.placeholder .seal{font-size:38px}}
 @media(max-width:355px){.head{grid-template-columns:1fr}.portrait{width:175px;margin:0 auto}.name-area{text-align:center}.identity{text-align:left}}
+
+/* Approved landscape guild portraits */
+.head{display:block;padding:0}
+.head .portrait{aspect-ratio:1.18;border:0;outline:0;width:100%;max-width:none}
+.head .portrait img{object-fit:cover;background:#1e342f}
+.head .name-area{padding:19px 22px 18px}
+@media(max-width:490px){.head{display:block;padding:0}.head .portrait{aspect-ratio:1.18;width:100%;margin:0}.head .name-area{text-align:left;padding:15px}.head .identity{text-align:left}}
+.crew-leader{display:flex;gap:20px;align-items:center;background:#efe4c8;color:#274037;border:1px solid #ad9469;padding:15px;margin:0 0 22px}
+.crew-leader img{width:min(32%,260px);height:auto;display:block;border:2px solid #b9a277}
+.crew-leader h2{margin:0 0 8px;font-size:clamp(20px,3vw,31px);font-weight:normal}
+.crew-leader p{margin:0 0 8px}.crew-leader a{color:#28594b;font-weight:bold}
+@media(max-width:500px){.crew-leader{align-items:flex-start;gap:12px}.crew-leader img{width:37%}}
 </style>
 </head>
 <body>
 <header>
 <nav aria-label="Archive navigation"><a href="./index.html">House Archive</a><a href="./index.html#journal">Chronicle</a><a href="./timeline.html">Journey Timeline</a><a href="./atlas.html">Azeroth Atlas</a></nav>
-<div class="kicker">House Mardenholt · Plot Armor Crew</div>
+<div class="kicker">The Alliance · Plot Armor Crew</div>
 <h1>The Companions Ledger</h1>
 <p>The people whose paths crossed with Ser Atte Mardenholt — from the first road to the newest chapter.</p>
 </header>
 <main>
 <section class="intro" aria-label="About the companions ledger">
-<p>Each dossier records confirmed character details and encounters from the published Chronicle. Portraits and personal biographies will be added only when supplied or approved; an empty portrait frame is not a depiction of the character.</p>
+<p>Each dossier records confirmed character details and encounters from the published Chronicle. The approved portraits and guild titles are recorded below. Historical chapter encounters are verified; personal biographies remain pending player approval.</p>
 <div class="record-count"><strong id="totalCount">—</strong>RECORDED COMPANIONS</div>
 </section>
+<section class="crew-leader" aria-label="Atte Mardenholt guild portrait"><img src="./assets/crew-2026/atte-mardenholt.webp" alt="Approved Plot Armor Crew portrait of Ser Atte Mardenholt" loading="lazy"/><div><h2>Ser Atte Mardenholt</h2><p>Human Warrior · Veteran</p><p>The knight whose travels form the Chronicle. His character history is kept in the House Archive.</p><a href="./index.html#atte">Read Atte's dossier</a></div></section>
 <div class="tools">
 <label for="search">Find a companion <input type="search" id="search" placeholder="Search by name, race or class" autocomplete="off"></label>
 <div class="filters"><label for="classFilter">Class</label><select id="classFilter"><option value="">All classes</option></select><span id="resultCount" aria-live="polite"></span></div>
@@ -102,12 +115,12 @@ if(Array.isArray(data.companions))records=data.companions;
 for(const raw of records){
 if(!raw||typeof raw.name!=='string'||!raw.name.trim())continue;
 const id=norm(raw.name);
-if(!people.has(id))people.set(id,{name:raw.name.trim(),race:String(raw.race||''),gender:String(raw.gender||''),characterClass:String(raw.class||''),biography:String(raw.biography||''),portrait:String(raw.portrait||''),encounters:Array.isArray(raw.encounters)?raw.encounters:[]});
+if(!people.has(id))people.set(id,{name:raw.name.trim(),race:String(raw.race||''),gender:String(raw.gender||''),characterClass:String(raw.class||''),guildRank:String(raw.guildRank||''),biography:String(raw.biography||''),portrait:String(raw.portrait||''),encounters:Array.isArray(raw.encounters)?raw.encounters:[]});
 }
 chapters.forEach((chapter,index)=>{
 String(chapter.companions||'').split(',').map(s=>s.trim()).filter(Boolean).forEach(name=>{
 const key=norm(name);
-if(!people.has(key))people.set(key,{name,race:'',gender:'',characterClass:'',biography:'',portrait:'',encounters:[]});
+if(!people.has(key))people.set(key,{name,race:'',gender:'',characterClass:'',guildRank:'',biography:'',portrait:'',encounters:[]});
 const person=people.get(key);
 if(!person.encounters.some(e=>Number(e.chapter)===index+1))person.encounters.push({chapter:index+1,summary:'Recorded as a companion in this chapter.'});
 });
@@ -134,7 +147,7 @@ card.append(frame);
 function render(){
 grid.replaceChildren();
 const term=norm(search.value),selected=filter.value;
-const matches=companions.filter(p=>(!selected||p.characterClass===selected)&&(!term||[p.name,p.race,p.gender,p.characterClass].some(x=>norm(x).includes(term))));
+const matches=companions.filter(p=>(!selected||p.characterClass===selected)&&(!term||[p.name,p.race,p.gender,p.characterClass,p.guildRank].some(x=>norm(x).includes(term))));
 document.getElementById('resultCount').textContent=matches.length+' shown';
 if(!matches.length){grid.append(make('p','empty','No companions match those filters.'));return}
 matches.forEach((p,i)=>{
@@ -144,7 +157,7 @@ appendPortrait(head,p);
 const nameArea=make('div','name-area');
 nameArea.append(make('div','ordinal','Companion dossier · '+String(companions.indexOf(p)+1).padStart(2,'0')),make('h2','',p.name));
 const dl=make('dl','identity');
-for(const [label,value] of [['Race',p.race],['Gender',p.gender],['Class',p.characterClass]]){
+for(const [label,value] of [['Race',p.race],['Gender',p.gender],['Class',p.characterClass],['Guild rank',p.guildRank]]){
 dl.append(make('dt','',label),make('dd','',value||'Unconfirmed'));
 }
 nameArea.append(dl);head.append(nameArea);card.append(head);
