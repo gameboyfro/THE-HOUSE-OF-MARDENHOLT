@@ -4,8 +4,8 @@
 
 ## Status
 - **Website:** GitHub Pages visitor archive, available at https://gameboyfro.github.io/THE-HOUSE-OF-MARDENHOLT/
-- **Chronicles:** Five dated chapters (4–8 November 2026) once this preview release is approved and merged. Chapter V is on the preview branch only until then.
-- **Features:** Wanderer's Chronicle, Journey Timeline, Azeroth Atlas, and Companions Ledger with eight illustrated dossiers.
+- **Chronicles:** Five published, dated chapters (4–8 November 2026). Chapter VI (9 November) is being drafted privately and is not published.
+- **Features:** Wanderer's Chronicle, Journey Timeline, Azeroth Atlas (including dated field-note locations awaiting their chapters), and Companions Ledger with nine illustrated dossiers.
 - **Editor:** Private offline HTML editor, not part of the public repository; its browser-local drafts are not automatically synced to GitHub.
 - **Map:** Existing schematic Atlas retained pending a redesign approved by the site owner.
 
@@ -30,7 +30,7 @@ Do not modify approved images, journal entries or character details without expl
 
 ## Important files
 - `index.html` — live read-only Visitor website and illustrated Chronicle.
-- `assets/` — public site artwork, Chronicles plates, eight approved companion portraits and Chronicle illustrations.
+- `assets/` — public site artwork, Chronicles plates, nine approved companion portraits and Chronicle illustrations.
 - `.nojekyll` — serve the static website directly through GitHub Pages.
 - `README.md` — project and deployment guide.
 - `CHANGELOG.md` — version-by-version record.
