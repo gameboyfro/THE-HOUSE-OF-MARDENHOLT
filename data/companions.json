@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "companions": [
     {
       "id": "spagetoll-cuh",
@@ -164,6 +164,22 @@
         }
       ],
       "guildRank": "Officer"
+    },
+    {
+      "id": "melan-holya",
+      "name": "Melan Holya",
+      "race": "Human",
+      "class": "Priest",
+      "biography": "",
+      "gender": "Female",
+      "portrait": "assets/crew-2026/melan-holya.webp",
+      "encounters": [
+        {
+          "chapter": 6,
+          "summary": "First met Atte and joined Furrassic Maul for the Stockade, Shadowfang Keep, Excavation Site: Wetlands, Wailing Caverns and Gnomeregan, defeating every boss together on 9 November."
+        }
+      ],
+      "guildRank": "Initiate"
     }
   ]
 }
