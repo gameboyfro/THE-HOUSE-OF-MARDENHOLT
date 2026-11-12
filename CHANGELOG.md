@@ -2,6 +2,27 @@
 
 Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, and affected files. Only actual completed changes belong under Added/Changed/Fixed/Removed.
 
+## [v2.3.0] — 2026-11-12 — Chapter VI published
+### Added
+- Chapter VI — Of Broken Chains and Distant Shores (9 November 2026), in Atte's first-person voice, including Darkmoon Faire, five cleared dungeons and their 31 named encounters, Fray Island, the Sleeping Bag clue trail, the Dun Morogh blizzard and a final night in Ironforge.
+- Confirmed Chapter VI encounter summaries for Furrassic Maul and Thundrus Cheeklapper. Melan Holya's existing Chapter VI encounter is now attached to a published chapter.
+
+### Changed
+- Chapter VI location records are now classified as visits documented in a published chapter.
+- README's chapter and companion counts have been brought up to date.
+
+### Fixed
+- The visitor reader, Timeline, Atlas and Companions Ledger now have a published Chapter VI to link to.
+
+### Removed
+- Nothing. Chapters I–V and approved companion portraits remain unchanged.
+
+### Pending
+- Six illustrated Chapter VI plates have been prepared separately but are not yet deployed to GitHub Pages. Chapter VI currently displays its prose without illustrations; do not claim the artwork is published.
+- Chapters VII and VIII remain unpublished; family history proposals remain on hold.
+
+**Files affected:** `chapters.js`, `data/companions.json`, `data/locations.json`, `README.md`, `CHANGELOG.md`.
+
 ## [v2.2.0] — 2026-11-12 — Melan Holya and Chapter VI field-note destinations
 ### Added
 - Melan Holya joins the Companions Ledger as a Human Priest, Initiate, with her approved portrait. Chapter VI encounter details are staged for when the chapter is published.
