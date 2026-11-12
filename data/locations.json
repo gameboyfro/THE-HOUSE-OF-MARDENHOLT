@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "locations": [
     {
       "id": "elwynn-forest",
@@ -9,12 +9,18 @@
     {
       "id": "stormwind-city",
       "name": "Stormwind City",
-      "continent": "Eastern Kingdoms"
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-09",
+      "fieldNote": "Started the day at Darkmoon Faire outside Stormwind and entered the Stockade.",
+      "pendingChapter": 6
     },
     {
       "id": "westfall",
       "name": "Westfall",
-      "continent": "Eastern Kingdoms"
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-09",
+      "fieldNote": "Began the mysterious chain of notes with Thundrus Cheeklapper.",
+      "pendingChapter": 6
     },
     {
       "id": "redridge-mountains",
@@ -29,12 +35,18 @@
     {
       "id": "ironforge",
       "name": "Ironforge",
-      "continent": "Eastern Kingdoms"
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-09",
+      "fieldNote": "Ended the day's travels in the city.",
+      "pendingChapter": 6
     },
     {
       "id": "wetlands",
       "name": "Wetlands",
-      "continent": "Eastern Kingdoms"
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-09",
+      "fieldNote": "Visited the excavation site for the dungeon expedition.",
+      "pendingChapter": 6
     },
     {
       "id": "the-hall-of-thanes",
@@ -54,7 +66,10 @@
     {
       "id": "shadowfang-keep",
       "name": "Shadowfang Keep",
-      "continent": "Eastern Kingdoms"
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-09",
+      "fieldNote": "Defeated all dungeon bosses with Furrassic Maul and Melan Holya.",
+      "pendingChapter": 6
     },
     {
       "id": "blackfathom-deeps",
@@ -80,6 +95,94 @@
       "id": "ashenvale",
       "name": "Ashenvale",
       "continent": "Kalimdor"
+    },
+    {
+      "id": "darkmoon-faire",
+      "name": "Darkmoon Faire",
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-09",
+      "fieldNote": "Visited the fair outside Stormwind and earned Darkmoon Faire tickets.",
+      "pendingChapter": 6
+    },
+    {
+      "id": "the-stockade",
+      "name": "The Stockade",
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-09",
+      "fieldNote": "Cleared every boss alongside Furrassic Maul and Melan Holya.",
+      "pendingChapter": 6
+    },
+    {
+      "id": "silverpine-forest",
+      "name": "Silverpine Forest",
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-09",
+      "fieldNote": "Travelled through the region to Shadowfang Keep.",
+      "pendingChapter": 6
+    },
+    {
+      "id": "excavation-site-wetlands",
+      "name": "Excavation Site: Wetlands",
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-09",
+      "fieldNote": "Defeated Saltspine, Shadetooth, Highland Horror, and Relic Guardian.",
+      "pendingChapter": 6
+    },
+    {
+      "id": "the-barrens",
+      "name": "The Barrens",
+      "continent": "Kalimdor",
+      "fieldNoteDate": "2026-11-09",
+      "fieldNote": "Reached Ratchet, cleared Wailing Caverns and followed the burned-tower clue.",
+      "pendingChapter": 6
+    },
+    {
+      "id": "ratchet",
+      "name": "Ratchet",
+      "continent": "Kalimdor",
+      "fieldNoteDate": "2026-11-09",
+      "fieldNote": "Arrived by the coast on the way to Wailing Caverns.",
+      "pendingChapter": 6
+    },
+    {
+      "id": "wailing-caverns",
+      "name": "Wailing Caverns",
+      "continent": "Kalimdor",
+      "fieldNoteDate": "2026-11-09",
+      "fieldNote": "Cleared every boss with Furrassic Maul and Melan Holya and acquired the Cloak of Hermitic Bliss.",
+      "pendingChapter": 6
+    },
+    {
+      "id": "fray-island",
+      "name": "Fray Island",
+      "continent": "Kalimdor",
+      "fieldNoteDate": "2026-11-09",
+      "fieldNote": "Completed The Affray with Thundrus Cheeklapper, unlocking Berserker Stance and Intercept.",
+      "pendingChapter": 6
+    },
+    {
+      "id": "stonetalon-mountains",
+      "name": "Stonetalon Mountains",
+      "continent": "Kalimdor",
+      "fieldNoteDate": "2026-11-09",
+      "fieldNote": "Followed another mysterious note with Thundrus Cheeklapper; the quest trail remains unfinished.",
+      "pendingChapter": 6
+    },
+    {
+      "id": "dun-morogh",
+      "name": "Dun Morogh",
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-09",
+      "fieldNote": "Travelled through a snowstorm on the way to Gnomeregan.",
+      "pendingChapter": 6
+    },
+    {
+      "id": "gnomeregan",
+      "name": "Gnomeregan",
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-09",
+      "fieldNote": "Cleared all six boss encounters with Furrassic Maul and Melan Holya.",
+      "pendingChapter": 6
     }
   ]
 }
