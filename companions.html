@@ -206,7 +206,7 @@ const idx=Number(item.chapter)-1;
 if(idx<0||idx>=chapters.length)continue;
 encounterByChapter.set(idx,{chapter:chapters[idx],index:idx,summary:String(item.summary||'').trim()});
 }
-if(!encounterByChapter.size){journeys.append(make('p','', 'No confirmed chapter encounters yet.'))}
+if(!encounterByChapter.size){const pending=(p.encounters||[]).some(e=>Number(e.chapter)>chapters.length);journeys.append(make('p','',pending?'The first shared adventures are recorded in field notes; the next Chronicle chapter awaits publication.':'No confirmed chapter encounters yet.'))}
 else{
 [...encounterByChapter.values()].sort((a,b)=>a.index-b.index).forEach(({chapter,index,summary})=>{
 const li=make('li','journey');
