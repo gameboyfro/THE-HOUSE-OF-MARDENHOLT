@@ -2,6 +2,25 @@
 
 Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, and affected files. Only actual completed changes belong under Added/Changed/Fixed/Removed.
 
+## [v2.3.1] — 2026-11-12 — Chapter VI illustrated plates
+### Added
+- Six finished aged-parchment, painterly journal illustrations for Chapter VI: two Darkmoon Faire scenes, Naralex in Wailing Caverns, Atte and dual-sword Thundrus fighting Big Will at Fray Island, and two views of the Dun Morogh snowstorm.
+- Captions and image references in the Chapter VI visitor reader.
+
+### Changed
+- README acknowledges that Chapter VI's illustrations are now published.
+
+### Fixed
+- The published Chapter VI no longer shows a missing-illustration placeholder.
+
+### Removed
+- Nothing. Previously approved portraits, Atlas layout, and Chapters I–V remain unchanged.
+
+### Pending
+- Chapters VII and VIII are not yet published; companion biographies await players' contributions.
+
+**Files affected:** `assets/chapter-06-plate-01.webp` through `assets/chapter-06-plate-06.webp`, `chapters.js`, `README.md`, `CHANGELOG.md`.
+
 ## [v2.3.0] — 2026-11-12 — Chapter VI published
 ### Added
 - Chapter VI — Of Broken Chains and Distant Shores (9 November 2026), in Atte's first-person voice, including Darkmoon Faire, five cleared dungeons and their 31 named encounters, Fray Island, the Sleeping Bag clue trail, the Dun Morogh blizzard and a final night in Ironforge.
