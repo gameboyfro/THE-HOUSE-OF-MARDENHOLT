@@ -2,6 +2,28 @@
 
 Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, and affected files. Only actual completed changes belong under Added/Changed/Fixed/Removed.
 
+## [v2.2.0] — 2026-11-12 — Melan Holya and Chapter VI field-note destinations
+### Added
+- Melan Holya joins the Companions Ledger as a Human Priest, Initiate, with her approved portrait. Chapter VI encounter details are staged for when the chapter is published.
+- Eleven missing location records from the actual 9 November journey, with dated notes about the visit, including The Stockade, Excavation Site: Wetlands, Wailing Caverns, Fray Island, Ratchet, Stonetalon Mountains, Gnomeregan, the Darkmoon Faire, the Barrens, Silverpine Forest and Dun Morogh.
+
+### Changed
+- Atlas entries and schematic pins distinguish visits confirmed by private field notes from visits documented in published Chronicle chapters.
+- Five existing location records now include their 9 November field-note visits.
+- README now reflects nine companions and five published chapters.
+
+### Fixed
+- Companion dossiers indicate when their first recorded adventure awaits publication instead of claiming no journey exists.
+
+### Removed
+- Nothing. Previously approved portraits, the Atlas layout and Chapters I–V remain unchanged.
+
+### Pending
+- Chapter VI's completed prose and illustrated plates are still private and not published; its encounter links become visible when the chapter is published.
+- Further companion biographies await player contributions.
+
+**Files affected:** `assets/crew-2026/melan-holya.webp`, `data/companions.json`, `companions.html`, `data/locations.json`, `atlas.html`, `README.md`, `CHANGELOG.md`.
+
 ## [v2.1.0 — PREVIEW] — 2026-11-10 — Chapter V and companion encounters
 ### Added
 - Chapter V in the confirmed order: Darkshore / Master's Glaive → Blackfathom Deeps → Duskwood → Wetlands → Stormwind.
