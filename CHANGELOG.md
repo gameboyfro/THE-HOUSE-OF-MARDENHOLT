@@ -2,6 +2,24 @@
 
 Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, and affected files. Only actual completed changes belong under Added/Changed/Fixed/Removed.
 
+## [v2.3.2] — 2026-11-12 — Atte portrait update
+### Added
+- New approved Atte Mardenholt Stormwind portrait, optimized for the public Companions Ledger.
+
+### Changed
+- Only the featured Atte portrait image reference on the Companions Ledger now points to the new artwork.
+
+### Fixed
+- The previous Atte image remains available as an archival asset; the new version has a unique filename to prevent stale image caching.
+
+### Removed
+- Nothing.
+
+### Pending
+- No further changes to Atte's character data or other companions.
+
+**Files affected:** `assets/crew-2026/atte-mardenholt-stormwind.webp`, `companions.html`, `CHANGELOG.md`.
+
 ## [v2.3.1] — 2026-11-12 — Chapter VI illustrated plates
 ### Added
 - Six finished aged-parchment, painterly journal illustrations for Chapter VI: two Darkmoon Faire scenes, Naralex in Wailing Caverns, Atte and dual-sword Thundrus fighting Big Will at Fray Island, and two views of the Dun Morogh snowstorm.
