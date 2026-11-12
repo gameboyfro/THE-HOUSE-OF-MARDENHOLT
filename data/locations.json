@@ -12,7 +12,7 @@
       "continent": "Eastern Kingdoms",
       "fieldNoteDate": "2026-11-09",
       "fieldNote": "Started the day at Darkmoon Faire outside Stormwind and entered the Stockade.",
-      "pendingChapter": 6
+      "publishedChapter": 6
     },
     {
       "id": "westfall",
@@ -20,7 +20,7 @@
       "continent": "Eastern Kingdoms",
       "fieldNoteDate": "2026-11-09",
       "fieldNote": "Began the mysterious chain of notes with Thundrus Cheeklapper.",
-      "pendingChapter": 6
+      "publishedChapter": 6
     },
     {
       "id": "redridge-mountains",
@@ -38,7 +38,7 @@
       "continent": "Eastern Kingdoms",
       "fieldNoteDate": "2026-11-09",
       "fieldNote": "Ended the day's travels in the city.",
-      "pendingChapter": 6
+      "publishedChapter": 6
     },
     {
       "id": "wetlands",
@@ -46,7 +46,7 @@
       "continent": "Eastern Kingdoms",
       "fieldNoteDate": "2026-11-09",
       "fieldNote": "Visited the excavation site for the dungeon expedition.",
-      "pendingChapter": 6
+      "publishedChapter": 6
     },
     {
       "id": "the-hall-of-thanes",
@@ -69,7 +69,7 @@
       "continent": "Eastern Kingdoms",
       "fieldNoteDate": "2026-11-09",
       "fieldNote": "Defeated all dungeon bosses with Furrassic Maul and Melan Holya.",
-      "pendingChapter": 6
+      "publishedChapter": 6
     },
     {
       "id": "blackfathom-deeps",
@@ -102,7 +102,7 @@
       "continent": "Eastern Kingdoms",
       "fieldNoteDate": "2026-11-09",
       "fieldNote": "Visited the fair outside Stormwind and earned Darkmoon Faire tickets.",
-      "pendingChapter": 6
+      "publishedChapter": 6
     },
     {
       "id": "the-stockade",
@@ -110,7 +110,7 @@
       "continent": "Eastern Kingdoms",
       "fieldNoteDate": "2026-11-09",
       "fieldNote": "Cleared every boss alongside Furrassic Maul and Melan Holya.",
-      "pendingChapter": 6
+      "publishedChapter": 6
     },
     {
       "id": "silverpine-forest",
@@ -118,7 +118,7 @@
       "continent": "Eastern Kingdoms",
       "fieldNoteDate": "2026-11-09",
       "fieldNote": "Travelled through the region to Shadowfang Keep.",
-      "pendingChapter": 6
+      "publishedChapter": 6
     },
     {
       "id": "excavation-site-wetlands",
@@ -126,7 +126,7 @@
       "continent": "Eastern Kingdoms",
       "fieldNoteDate": "2026-11-09",
       "fieldNote": "Defeated Saltspine, Shadetooth, Highland Horror, and Relic Guardian.",
-      "pendingChapter": 6
+      "publishedChapter": 6
     },
     {
       "id": "the-barrens",
@@ -134,7 +134,7 @@
       "continent": "Kalimdor",
       "fieldNoteDate": "2026-11-09",
       "fieldNote": "Reached Ratchet, cleared Wailing Caverns and followed the burned-tower clue.",
-      "pendingChapter": 6
+      "publishedChapter": 6
     },
     {
       "id": "ratchet",
@@ -142,7 +142,7 @@
       "continent": "Kalimdor",
       "fieldNoteDate": "2026-11-09",
       "fieldNote": "Arrived by the coast on the way to Wailing Caverns.",
-      "pendingChapter": 6
+      "publishedChapter": 6
     },
     {
       "id": "wailing-caverns",
@@ -150,7 +150,7 @@
       "continent": "Kalimdor",
       "fieldNoteDate": "2026-11-09",
       "fieldNote": "Cleared every boss with Furrassic Maul and Melan Holya and acquired the Cloak of Hermitic Bliss.",
-      "pendingChapter": 6
+      "publishedChapter": 6
     },
     {
       "id": "fray-island",
@@ -158,7 +158,7 @@
       "continent": "Kalimdor",
       "fieldNoteDate": "2026-11-09",
       "fieldNote": "Completed The Affray with Thundrus Cheeklapper, unlocking Berserker Stance and Intercept.",
-      "pendingChapter": 6
+      "publishedChapter": 6
     },
     {
       "id": "stonetalon-mountains",
@@ -166,7 +166,7 @@
       "continent": "Kalimdor",
       "fieldNoteDate": "2026-11-09",
       "fieldNote": "Followed another mysterious note with Thundrus Cheeklapper; the quest trail remains unfinished.",
-      "pendingChapter": 6
+      "publishedChapter": 6
     },
     {
       "id": "dun-morogh",
@@ -174,7 +174,7 @@
       "continent": "Eastern Kingdoms",
       "fieldNoteDate": "2026-11-09",
       "fieldNote": "Travelled through a snowstorm on the way to Gnomeregan.",
-      "pendingChapter": 6
+      "publishedChapter": 6
     },
     {
       "id": "gnomeregan",
@@ -182,7 +182,7 @@
       "continent": "Eastern Kingdoms",
       "fieldNoteDate": "2026-11-09",
       "fieldNote": "Cleared all six boss encounters with Furrassic Maul and Melan Holya.",
-      "pendingChapter": 6
+      "publishedChapter": 6
     }
   ]
 }
