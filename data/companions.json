@@ -188,6 +188,22 @@
         }
       ],
       "guildRank": "Initiate"
+    },
+    {
+      "id": "old-warden",
+      "name": "Old Warden",
+      "race": "Dwarf",
+      "class": "Priest",
+      "gender": "Female",
+      "guildRank": "Initiate",
+      "biography": "",
+      "portrait": "assets/crew-2026/old-warden.webp",
+      "encounters": [
+        {
+          "chapter": 7,
+          "summary": "First met Atte during the City of Dalaran expedition on 10 November 2026, alongside Melan Holya, Thundrus Cheeklapper and Spagetoll Cuh."
+        }
+      ]
     }
   ]
 }
