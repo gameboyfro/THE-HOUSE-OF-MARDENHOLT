@@ -183,6 +183,54 @@
       "fieldNoteDate": "2026-11-09",
       "fieldNote": "Cleared all six boss encounters with Furrassic Maul and Melan Holya.",
       "publishedChapter": 6
+    },
+    {
+      "id": "hillsbrad-foothills",
+      "name": "Hillsbrad Foothills",
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-10",
+      "fieldNote": "Met Thundrus Cheeklapper for a friendly duel near Southshore; Atte won.",
+      "publishedChapter": 7
+    },
+    {
+      "id": "southshore",
+      "name": "Southshore",
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-10",
+      "fieldNote": "Duelled Thundrus outside town, then sailed for Darkshore.",
+      "publishedChapter": 7
+    },
+    {
+      "id": "stonetalon-peak",
+      "name": "Stonetalon Peak",
+      "continent": "Kalimdor",
+      "fieldNoteDate": "2026-11-10",
+      "fieldNote": "Arrived by flight from Darkshore before heading toward Nijel's Point.",
+      "publishedChapter": 7
+    },
+    {
+      "id": "nijels-point",
+      "name": "Nijel's Point",
+      "continent": "Kalimdor",
+      "fieldNoteDate": "2026-11-10",
+      "fieldNote": "Passed through the Alliance outpost before travelling into Desolace.",
+      "publishedChapter": 7
+    },
+    {
+      "id": "desolace",
+      "name": "Desolace",
+      "continent": "Kalimdor",
+      "fieldNoteDate": "2026-11-10",
+      "fieldNote": "Quested against naga and centaurs, saw a wandering orc with a bear, and fished at sunset.",
+      "publishedChapter": 7
+    },
+    {
+      "id": "city-of-dalaran",
+      "name": "City of Dalaran",
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-10",
+      "fieldNote": "Completed a dungeon expedition with Melan Holya, Thundrus Cheeklapper, Spagetoll Cuh and Old Warden.",
+      "publishedChapter": 7
     }
   ]
 }
