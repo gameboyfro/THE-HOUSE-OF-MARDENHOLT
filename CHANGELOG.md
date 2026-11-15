@@ -2,6 +2,28 @@
 
 Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, and affected files. Only actual completed changes belong under Added/Changed/Fixed/Removed.
 
+## [v2.3.5] — 2026-11-15 — Restore Chapters VIII and IX from original backup
+### Added
+- Chapter VIII — Of Scarlet Zeal and Thornbound Paths, played 2026-11-11, original journal text and two supplied original illustration assets.
+- Chapter IX — Of Quiet Waters and Restless Blades, played 2026-11-12, original journal text and three supplied original illustration assets.
+- Seven recorded travel locations linked to Chapters VIII–IX and verified companion encounters.
+
+### Changed
+- Chapter X date corrected from 2026-11-15 to 2026-11-13 to match the saved journal backup.
+- Chapter X text and metadata restored from the backup; its four previously approved and published illustration assets remain unchanged.
+- Published journal now displays all ten chapters chronologically.
+
+### Fixed
+- Restored the two missing chapters, preserving original wording without creating replacement narratives.
+
+### Removed
+- Nothing.
+
+### Pending
+- None of the ten known chapters are missing from the public journal.
+
+**Files affected:** `chapters.js`, `data/companions.json`, `data/locations.json`, `README.md`, `CHANGELOG.md`, `assets/chapter-08-plate-01.webp`, `assets/chapter-08-plate-02.webp`, `assets/chapter-09-plate-01.webp`, `assets/chapter-09-plate-02.webp`, `assets/chapter-09-plate-03.webp`.
+
 ## [v2.3.4] — 2026-11-15 — Chapter X illustrated publication
 ### Added
 - Chapter X — Of Quiet Waters and Drowned Kingdoms (15 November 2026), documenting Atte's Stranglethorn Vale fishing, Razorfen Downs with Melan Holya, and The Drowned City with Thundrus Cheeklapper, Melan Holya, Quillb Picklepocket and Spagetoll Cuh.

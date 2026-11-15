@@ -23,6 +23,14 @@
           "summary": "Adventured with Atte, Thundrus, Melan and Old Warden in the City of Dalaran dungeon."
         },
         {
+          "chapter": 8,
+          "summary": "Joined the Razorfen Kraul expedition with Atte, Quillb and Thundrus."
+        },
+        {
+          "chapter": 9,
+          "summary": "Quested with Atte and the company through Stranglethorn Vale."
+        },
+        {
           "chapter": 10,
           "summary": "Joined Atte, Melan, Thundrus and Quillb for The Drowned City expedition."
         }
@@ -55,6 +63,14 @@
           "summary": "Fought a friendly duel with Atte outside Southshore; Atte won. Later joined the City of Dalaran dungeon expedition."
         },
         {
+          "chapter": 8,
+          "summary": "Joined the successful Razorfen Kraul expedition with Atte, Quillb and Spagetoll."
+        },
+        {
+          "chapter": 9,
+          "summary": "Joined Atte and his companions for jungle quests and Horde skirmishes in Stranglethorn Vale."
+        },
+        {
           "chapter": 10,
           "summary": "Joined Atte, Melan, Quillb and Spagetoll for The Drowned City expedition."
         }
@@ -81,6 +97,14 @@
         {
           "chapter": 5,
           "summary": "Quested with Atte, Civa and Spagetoll in the Wetlands in preparation for the next day's Stockades."
+        },
+        {
+          "chapter": 8,
+          "summary": "Joined Atte, Spagetoll and Thundrus for a successful Razorfen Kraul expedition."
+        },
+        {
+          "chapter": 9,
+          "summary": "Quested with Atte in Stranglethorn Vale and faced Horde skirmishes."
         },
         {
           "chapter": 10,
@@ -213,6 +237,10 @@
         {
           "chapter": 7,
           "summary": "Joined Atte, Thundrus, Spagetoll and the newly met Old Warden for the City of Dalaran dungeon."
+        },
+        {
+          "chapter": 8,
+          "summary": "Accompanied Atte through Scarlet Monastery's Graveyard and Library in Lordaeron."
         },
         {
           "chapter": 10,

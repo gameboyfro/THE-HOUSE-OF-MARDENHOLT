@@ -236,7 +236,7 @@
       "id": "stranglethorn-vale",
       "name": "Stranglethorn Vale",
       "continent": "Eastern Kingdoms",
-      "fieldNoteDate": "2026-11-15",
+      "fieldNoteDate": "2026-11-13",
       "fieldNote": "Day 10 opened with fishing at Atte's favourite spots along the Stranglethorn Vale waterways.",
       "publishedChapter": 10
     },
@@ -244,7 +244,7 @@
       "id": "razorfen-downs",
       "name": "Razorfen Downs",
       "continent": "Kalimdor",
-      "fieldNoteDate": "2026-11-15",
+      "fieldNoteDate": "2026-11-13",
       "fieldNote": "Atte and Melan Holya ventured into Razorfen Downs.",
       "publishedChapter": 10
     },
@@ -252,9 +252,65 @@
       "id": "the-drowned-city",
       "name": "The Drowned City",
       "continent": "Eastern Kingdoms",
-      "fieldNoteDate": "2026-11-15",
+      "fieldNoteDate": "2026-11-13",
       "fieldNote": "Atte explored The Drowned City with Thundrus Cheeklapper, Melan Holya, Quillb Picklepocket and Spagetoll Cuh.",
       "publishedChapter": 10
+    },
+    {
+      "id": "western-plaguelands",
+      "name": "Western Plaguelands",
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-11",
+      "fieldNote": "Atte crossed Chillwind Camp toward Scarlet Monastery with Melan Holya.",
+      "publishedChapter": 8
+    },
+    {
+      "id": "tirisfal-glades",
+      "name": "Tirisfal Glades",
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-11",
+      "fieldNote": "Atte travelled toward the Scarlet Monastery in northern Lordaeron.",
+      "publishedChapter": 8
+    },
+    {
+      "id": "scarlet-monastery",
+      "name": "Scarlet Monastery",
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-11",
+      "fieldNote": "Atte and Melan Holya explored the Graveyard and Library.",
+      "publishedChapter": 8
+    },
+    {
+      "id": "razorfen-kraul",
+      "name": "Razorfen Kraul",
+      "continent": "Kalimdor",
+      "fieldNoteDate": "2026-11-11",
+      "fieldNote": "Atte was summoned to join his companions on a successful dungeon expedition.",
+      "publishedChapter": 8
+    },
+    {
+      "id": "booty-bay",
+      "name": "Booty Bay",
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-12",
+      "fieldNote": "Atte returned to Booty Bay after fishing, crafting and jungle quests in Stranglethorn Vale.",
+      "publishedChapter": 9
+    },
+    {
+      "id": "lake-nazferiti",
+      "name": "Lake Nazferiti",
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-12",
+      "fieldNote": "Atte fished in Stranglethorn Vale beneath the jungle canopy.",
+      "publishedChapter": 9
+    },
+    {
+      "id": "vile-reef",
+      "name": "The Vile Reef",
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-12",
+      "fieldNote": "Atte continued fishing near the Vile Reef in Stranglethorn Vale.",
+      "publishedChapter": 9
     }
   ]
 }
