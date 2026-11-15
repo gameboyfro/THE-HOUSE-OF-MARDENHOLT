@@ -231,6 +231,30 @@
       "fieldNoteDate": "2026-11-10",
       "fieldNote": "Completed a dungeon expedition with Melan Holya, Thundrus Cheeklapper, Spagetoll Cuh and Old Warden.",
       "publishedChapter": 7
+    },
+    {
+      "id": "stranglethorn-vale",
+      "name": "Stranglethorn Vale",
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-15",
+      "fieldNote": "Day 10 opened with fishing at Atte's favourite spots along the Stranglethorn Vale waterways.",
+      "publishedChapter": 10
+    },
+    {
+      "id": "razorfen-downs",
+      "name": "Razorfen Downs",
+      "continent": "Kalimdor",
+      "fieldNoteDate": "2026-11-15",
+      "fieldNote": "Atte and Melan Holya ventured into Razorfen Downs.",
+      "publishedChapter": 10
+    },
+    {
+      "id": "the-drowned-city",
+      "name": "The Drowned City",
+      "continent": "Eastern Kingdoms",
+      "fieldNoteDate": "2026-11-15",
+      "fieldNote": "Atte explored The Drowned City with Thundrus Cheeklapper, Melan Holya, Quillb Picklepocket and Spagetoll Cuh.",
+      "publishedChapter": 10
     }
   ]
 }
