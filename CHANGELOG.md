@@ -2,6 +2,25 @@
 
 Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, and affected files. Only actual completed changes belong under Added/Changed/Fixed/Removed.
 
+## [v2.3.3] — 2026-11-15 — Chapter X text publication
+### Added
+- Chapter X — Of Quiet Waters and Drowned Kingdoms (15 November 2026), documenting Atte's Stranglethorn Vale fishing, Razorfen Downs with Melan Holya, and The Drowned City with Thundrus Cheeklapper, Melan Holya, Quillb Picklepocket and Spagetoll Cuh.
+
+### Changed
+- The public Wanderer's Chronicle now includes a Chapter X journal text entry, after the seven previously published chapters.
+
+### Fixed
+- No previously published chapter text or artwork was altered.
+
+### Removed
+- Nothing.
+
+### Pending
+- Chapter VIII and Chapter IX original source text and approved images are not present on the live branch and remain unpublished.
+- Four new Day 10 journal plates are pending a separate binary asset upload. The chapter is published without broken image links.
+
+**Files affected:** `chapters.js`, `README.md`, `CHANGELOG.md`.
+
 ## [v2.3.2] — 2026-11-12 — Atte portrait update
 ### Added
 - New approved Atte Mardenholt Stormwind portrait, optimized for the public Companions Ledger.
