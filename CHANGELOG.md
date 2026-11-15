@@ -8,6 +8,8 @@ Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, 
 
 ### Changed
 - The public Wanderer's Chronicle now includes a Chapter X journal text entry, after the seven previously published chapters.
+- Companion Ledger encounters for Melan, Thundrus, Quillb and Spagetoll now reference Chapter X.
+- Three confirmed Day 10 locations were added to the Atlas records without inventing map coordinates.
 
 ### Fixed
 - No previously published chapter text or artwork was altered.
@@ -19,7 +21,7 @@ Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, 
 - Chapter VIII and Chapter IX original source text and approved images are not present on the live branch and remain unpublished.
 - Four new Day 10 journal plates are pending a separate binary asset upload. The chapter is published without broken image links.
 
-**Files affected:** `chapters.js`, `README.md`, `CHANGELOG.md`.
+**Files affected:** `chapters.js`, `data/companions.json`, `data/locations.json`, `README.md`, `CHANGELOG.md`.
 
 ## [v2.3.2] — 2026-11-12 — Atte portrait update
 ### Added
