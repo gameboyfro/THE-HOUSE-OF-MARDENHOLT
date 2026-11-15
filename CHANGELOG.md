@@ -2,12 +2,13 @@
 
 Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, and affected files. Only actual completed changes belong under Added/Changed/Fixed/Removed.
 
-## [v2.3.3] — 2026-11-15 — Chapter X text publication
+## [v2.3.4] — 2026-11-15 — Chapter X illustrated publication
 ### Added
 - Chapter X — Of Quiet Waters and Drowned Kingdoms (15 November 2026), documenting Atte's Stranglethorn Vale fishing, Razorfen Downs with Melan Holya, and The Drowned City with Thundrus Cheeklapper, Melan Holya, Quillb Picklepocket and Spagetoll Cuh.
+- Four matching aged-parchment watercolor plates for Chapter X, including the final corrected shield, bald Thundrus, no imp in the ruins illustration, and removal of the two marked figures in the ritual plate.
 
 ### Changed
-- The public Wanderer's Chronicle now includes a Chapter X journal text entry, after the seven previously published chapters.
+- The public Wanderer's Chronicle now includes Chapter X with all four illustration references, after the seven previously published chapters.
 - Companion Ledger encounters for Melan, Thundrus, Quillb and Spagetoll now reference Chapter X.
 - Three confirmed Day 10 locations were added to the Atlas records without inventing map coordinates.
 
@@ -19,9 +20,9 @@ Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, 
 
 ### Pending
 - Chapter VIII and Chapter IX original source text and approved images are not present on the live branch and remain unpublished.
-- Four new Day 10 journal plates are pending a separate binary asset upload. The chapter is published without broken image links.
+- No Day 10 image uploads remain pending; the four assets have been committed to the public site.
 
-**Files affected:** `chapters.js`, `data/companions.json`, `data/locations.json`, `README.md`, `CHANGELOG.md`.
+**Files affected:** `chapters.js`, `data/companions.json`, `data/locations.json`, `assets/chapter-10-plate-01.webp` through `assets/chapter-10-plate-04.webp`, `README.md`, `CHANGELOG.md`.
 
 ## [v2.3.2] — 2026-11-12 — Atte portrait update
 ### Added
