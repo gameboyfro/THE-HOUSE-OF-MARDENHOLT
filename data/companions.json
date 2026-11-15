@@ -21,6 +21,10 @@
         {
           "chapter": 7,
           "summary": "Adventured with Atte, Thundrus, Melan and Old Warden in the City of Dalaran dungeon."
+        },
+        {
+          "chapter": 10,
+          "summary": "Joined Atte, Melan, Thundrus and Quillb for The Drowned City expedition."
         }
       ],
       "guildRank": "Officer"
@@ -49,6 +53,10 @@
         {
           "chapter": 7,
           "summary": "Fought a friendly duel with Atte outside Southshore; Atte won. Later joined the City of Dalaran dungeon expedition."
+        },
+        {
+          "chapter": 10,
+          "summary": "Joined Atte, Melan, Quillb and Spagetoll for The Drowned City expedition."
         }
       ],
       "guildRank": "Officer"
@@ -73,6 +81,10 @@
         {
           "chapter": 5,
           "summary": "Quested with Atte, Civa and Spagetoll in the Wetlands in preparation for the next day's Stockades."
+        },
+        {
+          "chapter": 10,
+          "summary": "Joined Atte, Melan, Thundrus and Spagetoll for The Drowned City expedition."
         }
       ],
       "guildRank": "Guild Master"
@@ -201,6 +213,10 @@
         {
           "chapter": 7,
           "summary": "Joined Atte, Thundrus, Spagetoll and the newly met Old Warden for the City of Dalaran dungeon."
+        },
+        {
+          "chapter": 10,
+          "summary": "Accompanied Atte through Razorfen Downs and later joined The Drowned City expedition with Thundrus, Quillb and Spagetoll."
         }
       ],
       "guildRank": "Initiate"
