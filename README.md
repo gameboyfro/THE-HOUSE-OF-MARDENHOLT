@@ -4,7 +4,7 @@
 
 ## Status
 - **Website:** GitHub Pages visitor archive, available at https://gameboyfro.github.io/THE-HOUSE-OF-MARDENHOLT/
-- **Chronicles:** Eight published chapters (I–VII and X). Chapters VIII–IX and Chapter X's illustrated plates remain pending.
+- **Chronicles:** Eight published chapters (I–VII and X). Chapter X includes four illustrated plates. Chapters VIII–IX remain unpublished pending the exact draft files.
 - **Features:** Wanderer's Chronicle, Journey Timeline, Azeroth Atlas (including dated field-note locations awaiting their chapters), and Companions Ledger with nine illustrated dossiers.
 - **Editor:** Private offline HTML editor, not part of the public repository; its browser-local drafts are not automatically synced to GitHub.
 - **Map:** Existing schematic Atlas retained pending a redesign approved by the site owner.
