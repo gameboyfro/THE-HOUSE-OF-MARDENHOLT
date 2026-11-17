@@ -44,7 +44,7 @@
       "class": "Warrior",
       "biography": "",
       "gender": "Male",
-      "portrait": "assets/crew-2026/thundrus-cheeklapper.webp",
+      "portrait": "assets/crew-2026/thundrus-cheeklapper-2026-11-17.webp",
       "encounters": [
         {
           "chapter": 1,
@@ -84,7 +84,7 @@
       "class": "Rogue",
       "biography": "",
       "gender": "Male",
-      "portrait": "assets/crew-2026/quillb-picklepocket.webp",
+      "portrait": "assets/crew-2026/quillb-picklepocket-2026-11-17.webp",
       "encounters": [
         {
           "chapter": 1,
@@ -120,7 +120,7 @@
       "class": "Druid",
       "biography": "",
       "gender": "Female",
-      "portrait": "assets/crew-2026/furrassic-maul.webp",
+      "portrait": "assets/crew-2026/furrassic-maul-2026-11-17.webp",
       "encounters": [
         {
           "chapter": 2,
@@ -168,7 +168,7 @@
       "class": "Warrior",
       "biography": "",
       "gender": "Female",
-      "portrait": "assets/crew-2026/civa-warrior.webp",
+      "portrait": "assets/crew-2026/civa-warrior-2026-11-17.webp",
       "encounters": [
         {
           "chapter": 3,
@@ -183,7 +183,7 @@
           "summary": "Quested with Atte, Quillb and Spagetoll in the Wetlands in preparation for the next day's Stockades."
         }
       ],
-      "guildRank": "Veteran"
+      "guildRank": "Officer"
     },
     {
       "id": "bu-shwacker",
@@ -208,7 +208,7 @@
       "class": "Paladin",
       "biography": "",
       "gender": "Male",
-      "portrait": "assets/crew-2026/fat-dwarfs.webp",
+      "portrait": "assets/crew-2026/fat-dwarfs-2026-11-17.webp",
       "encounters": [
         {
           "chapter": 4,
@@ -219,7 +219,7 @@
           "summary": "Met Atte in Stormwind after obtaining his bear mount, and helped reinforce the spikes on Atte's shield."
         }
       ],
-      "guildRank": "Officer"
+      "guildRank": "Veteran"
     },
     {
       "id": "melan-holya",
@@ -228,7 +228,7 @@
       "class": "Priest",
       "biography": "",
       "gender": "Female",
-      "portrait": "assets/crew-2026/melan-holya.webp",
+      "portrait": "assets/crew-2026/melan-holya-2026-11-17.webp",
       "encounters": [
         {
           "chapter": 6,
@@ -257,7 +257,7 @@
       "gender": "Female",
       "guildRank": "Initiate",
       "biography": "",
-      "portrait": "assets/crew-2026/old-warden.webp",
+      "portrait": "assets/crew-2026/old-warden-2026-11-17.webp",
       "encounters": [
         {
           "chapter": 7,

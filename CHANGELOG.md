@@ -2,6 +2,26 @@
 
 Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, and affected files. Only actual completed changes belong under Added/Changed/Fixed/Removed.
 
+## [v2.3.7] — 2026-11-17 — Seven approved guild portrait updates
+### Added
+- Seven new, pixel-exact lossless WebP copies of the user-approved companion portrait images for Melan Holya, Old Warden, Civa Warrior, Fat Dwarfs, Quillb Picklepocket, Furrassic Maul and Thundrus Cheeklapper.
+
+### Changed
+- Updated each matching Companion Ledger portrait reference to its new asset; preserved the old files in the repository.
+- Updated Civa Warrior's guild rank to Officer and Fat Dwarfs' rank to Veteran, matching the approved portrait labels.
+- The seven new portrait cards use uncropped image fitting, preserving their complete gilded frames and printed names while keeping the card layout unchanged.
+
+### Fixed
+- Prevented the seven new portraits from being cropped by the ledger's fixed-aspect-ratio card slots.
+
+### Removed
+- Nothing. Other companions, biographies, encounters, and journal chapters remain unchanged.
+
+### Pending
+- The seven approved portraits are now linked; no other portraits replaced in this release.
+
+**Files affected:** `data/companions.json`, `companions.html`, `CHANGELOG.md`, `assets/crew-2026/civa-warrior-2026-11-17.webp`, `assets/crew-2026/fat-dwarfs-2026-11-17.webp`, `assets/crew-2026/furrassic-maul-2026-11-17.webp`, `assets/crew-2026/melan-holya-2026-11-17.webp`, `assets/crew-2026/old-warden-2026-11-17.webp`, `assets/crew-2026/quillb-picklepocket-2026-11-17.webp`, `assets/crew-2026/thundrus-cheeklapper-2026-11-17.webp`.
+
 ## [v2.3.6] — 2026-11-17 — Companion Ledger duplicate cleanup
 ### Added
 - No new companion records.

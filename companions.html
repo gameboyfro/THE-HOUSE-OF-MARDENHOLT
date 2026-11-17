@@ -66,6 +66,8 @@ footer{text-align:center;color:#c4aa7b;padding:15px 20px 30px;border-top:1px sol
 .head{display:block;padding:0}
 .head .portrait{aspect-ratio:1.18;border:0;outline:0;width:100%;max-width:none}
 .head .portrait img{object-fit:cover;background:#1e342f}
+/* Show the complete approved artwork on new cards, including frame and nameplate. */
+.head .portrait img[src$='-2026-11-17.webp']{object-fit:contain}
 .head .name-area{padding:19px 22px 18px}
 @media(max-width:490px){.head{display:block;padding:0}.head .portrait{aspect-ratio:1.18;width:100%;margin:0}.head .name-area{text-align:left;padding:15px}.head .identity{text-align:left}}
 .crew-leader{display:flex;gap:20px;align-items:center;background:#efe4c8;color:#274037;border:1px solid #ad9469;padding:15px;margin:0 0 22px}
