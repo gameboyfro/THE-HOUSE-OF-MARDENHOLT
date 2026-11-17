@@ -116,7 +116,7 @@ footer{text-align:center;color:#c4aa7b;padding:15px 20px 30px;border-top:1px sol
 'use strict';
 const chapters=Array.isArray(window.MARDENHOLT_PUBLISHED_CHAPTERS)?window.MARDENHOLT_PUBLISHED_CHAPTERS:[];
 const grid=document.getElementById('grid'),search=document.getElementById('search'),filter=document.getElementById('classFilter');
-const norm=s=>String(s||'').trim().toLocaleLowerCase();
+const norm=s=>String(s||'').trim().replace(/[.!?;,:\s]+$/g,'').toLocaleLowerCase();
 const make=(tag,cls,value)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(value!==undefined)node.textContent=String(value);return node};
 const portraitDialog=document.getElementById('portraitDialog');
 const largePortrait=document.getElementById('largePortrait');

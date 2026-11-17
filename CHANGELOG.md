@@ -2,6 +2,24 @@
 
 Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, and affected files. Only actual completed changes belong under Added/Changed/Fixed/Removed.
 
+## [v2.3.6] — 2026-11-17 — Companion Ledger duplicate cleanup
+### Added
+- No new companion records.
+
+### Changed
+- Normalize trailing punctuation in the Companion Ledger's matching keys, so a name with an accidental terminal period no longer creates a second dossier.
+
+### Fixed
+- Removed the stray period from Thundrus Cheeklapper's Chapter VIII companion-list entry, eliminating his duplicate placeholder dossier while retaining the approved portrait, official dossier, and documented encounters.
+
+### Removed
+- Only the accidental, unillustrated duplicate companion card; no approved companion or artwork deleted.
+
+### Pending
+- No further duplicate Thundrus records identified.
+
+**Files affected:** `chapters.js`, `companions.html`, `CHANGELOG.md`.
+
 ## [v2.3.5] — 2026-11-15 — Restore Chapters VIII and IX from original backup
 ### Added
 - Chapter VIII — Of Scarlet Zeal and Thornbound Paths, played 2026-11-11, original journal text and two supplied original illustration assets.
