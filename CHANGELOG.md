@@ -2,6 +2,27 @@
 
 Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, and affected files. Only actual completed changes belong under Added/Changed/Fixed/Removed.
 
+## [v2.3.9] — 2026-11-20 — Publish Chapter XI from verified Editor backup
+### Added
+- Chapter XI — Of Jungle Rains and Quiet Waters, recorded 2026-11-14, with the complete and unchanged text of the 2026-11-19 approved Chronicle backup.
+- Two original Chapter XI illustrations (`assets/chapter-11-plate-01.webp`, `assets/chapter-11-plate-02.webp`) with their saved captions.
+
+### Changed
+- Extended `chapters.js` from ten to eleven published chapters without modifying Chapters I–X.
+- The Wanderer's Chronicle and Journey Timeline now automatically include Chapter XI through the existing chapter data loader.
+- Updated README to reflect eleven published chapters and ten illustrated companion dossiers.
+
+### Fixed
+- The public Visitor archive now reflects the previously completed Chapter XI entry preserved in the private Editor backup.
+
+### Removed
+- None. Existing chapter art, companion portraits, and site design remain unchanged.
+
+### Pending
+- None for Chapter XI. Further new chapters remain subject to separate approval.
+
+**Files affected:** `chapters.js`, `README.md`, `CHANGELOG.md`, `assets/chapter-11-plate-01.webp`, `assets/chapter-11-plate-02.webp`.
+
 ## [v2.3.8] — 2026-11-19 — Ten approved companion portraits and Thundrus rename
 ### Added
 - Published ten user-approved Plot Armor Crew companion portraits as optimized WebP images in `assets/crew-2026/`, keeping each completed frame visible at 1374 × 1145 pixels.
