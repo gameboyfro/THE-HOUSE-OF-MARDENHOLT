@@ -64,12 +64,11 @@ footer{text-align:center;color:#c4aa7b;padding:15px 20px 30px;border-top:1px sol
 
 /* Approved landscape guild portraits */
 .head{display:block;padding:0}
-.head .portrait{aspect-ratio:1.18;border:0;outline:0;width:100%;max-width:none}
-.head .portrait img{object-fit:cover;background:#1e342f}
-/* Show the complete approved artwork on new cards, including frame and nameplate. */
-.head .portrait img[src$='-2026-11-17.webp']{object-fit:contain}
+.head .portrait{aspect-ratio:1374/1145;border:0;outline:0;width:100%;max-width:none}
+.head .portrait img{object-fit:contain;background:#1e342f}
+/* All approved companion portraits display uncropped at the master ratio. */
 .head .name-area{padding:19px 22px 18px}
-@media(max-width:490px){.head{display:block;padding:0}.head .portrait{aspect-ratio:1.18;width:100%;margin:0}.head .name-area{text-align:left;padding:15px}.head .identity{text-align:left}}
+@media(max-width:490px){.head{display:block;padding:0}.head .portrait{aspect-ratio:1374/1145;width:100%;margin:0}.head .name-area{text-align:left;padding:15px}.head .identity{text-align:left}}
 .crew-leader{display:flex;gap:20px;align-items:center;background:#efe4c8;color:#274037;border:1px solid #ad9469;padding:15px;margin:0 0 22px}
 .crew-leader img{width:min(32%,260px);height:auto;display:block;border:2px solid #b9a277}
 .crew-leader h2{margin:0 0 8px;font-size:clamp(20px,3vw,31px);font-weight:normal}
@@ -228,6 +227,7 @@ card.append(journeys);grid.append(card);
 });
 }
 search.addEventListener('input',render);filter.addEventListener('change',render);render();
+if(location.hash==='#companion-thundrus-cheeklapper')history.replaceState(null,'','#companion-thundrus-buccaklapper');
 if(location.hash.startsWith('#companion-')){
 const el=document.getElementById(decodeURIComponent(location.hash.slice(1)));
 if(el)requestAnimationFrame(()=>el.scrollIntoView({block:'start'}));

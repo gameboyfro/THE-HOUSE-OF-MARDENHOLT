@@ -2,6 +2,25 @@
 
 Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, and affected files. Only actual completed changes belong under Added/Changed/Fixed/Removed.
 
+## [v2.3.8] — 2026-11-19 — Ten approved companion portraits and Thundrus rename
+### Added
+- Published ten user-approved Plot Armor Crew companion portraits as optimized WebP images in `assets/crew-2026/`, keeping each completed frame visible at 1374 × 1145 pixels.
+
+### Changed
+- Updated all ten portrait references in the Companions Ledger to the approved 2026-11-19 image files.
+- Renamed Thundrus Cheeklapper to **Thundrus Buccaklapper**, retained Human Warrior / Officer, and updated current ledger details, Chronicle references, homepage text and atlas field notes.
+- Updated the portrait cards to the master artwork ratio and uncropped image fitting on desktop and mobile.
+
+### Fixed
+- Preserved the full approved portrait borders and nameplates at website card size. The one-pixel width difference in Bu Shwacker's source was resolved without changing the character's proportions.
+- Preserved legacy links to Thundrus's former companion anchor by redirecting them to the renamed dossier.
+
+### Removed
+- Deleted the temporary one-time artwork-import workflow after the new Thundrus asset successfully arrived in the repository.
+
+### Pending
+- None for this approved ten-companion portrait release. Atte Mardenholt's separate portrait remains unchanged.
+
 ## [v2.3.7] — 2026-11-17 — Seven approved guild portrait updates
 ### Added
 - Seven new, pixel-exact lossless WebP copies of the user-approved companion portrait images for Melan Holya, Old Warden, Civa Warrior, Fat Dwarfs, Quillb Picklepocket, Furrassic Maul and Thundrus Cheeklapper.

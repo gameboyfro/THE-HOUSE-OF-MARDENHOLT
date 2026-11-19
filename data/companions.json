@@ -8,7 +8,7 @@
       "class": "Warlock",
       "biography": "",
       "gender": "Male",
-      "portrait": "assets/crew-2026/spagetoll-cuh.webp",
+      "portrait": "assets/crew-2026/spagetoll-cuh-2026-11-19.webp",
       "encounters": [
         {
           "chapter": 1,
@@ -38,13 +38,13 @@
       "guildRank": "Officer"
     },
     {
-      "id": "thundrus-cheeklapper",
-      "name": "Thundrus Cheeklapper",
+      "id": "thundrus-buccaklapper",
+      "name": "Thundrus Buccaklapper",
       "race": "Human",
       "class": "Warrior",
       "biography": "",
       "gender": "Male",
-      "portrait": "assets/crew-2026/thundrus-cheeklapper-2026-11-17.webp",
+      "portrait": "assets/crew-2026/thundrus-buccaklapper-2026-11-19.webp",
       "encounters": [
         {
           "chapter": 1,
@@ -84,7 +84,7 @@
       "class": "Rogue",
       "biography": "",
       "gender": "Male",
-      "portrait": "assets/crew-2026/quillb-picklepocket-2026-11-17.webp",
+      "portrait": "assets/crew-2026/quillb-picklepocket-2026-11-19.webp",
       "encounters": [
         {
           "chapter": 1,
@@ -120,7 +120,7 @@
       "class": "Druid",
       "biography": "",
       "gender": "Female",
-      "portrait": "assets/crew-2026/furrassic-maul-2026-11-17.webp",
+      "portrait": "assets/crew-2026/furrassic-maul-2026-11-19.webp",
       "encounters": [
         {
           "chapter": 2,
@@ -148,7 +148,7 @@
       "class": "Hunter",
       "biography": "",
       "gender": "Female",
-      "portrait": "assets/crew-2026/lilbigmenace-thornwhisper.webp",
+      "portrait": "assets/crew-2026/lilbigmenace-thornwhisper-2026-11-19.webp",
       "encounters": [
         {
           "chapter": 3,
@@ -168,7 +168,7 @@
       "class": "Warrior",
       "biography": "",
       "gender": "Female",
-      "portrait": "assets/crew-2026/civa-warrior-2026-11-17.webp",
+      "portrait": "assets/crew-2026/civa-warrior-2026-11-19.webp",
       "encounters": [
         {
           "chapter": 3,
@@ -192,7 +192,7 @@
       "class": "Mage",
       "biography": "",
       "gender": "Male",
-      "portrait": "assets/crew-2026/bu-shwacker.webp",
+      "portrait": "assets/crew-2026/bu-shwacker-2026-11-19.webp",
       "encounters": [
         {
           "chapter": 4,
@@ -208,7 +208,7 @@
       "class": "Paladin",
       "biography": "",
       "gender": "Male",
-      "portrait": "assets/crew-2026/fat-dwarfs-2026-11-17.webp",
+      "portrait": "assets/crew-2026/fat-dwarfs-2026-11-19.webp",
       "encounters": [
         {
           "chapter": 4,
@@ -228,7 +228,7 @@
       "class": "Priest",
       "biography": "",
       "gender": "Female",
-      "portrait": "assets/crew-2026/melan-holya-2026-11-17.webp",
+      "portrait": "assets/crew-2026/melan-holya-2026-11-19.webp",
       "encounters": [
         {
           "chapter": 6,
@@ -257,11 +257,11 @@
       "gender": "Female",
       "guildRank": "Initiate",
       "biography": "",
-      "portrait": "assets/crew-2026/old-warden-2026-11-17.webp",
+      "portrait": "assets/crew-2026/old-warden-2026-11-19.webp",
       "encounters": [
         {
           "chapter": 7,
-          "summary": "First met Atte during the City of Dalaran expedition on 10 November 2026, alongside Melan Holya, Thundrus Cheeklapper and Spagetoll Cuh."
+          "summary": "First met Atte during the City of Dalaran expedition on 10 November 2026, alongside Melan Holya, Thundrus Buccaklapper and Spagetoll Cuh."
         }
       ]
     }
