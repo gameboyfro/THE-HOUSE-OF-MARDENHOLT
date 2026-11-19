@@ -1,0 +1,44 @@
+name: Import approved Thundrus portrait (one-time)
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/import-approved-thundrus.yml
+permissions:
+  contents: write
+jobs:
+  import-portrait:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Download exact approved artwork
+        env:
+          IMAGE_URL: 'https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3.1-flash-image/images/217d0a60-6c8e-4b2d-a63e-e5cb5b92d428/ffaf178d-da10-4f3e-8ab4-c5004e3a528c/The_supplied_reference_board_has_TWO_labeled_pictures__LEFT_.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiZDQ0NWQ0MTdhMjM0MDA3NCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5NTI0MzY3MX0.G6s_dBs0rTCrV5DZyf9YpqKaNQONwfvMKKw0umajJ6k'
+        run: |
+          curl -fLsS --retry 4 --retry-delay 3 --output /tmp/thundrus-approved.png "$IMAGE_URL"
+          file /tmp/thundrus-approved.png
+      - name: Convert without stretching the approved portrait
+        run: |
+          python -m pip install --quiet pillow
+          python - <<'PY'
+          from PIL import Image, ImageOps
+          from pathlib import Path
+          p=Path('assets/crew-2026/thundrus-buccaklapper-2026-11-19.webp')
+          p.parent.mkdir(parents=True, exist_ok=True)
+          im=Image.open('/tmp/thundrus-approved.png').convert('RGB')
+          assert im.width>=900 and im.height>=700, f'Unexpected source: {im.size}'
+          if im.size != (1374,1145):
+              im=ImageOps.pad(im,(1374,1145),method=Image.Resampling.LANCZOS,color=(29,35,56))
+          im.save(p,'WEBP',quality=86,method=6)
+          assert Image.open(p).size==(1374,1145)
+          print(p, p.stat().st_size, 'bytes')
+          PY
+      - name: Publish approved Thundrus asset
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/crew-2026/thundrus-buccaklapper-2026-11-19.webp
+          git commit -m "Import approved Thundrus Buccaklapper portrait [skip ci]"
+          git push
