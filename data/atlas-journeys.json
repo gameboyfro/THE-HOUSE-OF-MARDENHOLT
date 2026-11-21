@@ -1,0 +1,748 @@
+{
+  "schema": 2,
+  "title": "House Mardenholt — Verified Travel Ledger",
+  "source": "Explicit place visits compiled from published Chronicle chapter metadata, Chapters I–XVI (2026-11-04 to 2026-11-19). Never infer visits by keyword search in prose.",
+  "geoNote": "Hand-drawn geographic placements express relative regions, not exact in-game world coordinates. Riverglades is east of Badlands/Burning Steppes; Krol'dok marker is zone-level only, not a verified dungeon entrance.",
+  "continents": [
+    "Eastern Kingdoms",
+    "Kalimdor"
+  ],
+  "locations": [
+    {
+      "id": "northshire",
+      "name": "Northshire",
+      "continent": "Eastern Kingdoms",
+      "x": 516,
+      "y": 610,
+      "kind": "landmark",
+      "major": false,
+      "chapters": [
+        1
+      ]
+    },
+    {
+      "id": "elwynn",
+      "name": "Elwynn Forest",
+      "continent": "Eastern Kingdoms",
+      "x": 499,
+      "y": 628,
+      "kind": "zone",
+      "major": false,
+      "chapters": [
+        1,
+        12
+      ]
+    },
+    {
+      "id": "stormwind",
+      "name": "Stormwind City",
+      "continent": "Eastern Kingdoms",
+      "x": 444,
+      "y": 631,
+      "kind": "settlement",
+      "major": true,
+      "chapters": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "westfall",
+      "name": "Westfall",
+      "continent": "Eastern Kingdoms",
+      "x": 405,
+      "y": 653,
+      "kind": "zone",
+      "major": false,
+      "chapters": [
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "id": "deadmines",
+      "name": "Deadmines",
+      "continent": "Eastern Kingdoms",
+      "x": 392,
+      "y": 668,
+      "kind": "dungeon",
+      "major": false,
+      "chapters": [
+        3
+      ]
+    },
+    {
+      "id": "ironforge",
+      "name": "Ironforge",
+      "continent": "Eastern Kingdoms",
+      "x": 468,
+      "y": 451,
+      "kind": "settlement",
+      "major": true,
+      "chapters": [
+        2,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "id": "dun-morogh",
+      "name": "Dun Morogh",
+      "continent": "Eastern Kingdoms",
+      "x": 452,
+      "y": 435,
+      "kind": "zone",
+      "major": false,
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "id": "hall-thanes",
+      "name": "Hall of Thanes",
+      "continent": "Eastern Kingdoms",
+      "x": 490,
+      "y": 448,
+      "kind": "dungeon",
+      "major": false,
+      "chapters": [
+        2
+      ]
+    },
+    {
+      "id": "dalaran",
+      "name": "Dalaran",
+      "continent": "Eastern Kingdoms",
+      "x": 477,
+      "y": 287,
+      "kind": "settlement",
+      "major": false,
+      "chapters": [
+        3
+      ]
+    },
+    {
+      "id": "city-dalaran",
+      "name": "City of Dalaran",
+      "continent": "Eastern Kingdoms",
+      "x": 487,
+      "y": 278,
+      "kind": "dungeon",
+      "major": false,
+      "chapters": [
+        7
+      ]
+    },
+    {
+      "id": "lordaeron",
+      "name": "Ruins of Lordaeron",
+      "continent": "Eastern Kingdoms",
+      "x": 450,
+      "y": 176,
+      "kind": "dungeon",
+      "major": false,
+      "chapters": [
+        3
+      ]
+    },
+    {
+      "id": "redridge",
+      "name": "Redridge Mountains",
+      "continent": "Eastern Kingdoms",
+      "x": 552,
+      "y": 641,
+      "kind": "zone",
+      "major": false,
+      "chapters": [
+        3
+      ]
+    },
+    {
+      "id": "lakeshire",
+      "name": "Lakeshire",
+      "continent": "Eastern Kingdoms",
+      "x": 552,
+      "y": 658,
+      "kind": "settlement",
+      "major": false,
+      "chapters": [
+        3
+      ]
+    },
+    {
+      "id": "lake-everstill",
+      "name": "Lake Everstill",
+      "continent": "Eastern Kingdoms",
+      "x": 566,
+      "y": 663,
+      "kind": "landmark",
+      "major": false,
+      "chapters": [
+        3
+      ]
+    },
+    {
+      "id": "duskwood",
+      "name": "Duskwood",
+      "continent": "Eastern Kingdoms",
+      "x": 482,
+      "y": 680,
+      "kind": "zone",
+      "major": false,
+      "chapters": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "wetlands",
+      "name": "Wetlands",
+      "continent": "Eastern Kingdoms",
+      "x": 482,
+      "y": 372,
+      "kind": "zone",
+      "major": false,
+      "chapters": [
+        4,
+        5,
+        6,
+        12
+      ]
+    },
+    {
+      "id": "shadowfang",
+      "name": "Shadowfang Keep",
+      "continent": "Eastern Kingdoms",
+      "x": 393,
+      "y": 250,
+      "kind": "dungeon",
+      "major": false,
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "id": "silverpine",
+      "name": "Silverpine Forest",
+      "continent": "Eastern Kingdoms",
+      "x": 398,
+      "y": 225,
+      "kind": "zone",
+      "major": false,
+      "chapters": [
+        4,
+        6
+      ]
+    },
+    {
+      "id": "menethil",
+      "name": "Menethil Harbor",
+      "continent": "Eastern Kingdoms",
+      "x": 440,
+      "y": 386,
+      "kind": "settlement",
+      "major": false,
+      "chapters": [
+        12
+      ]
+    },
+    {
+      "id": "booty-bay",
+      "name": "Booty Bay",
+      "continent": "Eastern Kingdoms",
+      "x": 465,
+      "y": 773,
+      "kind": "settlement",
+      "major": true,
+      "chapters": [
+        4,
+        9,
+        11,
+        16
+      ]
+    },
+    {
+      "id": "darkmoon",
+      "name": "Darkmoon Faire",
+      "continent": "Eastern Kingdoms",
+      "x": 434,
+      "y": 623,
+      "kind": "landmark",
+      "major": false,
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "id": "stockade",
+      "name": "The Stockade",
+      "continent": "Eastern Kingdoms",
+      "x": 456,
+      "y": 637,
+      "kind": "dungeon",
+      "major": false,
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "id": "excavation",
+      "name": "Excavation Site: Wetlands",
+      "continent": "Eastern Kingdoms",
+      "x": 494,
+      "y": 379,
+      "kind": "dungeon",
+      "major": false,
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "id": "gnomeregan",
+      "name": "Gnomeregan",
+      "continent": "Eastern Kingdoms",
+      "x": 432,
+      "y": 454,
+      "kind": "dungeon",
+      "major": false,
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "id": "hillsbrad",
+      "name": "Hillsbrad Foothills",
+      "continent": "Eastern Kingdoms",
+      "x": 457,
+      "y": 303,
+      "kind": "zone",
+      "major": false,
+      "chapters": [
+        7
+      ]
+    },
+    {
+      "id": "southshore",
+      "name": "Southshore",
+      "continent": "Eastern Kingdoms",
+      "x": 459,
+      "y": 320,
+      "kind": "settlement",
+      "major": false,
+      "chapters": [
+        7
+      ]
+    },
+    {
+      "id": "stranglethorn",
+      "name": "Stranglethorn Vale",
+      "continent": "Eastern Kingdoms",
+      "x": 482,
+      "y": 731,
+      "kind": "zone",
+      "major": false,
+      "chapters": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        14
+      ]
+    },
+    {
+      "id": "lake-nazferiti",
+      "name": "Lake Nazferiti",
+      "continent": "Eastern Kingdoms",
+      "x": 480,
+      "y": 708,
+      "kind": "landmark",
+      "major": false,
+      "chapters": [
+        9
+      ]
+    },
+    {
+      "id": "vile-reef",
+      "name": "The Vile Reef",
+      "continent": "Eastern Kingdoms",
+      "x": 430,
+      "y": 747,
+      "kind": "landmark",
+      "major": false,
+      "chapters": [
+        9
+      ]
+    },
+    {
+      "id": "western-plague",
+      "name": "Western Plaguelands",
+      "continent": "Eastern Kingdoms",
+      "x": 497,
+      "y": 175,
+      "kind": "zone",
+      "major": false,
+      "chapters": [
+        8
+      ]
+    },
+    {
+      "id": "tirisfal",
+      "name": "Tirisfal Glades",
+      "continent": "Eastern Kingdoms",
+      "x": 458,
+      "y": 158,
+      "kind": "zone",
+      "major": false,
+      "chapters": [
+        8,
+        12
+      ]
+    },
+    {
+      "id": "scarlet",
+      "name": "Scarlet Monastery",
+      "continent": "Eastern Kingdoms",
+      "x": 469,
+      "y": 161,
+      "kind": "dungeon",
+      "major": true,
+      "chapters": [
+        8
+      ]
+    },
+    {
+      "id": "scarlet-cathedral",
+      "name": "Scarlet Monastery Cathedral",
+      "continent": "Eastern Kingdoms",
+      "x": 480,
+      "y": 170,
+      "kind": "dungeon",
+      "major": false,
+      "chapters": [
+        12,
+        15
+      ]
+    },
+    {
+      "id": "drowned-city",
+      "name": "The Drowned City",
+      "continent": "Eastern Kingdoms",
+      "x": 432,
+      "y": 728,
+      "kind": "dungeon",
+      "major": false,
+      "chapters": [
+        10,
+        12
+      ]
+    },
+    {
+      "id": "eastvale",
+      "name": "Eastvale Logging Camp",
+      "continent": "Eastern Kingdoms",
+      "x": 531,
+      "y": 614,
+      "kind": "settlement",
+      "major": false,
+      "chapters": [
+        12
+      ]
+    },
+    {
+      "id": "riverglades",
+      "name": "Riverglades",
+      "continent": "Eastern Kingdoms",
+      "x": 596,
+      "y": 536,
+      "kind": "zone",
+      "major": true,
+      "chapters": [
+        13,
+        15,
+        16
+      ]
+    },
+    {
+      "id": "farholde",
+      "name": "Farholde Keep",
+      "continent": "Eastern Kingdoms",
+      "x": 602,
+      "y": 550,
+      "kind": "settlement",
+      "major": false,
+      "chapters": [
+        13
+      ]
+    },
+    {
+      "id": "kroldok",
+      "name": "Krol'dok Stronghold",
+      "continent": "Eastern Kingdoms",
+      "x": 617,
+      "y": 515,
+      "kind": "dungeon",
+      "major": false,
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "id": "swamp-sorrows",
+      "name": "Swamp of Sorrows",
+      "continent": "Eastern Kingdoms",
+      "x": 565,
+      "y": 686,
+      "kind": "zone",
+      "major": false,
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "id": "darkshore",
+      "name": "Darkshore",
+      "continent": "Kalimdor",
+      "x": 314,
+      "y": 249,
+      "kind": "zone",
+      "major": false,
+      "chapters": [
+        5,
+        7
+      ]
+    },
+    {
+      "id": "masters-glaive",
+      "name": "The Master's Glaive",
+      "continent": "Kalimdor",
+      "x": 333,
+      "y": 290,
+      "kind": "landmark",
+      "major": false,
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "id": "ashenvale",
+      "name": "Ashenvale",
+      "continent": "Kalimdor",
+      "x": 389,
+      "y": 332,
+      "kind": "zone",
+      "major": true,
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "id": "bfd",
+      "name": "Blackfathom Deeps",
+      "continent": "Kalimdor",
+      "x": 314,
+      "y": 310,
+      "kind": "dungeon",
+      "major": false,
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "id": "barrens",
+      "name": "The Barrens",
+      "continent": "Kalimdor",
+      "x": 462,
+      "y": 438,
+      "kind": "zone",
+      "major": false,
+      "chapters": [
+        6,
+        8,
+        10,
+        14
+      ]
+    },
+    {
+      "id": "ratchet",
+      "name": "Ratchet",
+      "continent": "Kalimdor",
+      "x": 532,
+      "y": 475,
+      "kind": "settlement",
+      "major": true,
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "id": "wailing",
+      "name": "Wailing Caverns",
+      "continent": "Kalimdor",
+      "x": 447,
+      "y": 459,
+      "kind": "dungeon",
+      "major": false,
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "id": "fray",
+      "name": "Fray Island",
+      "continent": "Kalimdor",
+      "x": 534,
+      "y": 496,
+      "kind": "landmark",
+      "major": false,
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "id": "stonetalon",
+      "name": "Stonetalon Mountains",
+      "continent": "Kalimdor",
+      "x": 375,
+      "y": 405,
+      "kind": "zone",
+      "major": false,
+      "chapters": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": "stonetalon-peak",
+      "name": "Stonetalon Peak",
+      "continent": "Kalimdor",
+      "x": 374,
+      "y": 380,
+      "kind": "landmark",
+      "major": false,
+      "chapters": [
+        7
+      ]
+    },
+    {
+      "id": "nijels-point",
+      "name": "Nijel's Point",
+      "continent": "Kalimdor",
+      "x": 326,
+      "y": 436,
+      "kind": "settlement",
+      "major": false,
+      "chapters": [
+        7
+      ]
+    },
+    {
+      "id": "desolace",
+      "name": "Desolace",
+      "continent": "Kalimdor",
+      "x": 352,
+      "y": 487,
+      "kind": "zone",
+      "major": false,
+      "chapters": [
+        7,
+        12,
+        14
+      ]
+    },
+    {
+      "id": "rfk",
+      "name": "Razorfen Kraul",
+      "continent": "Kalimdor",
+      "x": 472,
+      "y": 520,
+      "kind": "dungeon",
+      "major": false,
+      "chapters": [
+        8
+      ]
+    },
+    {
+      "id": "rfd",
+      "name": "Razorfen Downs",
+      "continent": "Kalimdor",
+      "x": 474,
+      "y": 543,
+      "kind": "dungeon",
+      "major": false,
+      "chapters": [
+        10,
+        14
+      ]
+    },
+    {
+      "id": "feralas",
+      "name": "Feralas",
+      "continent": "Kalimdor",
+      "x": 367,
+      "y": 556,
+      "kind": "zone",
+      "major": false,
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "id": "dustwallow",
+      "name": "Dustwallow Marsh",
+      "continent": "Kalimdor",
+      "x": 540,
+      "y": 534,
+      "kind": "zone",
+      "major": false,
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "id": "theramore",
+      "name": "Theramore Isle",
+      "continent": "Kalimdor",
+      "x": 570,
+      "y": 551,
+      "kind": "settlement",
+      "major": true,
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "id": "tanaris",
+      "name": "Tanaris",
+      "continent": "Kalimdor",
+      "x": 480,
+      "y": 691,
+      "kind": "zone",
+      "major": false,
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "id": "gadgetzan",
+      "name": "Gadgetzan",
+      "continent": "Kalimdor",
+      "x": 492,
+      "y": 678,
+      "kind": "settlement",
+      "major": true,
+      "chapters": [
+        16
+      ]
+    }
+  ]
+}
