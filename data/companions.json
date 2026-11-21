@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "companions": [
     {
       "id": "spagetoll-cuh",
@@ -264,6 +264,17 @@
           "summary": "First met Atte during the City of Dalaran expedition on 10 November 2026, alongside Melan Holya, Thundrus Buccaklapper and Spagetoll Cuh."
         }
       ]
+    },
+    {
+      "id": "matt-shamon",
+      "name": "Matt Shamon",
+      "race": "Dwarf",
+      "class": "Shaman",
+      "gender": "Male",
+      "guildRank": "Officer",
+      "biography": "",
+      "portrait": "assets/crew-2026/matt-shamon-2026-11-21.webp",
+      "encounters": []
     }
   ]
 }

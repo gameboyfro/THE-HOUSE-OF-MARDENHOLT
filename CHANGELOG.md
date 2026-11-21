@@ -2,6 +2,25 @@
 
 Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, and affected files. Only actual completed changes belong under Added/Changed/Fixed/Removed.
 
+## [v2.3.10] — 2026-11-21 — Add approved Matt Shamon companion portrait
+### Added
+- Matt Shamon — male Dwarf Shaman, Officer of Plot Armor Crew — as the eleventh illustrated Companion Ledger dossier.
+- The user-approved Matt Shamon portrait at `assets/crew-2026/matt-shamon-2026-11-21.webp` (1374 × 1145 WebP). The exact approved artwork was converted for the website without retouching or regenerating it.
+
+### Changed
+- Expanded the public `data/companions.json` roster from ten to eleven companions and updated the README counts accordingly.
+
+### Fixed
+- Matt now has a unique dossier instead of being absent from the public companion list.
+
+### Removed
+- None. All ten previous companion records and portraits are preserved as they were.
+
+### Pending
+- Link Matt's confirmed involvement helping Atte in Desolace to Chapter XII only after that chapter's manuscript and illustrations have been reviewed and published. No unpublished Chapter XII details were added to the public dossier.
+
+**Files affected:** `data/companions.json`, `README.md`, `CHANGELOG.md`, `assets/crew-2026/matt-shamon-2026-11-21.webp`.
+
 ## [v2.3.9] — 2026-11-20 — Publish Chapter XI from verified Editor backup
 ### Added
 - Chapter XI — Of Jungle Rains and Quiet Waters, recorded 2026-11-14, with the complete and unchanged text of the 2026-11-19 approved Chronicle backup.
