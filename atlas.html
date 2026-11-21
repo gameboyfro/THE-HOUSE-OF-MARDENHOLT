@@ -32,7 +32,7 @@ button,input,select{font:inherit}button{cursor:pointer}a{color:inherit}a:focus-v
 .map-frame{position:relative;border:8px solid #815f36;outline:2px solid #d9bb86;outline-offset:-13px;background:#dac397;min-height:610px;display:grid;place-items:center;overflow:hidden}
 .map-outer{width:100%;max-height:780px;overflow:auto;scrollbar-width:thin;scrollbar-color:#aa8d5e #e4cf9e;display:flex;justify-content:center}
 #map{display:block;width:min(100%,720px);min-width:490px;height:auto;aspect-ratio:760/850;touch-action:pan-x pan-y}
-#map .coast{fill:#c4bc8d;stroke:#665d3b;stroke-width:3.6;stroke-linecap:round;stroke-linejoin:round;filter:url(#landshade)}
+#map .coast{stroke:#665d3b;stroke-width:3.6;stroke-linecap:round;stroke-linejoin:round;filter:url(#landshade)}
 #map .innerland{fill:none;stroke:#6f6547;stroke-width:1.5;opacity:.38}
 #map .topo{fill:none;stroke:#92845b;stroke-width:1.8;stroke-dasharray:3 5;opacity:.75}
 #map .ridge{fill:none;stroke:#69583c;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;opacity:.62}
@@ -43,6 +43,7 @@ button,input,select{font:inherit}button{cursor:pointer}a{color:inherit}a:focus-v
 #map .pin{cursor:pointer;outline:none}#map .pin circle{fill:#244839;stroke:#f0d5a0;stroke-width:2.4;filter:drop-shadow(1px 3px 2px #392b1f77)}#map .pin text{fill:#f7e9c4;font:12px Georgia,serif;pointer-events:none}
 #map .pin:not(.selected):hover circle,#map .pin:focus-visible circle{fill:#926d37;stroke:#fff0d0}
 #map .pin.selected circle{fill:#923d2e;stroke:#f8e4b5;stroke-width:3}
+#eastern-art[hidden],#kalimdor-art[hidden]{display:none}
 #map .pin .pin-name{fill:#3b2e20;font:12px Georgia,serif;paint-order:stroke;stroke:#efe0b8;stroke-width:3px;stroke-linejoin:round;pointer-events:none;letter-spacing:.02em}
 #map .pin.dimmed{opacity:.16}#map .pin.hidden{display:none}
 .continent-note{text-align:center;color:#68563b;font:italic 12px Georgia,serif;margin:8px auto 0;max-width:680px}
