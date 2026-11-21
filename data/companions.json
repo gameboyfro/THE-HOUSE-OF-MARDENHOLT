@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "companions": [
     {
       "id": "spagetoll-cuh",
@@ -274,7 +274,12 @@
       "guildRank": "Officer",
       "biography": "",
       "portrait": "assets/crew-2026/matt-shamon-2026-11-21.webp",
-      "encounters": []
+      "encounters": [
+        {
+          "chapter": 12,
+          "summary": "Atte helped Matt with a Shaman totem quest in Desolace. Both travelled by gryphon, with Atte flying above Matt."
+        }
+      ]
     }
   ]
 }

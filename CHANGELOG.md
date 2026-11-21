@@ -2,6 +2,27 @@
 
 Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, and affected files. Only actual completed changes belong under Added/Changed/Fixed/Removed.
 
+## [v2.3.11] — 2026-11-21 — Publish Chapter XII and four illustrated story plates
+### Added
+- Chapter XII — Of Black Stallions and Scarlet Halls (Day Twelve, played 2026-11-15), including the revised first-person Chronicle with Matt Shamon’s Desolace totem-quest assistance and gryphon flight.
+- Four approved Chapter XII illustrations as optimized 1600 × 900 WebP plates in `assets/chapter-12-plate-01.webp` through `assets/chapter-12-plate-04.webp`. The original generated images are preserved outside the public repository.
+
+### Changed
+- Extended `chapters.js` from eleven to twelve chapters. The public Chronicle and Journey Timeline consume this same source automatically.
+- Added the published Chapter XII encounter to Matt Shamon’s existing Officer dossier in the Companions Ledger.
+- Updated the README Chronicle count and release notes.
+
+### Fixed
+- Matt Shamon’s confirmed Day XII participation now links to the published chapter. Anonymous dungeon companions remain unnamed.
+
+### Removed
+- None. Chapters I–XI and the eleven published companion portraits and other existing artwork are unchanged.
+
+### Pending
+- Day XIII / Riverglades remains unpublished. Azeroth Atlas is still a schematic beta; no geographic coordinates were invented in this release.
+
+**Files affected:** `chapters.js`, `data/companions.json`, `README.md`, `CHANGELOG.md`, `assets/chapter-12-plate-01.webp`, `assets/chapter-12-plate-02.webp`, `assets/chapter-12-plate-03.webp`, `assets/chapter-12-plate-04.webp`.
+
 ## [v2.3.10] — 2026-11-21 — Add approved Matt Shamon companion portrait
 ### Added
 - Matt Shamon — male Dwarf Shaman, Officer of Plot Armor Crew — as the eleventh illustrated Companion Ledger dossier.
