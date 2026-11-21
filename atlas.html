@@ -31,7 +31,7 @@ button,input,select{font:inherit}button{cursor:pointer}a{color:inherit}a:focus-v
 .map-pane{position:relative;background:radial-gradient(ellipse,#f0e1bf,#d6bc88);padding:17px 17px 10px;overflow:hidden;border-right:2px solid #9e8356}
 .map-frame{position:relative;border:8px solid #815f36;outline:2px solid #d9bb86;outline-offset:-13px;background:#dac397;min-height:610px;display:grid;place-items:center;overflow:hidden}
 .map-outer{width:100%;max-height:780px;overflow:auto;scrollbar-width:thin;scrollbar-color:#aa8d5e #e4cf9e;display:flex;justify-content:center}
-.map-canvas{position:relative;width:100%;max-width:1000px;min-width:720px;aspect-ratio:1000/667;background:#d0bb8c;overflow:visible;box-shadow:0 0 0 1px #a18350}
+.map-canvas{position:relative;width:100%;max-width:none;min-width:720px;aspect-ratio:1000/667;background:#d0bb8c;overflow:visible;box-shadow:0 0 0 1px #a18350}
 .map-canvas>img{width:100%;height:100%;display:block;object-fit:contain;filter:sepia(.08) contrast(1.04) saturate(.82)}
 #map{position:absolute;inset:0;display:block;width:100%;height:100%;touch-action:pan-x pan-y;overflow:visible}
 #mapArtError{position:absolute;inset:10% 8%;background:#f1e5c8;display:grid;place-items:center;color:#533723;padding:20px;text-align:center;border:2px solid #886d40;z-index:5}
@@ -218,13 +218,14 @@ for(const t of document.querySelectorAll(".tabs button"))t.setAttribute("aria-se
 if(selected&&!filtered(selected))selected=null;
 drawMarkers();drawPlaces();drawLedger();
 }
-for(const t of document.querySelectorAll(".tabs button"))t.addEventListener("click",()=>{active=t.dataset.continent;term="";$("search").value="";selected=null;refresh()});
+for(const t of document.querySelectorAll(".tabs button"))t.addEventListener("click",()=>{active=t.dataset.continent;term="";$("search").value="";selected=null;refresh();centerMapOnLand()});
 $("search").addEventListener("input",e=>{term=e.target.value.trim().toLocaleLowerCase();refresh()});
 $("kind").addEventListener("change",e=>{type=e.target.value;refresh()});
 $("mapBase").addEventListener("error",()=>{$("mapArtError").hidden=false});
 $("mapBase").addEventListener("load",()=>{$("mapArtError").hidden=true});
 let mapScale=1;
-function setMapScale(v){mapScale=Math.min(2.4,Math.max(1,v));$("map").parentElement.style.width=(mapScale*100)+"%"}
+function centerMapOnLand(){const pane=$("map").closest(".map-outer");pane.scrollLeft=Math.max(0,(pane.scrollWidth-pane.clientWidth)*.5)}
+function setMapScale(v){mapScale=Math.min(2.4,Math.max(1,v));$("map").parentElement.style.width=(mapScale*100)+"%";centerMapOnLand()}
 $("zoomIn").addEventListener("click",()=>setMapScale(mapScale+.25));
 $("zoomOut").addEventListener("click",()=>setMapScale(mapScale-.25));
 $("zoomReset").addEventListener("click",()=>setMapScale(1));
@@ -235,6 +236,8 @@ const incoming=new URLSearchParams(location.search).get("place");
 if(incoming){const loc=registry.find(x=>x.id===incoming);if(loc){active=loc.continent;selected=loc}}
 if(!selected)selected=registry.find(x=>x.id==="riverglades")||null;
 refresh();
+centerMapOnLand();
+if($("mapBase").complete && $("mapBase").naturalWidth===0)$("mapArtError").hidden=false;
 fetch('./data/atlas-journeys.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{if(d&&Array.isArray(d.locations)){registry=d.locations;if(selected)selected=registry.find(x=>x.id===selected.id)||null;refresh()}}).catch(()=>{});
 })();
 </script>
