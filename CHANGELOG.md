@@ -2,6 +2,27 @@
 
 Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, and affected files. Only actual completed changes belong under Added/Changed/Fixed/Removed.
 
+## [v2.3.13] — 2026-11-21 — Synchronize Chronicle galleries with owner's Editor
+### Added
+- Restored 14 exact WebP images from the owner's 2026-11-21 Editor backup into `assets/editor-2026-11-21/`, with source file bytes verified against their Git object hashes.
+- Added the Editor-first artwork publishing rules to the README.
+
+### Changed
+- Reconciled all 13 public chapter galleries with the 31 image selections, original captions, and exact ordering saved in the owner's private Chronicle Editor backup.
+- Reused 17 existing GitHub artwork files that already matched Editor images exactly; updated all gallery references and captions as necessary.
+
+### Fixed
+- Removed nine unsolicited image displays from the public Chronicle and replaced unapproved substitutes with the owner's exact selected images.
+- Chapter gallery counts now match the private Editor backup for every published chapter.
+
+### Removed
+- Removed references to additional or substituted journal illustrations; historical assets remain stored for reversible rollback. No chapter story text, gameplay records, or companion records were changed.
+
+### Pending
+- Future gallery changes require the owner to add images to the Editor or explicitly approve the exact change before publication.
+
+**Files affected:** `chapters.js`, `README.md`, `CHANGELOG.md`, and 14 exact source images under `assets/editor-2026-11-21/`.
+
 ## [v2.3.12] — 2026-11-21 — Publish Chapter XIII with Riverglades and Farholdekeep plates
 ### Added
 - Chapter XIII — Of New Horizons and the Smith's Craft, set on 2026-11-16, recording Atte's solo exploration and questing in Riverglades, the confirmed Farholdekeep setting, and Blacksmithing reaching 150.

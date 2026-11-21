@@ -13,6 +13,15 @@
 This repository is intended to hold only the **public Visitor website** and documentation.
 **Never upload** the private Editor, browser-storage backups, unpublished chapters, credentials, tokens, or personal information here. If the repository is changed to Public, all committed files and their history become publicly visible.
 
+
+## Chronicle artwork ownership — Editor is the source of truth
+- The owner's private **Mardenholt Wanderers Chronicle Editor backup** controls each published chapter's illustration selection, count, order, and caption.
+- **Never** publish an illustration merely because it was generated, discussed, proposed, or sent in chat. Art must be explicitly added to the specific chapter in the Editor, or the owner must explicitly approve the exact gallery change.
+- At publication, compare each gallery to the latest owner-supplied Editor backup and preserve the exact image bytes and caption text. Never substitute generated artwork for a selected image.
+- If an image in the Editor backup is not yet on the public site, upload that exact source image without retouching. If a published photo is not selected in the Editor, remove its gallery reference (keep old Git assets only for rollback).
+- Never upload the private Editor application, full backup, or its private media manifest to the public repository.
+- The 2026-11-21 photo reconciliation verified **31 owner-selected illustrations** across Chapters I–XIII; the current public galleries contain exactly those 31 selections.
+
 ## Publishing and preview workflow
 1. Prepare chapter material and local editor backups privately; do **not** commit the private editor, account tokens, or unpublished drafts.
 2. Open a draft pull request from a feature branch to `main`.
