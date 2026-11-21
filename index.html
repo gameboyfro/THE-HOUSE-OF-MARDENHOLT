@@ -155,6 +155,14 @@
 @media print{.chronicle-reader{display:none!important}.printed-entry .book-plate img{max-width:90%;max-height:500px}.printed-entry{break-after:page}}
 
 .chronicle-subheading{font:600 14px/1.45 Georgia,serif;letter-spacing:.08em;color:#85622d;margin:26px 0 10px;border-bottom:1px solid #c9af7e;padding-bottom:5px}
+
+/* Chapter-specific inline plates: keep older book-spread layouts unchanged. */
+.book-spread.inline-photo-chapter{grid-template-columns:minmax(0,1fr)}
+.book-spread.inline-photo-chapter .book-leaf.left{width:100%;max-width:930px;margin:0 auto;border-right:0}
+.book-spread.inline-photo-chapter .book-leaf.right{display:none}
+.book-prose .inline-chronicle-plate{margin:36px auto 40px;max-width:760px;text-align:center;break-inside:avoid}
+.book-prose .inline-chronicle-plate img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.book-prose .inline-chronicle-plate figcaption{font:italic 14px/1.65 Georgia,serif;margin-top:12px;color:#79674b}
 </style>
 </head>
 <body>
@@ -313,8 +321,37 @@ const shelf=$('#publishedChronicle');
 function visitorPhotos(e){return (Array.isArray(e.photos)?e.photos:[]).map(p=>({src:typeof p==='string'?p:p?.src,caption:typeof p==='object'?String(p?.caption||''):''})).filter(p=>typeof p.src==='string'&&(/^(?:assets\/[^?#]+\.(?:webp|jpe?g|png)|data:image\/(?:webp|jpeg|png);base64,[a-z0-9+/=]+)$/i.test(p.src))).concat((e.image&&(!Array.isArray(e.photos)||!e.photos.length)&&(/^(?:assets\/[^?#]+\.(?:webp|jpe?g|png)|data:image\/(?:webp|jpeg|png);base64,[a-z0-9+/=]+)$/i.test(e.image)))?[{src:e.image,caption:''}]:[]);}
 function textParagraphs(container,text){container.replaceChildren();const paragraphs=String(text||'').replace(/\r\n?/g,'\n').split(/\n\s*\n/);for(const block of paragraphs){const b=block.trim();if(!b)continue;if(b.length<100&&/^(?:THE MASTER'S GLAIVE|INTO THE BLACKFATHOM DEEPS|FAREWELL TO DUSKWOOD|FELLOWSHIP IN THE WETLANDS|A NIGHT BENEATH STORMWIND'S WALLS|ARCHIVIST'S NOTE|A MORNING AMONG THE DARKMOON BANNERS|THE PRISON BENEATH STORMWIND|THE WOLVES OF SHADOWFANG|THE SECRETS BENEATH THE WETLANDS|THE WAILING DEPTHS|THE AFFRAY — A WARRIOR'S TRIAL|THE TRAIL OF THE BURNED NOTES|THROUGH THE SILENCE OF DUN MOROGH|GNOMEREGAN — THE CITY THAT FELL|THE FIRES OF IRONFORGE)/.test(b)){const h=document.createElement('h4');h.className='chronicle-subheading';h.textContent=b;container.append(h)}else{const p=document.createElement('p');p.textContent=b;container.append(p)}}}
 function chapterNotes(e){const notes=$('#readerChapterNotes');notes.replaceChildren();for(const [label,value] of [['Traveling with',e.companions],['Quests and activities',e.quests],['Equipment and crafts',e.gear],["The day's end",e.outcome]]){if(!value)continue;const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=value;notes.append(dt,dd)}}
+
+function placeInlineChapterPhotos(e){
+ const story=$('#readerChapterStory');
+ const items=Array.isArray(e.inlinePhotos)?e.inlinePhotos:[];
+ const spread=$('#chronicleReader .book-spread');
+ if(spread)spread.classList.toggle('inline-photo-chapter',items.length>0);
+ if(!items.length)return;
+ const headings=new Set(Array.isArray(e.headings)?e.headings:[]);
+ for(const p of [...story.querySelectorAll('p')]){
+  if(headings.has(p.textContent.trim())){
+   const heading=document.createElement('h4');heading.className='chronicle-subheading';
+   heading.textContent=p.textContent;p.replaceWith(heading);
+  }
+ }
+ const pics=visitorPhotos(e);
+ for(const [i,item] of items.entries()){
+  const after=String(item.after||'').trim();
+  const target=[...story.querySelectorAll('p')].find(p=>p.textContent.includes(after));
+  const pic=pics[Number(item.photoIndex)];
+  if(!target||!pic)continue;
+  const fig=document.createElement('figure');fig.className='book-plate inline-chronicle-plate';
+  const num=document.createElement('div');num.className='book-plate-number';
+  num.textContent='PLATE '+String(i+1).padStart(2,'0');
+  const img=document.createElement('img');img.src=assetUrl(pic.src);img.alt=pic.caption||'Chronicle illustration';
+  img.loading='lazy';img.addEventListener('click',()=>openImage(pic.src,img.alt));
+  const cap=document.createElement('figcaption');cap.textContent=pic.caption||'From the travels of Ser Atte Mardenholt';
+  fig.append(num,img,cap);target.after(fig);
+ }
+}
 let activeReaderIndex=-1;
-function openVisitorReader(i){if(i<0||i>=published.length)return;activeReaderIndex=i;const e=published[i];$('#readerProgress').textContent=`${i+1} / ${published.length}`;$('#readerPrev').disabled=i===0;$('#readerNext').disabled=i===published.length-1;$('#readerChapterNumber').textContent='CHAPTER '+String(i+1).padStart(2,'0');$('#readerChapterTitle').textContent=e.title;$('#readerChapterDate').textContent=[prettyDate(e.date),e.zone].filter(Boolean).join('  ·  ');textParagraphs($('#readerChapterStory'),e.story);chapterNotes(e);const photos=$('#readerChapterPhotos');photos.replaceChildren();const pics=visitorPhotos(e);if(!pics.length){photos.innerHTML='<div class="book-empty-plate">The ink is dry, but no illustration has yet been placed upon this page.</div>'}else pics.forEach((p,j)=>{const fig=document.createElement('figure');fig.className='book-plate';const num=document.createElement('div');num.className='book-plate-number';num.textContent='PLATE '+String(j+1).padStart(2,'0');const img=document.createElement('img');img.src=p.src;img.alt=p.caption||`Illustration ${j+1} from ${e.title}`;img.loading='lazy';img.addEventListener('click',()=>openImage(p.src,img.alt));const cap=document.createElement('figcaption');cap.textContent=p.caption||'From the travels of Ser Atte Mardenholt';fig.append(num,img,cap);photos.append(fig)});const d=$('#chronicleReader');if(!d.open)d.showModal();d.querySelector('.reader-surface').scrollTop=0}
+function openVisitorReader(i){if(i<0||i>=published.length)return;activeReaderIndex=i;const e=published[i];$('#readerProgress').textContent=`${i+1} / ${published.length}`;$('#readerPrev').disabled=i===0;$('#readerNext').disabled=i===published.length-1;$('#readerChapterNumber').textContent='CHAPTER '+String(i+1).padStart(2,'0');$('#readerChapterTitle').textContent=e.title;$('#readerChapterDate').textContent=[prettyDate(e.date),e.zone].filter(Boolean).join('  ·  ');textParagraphs($('#readerChapterStory'),e.story);placeInlineChapterPhotos(e);chapterNotes(e);const photos=$('#readerChapterPhotos');photos.replaceChildren();const pics=visitorPhotos(e);if(Array.isArray(e.inlinePhotos)&&e.inlinePhotos.length){photos.replaceChildren();}else if(!pics.length){photos.innerHTML='<div class="book-empty-plate">The ink is dry, but no illustration has yet been placed upon this page.</div>'}else pics.forEach((p,j)=>{const fig=document.createElement('figure');fig.className='book-plate';const num=document.createElement('div');num.className='book-plate-number';num.textContent='PLATE '+String(j+1).padStart(2,'0');const img=document.createElement('img');img.src=p.src;img.alt=p.caption||`Illustration ${j+1} from ${e.title}`;img.loading='lazy';img.addEventListener('click',()=>openImage(p.src,img.alt));const cap=document.createElement('figcaption');cap.textContent=p.caption||'From the travels of Ser Atte Mardenholt';fig.append(num,img,cap);photos.append(fig)});const d=$('#chronicleReader');if(!d.open)d.showModal();d.querySelector('.reader-surface').scrollTop=0}
 $('#readerClose').addEventListener('click',()=>$('#chronicleReader').close());$('#readerPrev').addEventListener('click',()=>openVisitorReader(activeReaderIndex-1));$('#readerNext').addEventListener('click',()=>openVisitorReader(activeReaderIndex+1));
 published.forEach((e,i)=>{const card=document.createElement('article');card.className='journal-card reader-chapter';const images=visitorPhotos(e);const preview=String(e.story||'').replace(/\s+/g,' ').slice(0,330);card.innerHTML=`<div class="journal-card-top"><div><span class="chapter-number">CHAPTER ${String(i+1).padStart(2,'0')}</span><h3>${escapeHtml(e.title)}</h3><div class="meta">${escapeHtml(prettyDate(e.date))}${e.zone?' · '+escapeHtml(e.zone):''}</div></div><span style="color:#ad9561;font-size:27px">❧</span></div>${e.companions?`<div class="journal-card-extra"><strong>Traveling with:</strong> ${escapeHtml(e.companions)}</div>`:''}<p class="chronicle-preview">${escapeHtml(preview)}${e.story?.length>330?'…':''}</p><div class="chapter-photo-count">✥ ${images.length} illustration${images.length===1?'':'s'}</div><button class="chronicle-read-button" type="button" data-read-public="${i}">Read this chapter →</button>`;shelf.appendChild(card)});
 shelf.addEventListener('click',e=>{const b=e.target.closest('[data-read-public]');if(b)openVisitorReader(Number(b.dataset.readPublic))});
