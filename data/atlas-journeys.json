@@ -49,8 +49,8 @@
       "id": "stormwind",
       "name": "Stormwind City",
       "continent": "Eastern Kingdoms",
-      "x": 436.57,
-      "y": 457.1,
+      "x": 445.1,
+      "y": 473.11,
       "kind": "capital",
       "major": true,
       "chapters": [
@@ -62,11 +62,11 @@
         9,
         12
       ],
-      "worldX": 716.09,
-      "worldY": 414.47,
+      "worldX": 722.81,
+      "worldY": 427.08,
       "worldMapId": 0,
-      "positionSource": "client-subzone",
-      "positionPrecision": "subzone",
+      "positionSource": "client-place",
+      "positionPrecision": "named-place",
       "positionNote": ""
     },
     {
@@ -241,18 +241,18 @@
       "id": "lakeshire",
       "name": "Lakeshire",
       "continent": "Eastern Kingdoms",
-      "x": 515.66,
-      "y": 474.76,
+      "x": 518.13,
+      "y": 475.22,
       "kind": "settlement",
       "major": false,
       "chapters": [
         3
       ],
-      "worldX": 778.39,
-      "worldY": 428.38,
+      "worldX": 780.33,
+      "worldY": 428.74,
       "worldMapId": 0,
-      "positionSource": "client-subzone",
-      "positionPrecision": "subzone",
+      "positionSource": "client-place",
+      "positionPrecision": "named-place",
       "positionNote": ""
     },
     {
@@ -355,26 +355,26 @@
       "id": "menethil",
       "name": "Menethil Harbor",
       "continent": "Eastern Kingdoms",
-      "x": 478.01,
-      "y": 319.01,
+      "x": 479.04,
+      "y": 317.09,
       "kind": "settlement",
       "major": false,
       "chapters": [
         12
       ],
-      "worldX": 748.73,
-      "worldY": 305.7,
+      "worldX": 749.54,
+      "worldY": 304.19,
       "worldMapId": 0,
-      "positionSource": "client-subzone",
-      "positionPrecision": "subzone",
+      "positionSource": "client-place",
+      "positionPrecision": "named-place",
       "positionNote": ""
     },
     {
       "id": "booty-bay",
       "name": "Booty Bay",
       "continent": "Eastern Kingdoms",
-      "x": 441.48,
-      "y": 619.98,
+      "x": 441.6,
+      "y": 621.98,
       "kind": "settlement",
       "major": true,
       "chapters": [
@@ -383,11 +383,11 @@
         11,
         16
       ],
-      "worldX": 719.96,
-      "worldY": 542.76,
+      "worldX": 720.05,
+      "worldY": 544.33,
       "worldMapId": 0,
-      "positionSource": "client-subzone",
-      "positionPrecision": "subzone",
+      "positionSource": "client-place",
+      "positionPrecision": "named-place",
       "positionNote": ""
     },
     {
@@ -484,18 +484,18 @@
       "id": "southshore",
       "name": "Southshore",
       "continent": "Eastern Kingdoms",
-      "x": 472.19,
-      "y": 232.66,
+      "x": 470.59,
+      "y": 235.4,
       "kind": "settlement",
       "major": false,
       "chapters": [
         7
       ],
-      "worldX": 744.15,
-      "worldY": 237.69,
+      "worldX": 742.89,
+      "worldY": 239.85,
       "worldMapId": 0,
-      "positionSource": "client-subzone",
-      "positionPrecision": "subzone",
+      "positionSource": "client-place",
+      "positionPrecision": "named-place",
       "positionNote": ""
     },
     {
@@ -692,18 +692,18 @@
       "id": "farholde",
       "name": "Farholde Keep",
       "continent": "Eastern Kingdoms",
-      "x": 601.21,
-      "y": 474.81,
+      "x": 592.96,
+      "y": 471.7,
       "kind": "settlement",
       "major": false,
       "chapters": [
         13
       ],
-      "worldX": 845.77,
-      "worldY": 428.42,
+      "worldX": 839.27,
+      "worldY": 425.97,
       "worldMapId": 0,
-      "positionSource": "client-subzone",
-      "positionPrecision": "subzone",
+      "positionSource": "client-flight-point",
+      "positionPrecision": "named-place",
       "positionNote": ""
     },
     {
@@ -840,18 +840,18 @@
       "id": "ratchet",
       "name": "Ratchet",
       "continent": "Kalimdor",
-      "x": 564.25,
-      "y": 373.18,
+      "x": 564.91,
+      "y": 374.43,
       "kind": "settlement",
       "major": true,
       "chapters": [
         6
       ],
-      "worldX": 276.42,
-      "worldY": 351.23,
+      "worldX": 276.96,
+      "worldY": 352.25,
       "worldMapId": 1,
-      "positionSource": "client-subzone",
-      "positionPrecision": "subzone",
+      "positionSource": "client-place",
+      "positionPrecision": "named-place",
       "positionNote": ""
     },
     {
@@ -931,18 +931,18 @@
       "id": "nijels-point",
       "name": "Nijel's Point",
       "continent": "Kalimdor",
-      "x": 428.42,
-      "y": 348.77,
+      "x": 429.08,
+      "y": 343,
       "kind": "settlement",
       "major": false,
       "chapters": [
         7
       ],
-      "worldX": 165.04,
-      "worldY": 331.21,
+      "worldX": 165.58,
+      "worldY": 326.48,
       "worldMapId": 1,
-      "positionSource": "client-subzone",
-      "positionPrecision": "subzone",
+      "positionSource": "client-place",
+      "positionPrecision": "named-place",
       "positionNote": ""
     },
     {
@@ -1042,18 +1042,18 @@
       "id": "theramore",
       "name": "Theramore Isle",
       "continent": "Kalimdor",
-      "x": 585.23,
-      "y": 449.85,
+      "x": 587.67,
+      "y": 452.68,
       "kind": "settlement",
       "major": true,
       "chapters": [
         16
       ],
-      "worldX": 293.63,
-      "worldY": 414.1,
+      "worldX": 295.63,
+      "worldY": 416.42,
       "worldMapId": 1,
-      "positionSource": "client-subzone",
-      "positionPrecision": "subzone",
+      "positionSource": "client-flight-point",
+      "positionPrecision": "named-place",
       "positionNote": ""
     },
     {
@@ -1078,18 +1078,18 @@
       "id": "gadgetzan",
       "name": "Gadgetzan",
       "continent": "Kalimdor",
-      "x": 566.11,
-      "y": 541.57,
+      "x": 566.86,
+      "y": 542.91,
       "kind": "settlement",
       "major": true,
       "chapters": [
         16
       ],
-      "worldX": 277.95,
-      "worldY": 489.31,
+      "worldX": 278.56,
+      "worldY": 490.41,
       "worldMapId": 1,
-      "positionSource": "client-subzone",
-      "positionPrecision": "subzone",
+      "positionSource": "client-place",
+      "positionPrecision": "named-place",
       "positionNote": ""
     }
   ],
