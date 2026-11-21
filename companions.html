@@ -118,6 +118,11 @@ footer{text-align:center;color:#c4aa7b;padding:15px 20px 30px;border-top:1px sol
 const chapters=Array.isArray(window.MARDENHOLT_PUBLISHED_CHAPTERS)?window.MARDENHOLT_PUBLISHED_CHAPTERS:[];
 const grid=document.getElementById('grid'),search=document.getElementById('search'),filter=document.getElementById('classFilter');
 const norm=s=>String(s||'').trim().replace(/[.!?;,:\s]+$/g,'').toLocaleLowerCase();
+// Older chapter captions used a misspelling. Keep their original text intact,
+// but join all mentions to the verified Spagetoli Cuh companion dossier.
+const identityAliases=new Map([['spagetoll cuh','spagetoli cuh']]);
+const canonicalKey=s=>identityAliases.get(norm(s))||norm(s);
+const canonicalDisplayName=s=>canonicalKey(s)==='spagetoli cuh'?'Spagetoli Cuh':s;
 const make=(tag,cls,value)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(value!==undefined)node.textContent=String(value);return node};
 const portraitDialog=document.getElementById('portraitDialog');
 const largePortrait=document.getElementById('largePortrait');
@@ -141,13 +146,17 @@ if(Array.isArray(data.companions))records=data.companions;
 }catch(err){console.warn('Displaying chapter-derived companion names without additional profile details',err)}
 for(const raw of records){
 if(!raw||typeof raw.name!=='string'||!raw.name.trim())continue;
-const id=norm(raw.name);
-if(!people.has(id))people.set(id,{name:raw.name.trim(),race:String(raw.race||''),gender:String(raw.gender||''),characterClass:String(raw.class||''),guildRank:String(raw.guildRank||''),biography:String(raw.biography||''),portrait:String(raw.portrait||''),encounters:Array.isArray(raw.encounters)?raw.encounters:[]});
+if(Array.isArray(raw.aliases))for(const alias of raw.aliases){
+ const aliasKey=norm(alias);
+ if(aliasKey)identityAliases.set(aliasKey,norm(raw.name));
+}
+const id=canonicalKey(raw.name);
+if(!people.has(id))people.set(id,{name:canonicalDisplayName(raw.name.trim()),race:String(raw.race||''),gender:String(raw.gender||''),characterClass:String(raw.class||''),guildRank:String(raw.guildRank||''),biography:String(raw.biography||''),portrait:String(raw.portrait||''),encounters:Array.isArray(raw.encounters)?raw.encounters:[]});
 }
 chapters.forEach((chapter,index)=>{
 String(chapter.companions||'').split(',').map(s=>s.trim()).filter(Boolean).forEach(name=>{
-const key=norm(name);
-if(!people.has(key))people.set(key,{name,race:'',gender:'',characterClass:'',guildRank:'',biography:'',portrait:'',encounters:[]});
+const key=canonicalKey(name);
+if(!people.has(key))people.set(key,{name:canonicalDisplayName(name),race:'',gender:'',characterClass:'',guildRank:'',biography:'',portrait:'',encounters:[]});
 const person=people.get(key);
 if(!person.encounters.some(e=>Number(e.chapter)===index+1))person.encounters.push({chapter:index+1,summary:'Recorded as a companion in this chapter.'});
 });
@@ -228,6 +237,7 @@ card.append(journeys);grid.append(card);
 }
 search.addEventListener('input',render);filter.addEventListener('change',render);render();
 if(location.hash==='#companion-thundrus-cheeklapper')history.replaceState(null,'','#companion-thundrus-buccaklapper');
+if(location.hash==='#companion-spagetoll-cuh')history.replaceState(null,'','#companion-spagetoli-cuh');
 if(location.hash.startsWith('#companion-')){
 const el=document.getElementById(decodeURIComponent(location.hash.slice(1)));
 if(el)requestAnimationFrame(()=>el.scrollIntoView({block:'start'}));

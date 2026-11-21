@@ -3,7 +3,7 @@
   "companions": [
     {
       "id": "spagetoll-cuh",
-      "name": "Spagetoll Cuh",
+      "name": "Spagetoli Cuh",
       "race": "Human",
       "class": "Warlock",
       "biography": "",
@@ -35,7 +35,10 @@
           "summary": "Joined Atte, Melan, Thundrus and Quillb for The Drowned City expedition."
         }
       ],
-      "guildRank": "Officer"
+      "guildRank": "Officer",
+      "aliases": [
+        "Spagetoll Cuh"
+      ]
     },
     {
       "id": "thundrus-buccaklapper",
