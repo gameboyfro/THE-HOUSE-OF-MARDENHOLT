@@ -2,6 +2,27 @@
 
 Each change records **version, date, Added, Changed, Fixed, Removed, Pending**, and affected files. Only actual completed changes belong under Added/Changed/Fixed/Removed.
 
+## [v2.3.12] — 2026-11-21 — Publish Chapter XIII with Riverglades and Farholdekeep plates
+### Added
+- Chapter XIII — Of New Horizons and the Smith's Craft, set on 2026-11-16, recording Atte's solo exploration and questing in Riverglades, the confirmed Farholdekeep setting, and Blacksmithing reaching 150.
+- Three approved Riverglades/Farholdekeep illustrations as 1600 × 900 WebP plates at `assets/chapter-13-plate-01.webp` through `assets/chapter-13-plate-03.webp`.
+
+### Changed
+- Extended the public Wanderer's Chronicle from twelve to thirteen entries. The existing Timeline reads the updated `chapters.js` and includes Day XIII automatically.
+- Updated README Chronicle status and release notes.
+
+### Fixed
+- Preserved uncertainty about a possible murloc encounter instead of recording it as a confirmed kill.
+
+### Removed
+- None. All twelve previous Chronicle entries, existing artwork, companion dossiers, and portrait assets remain unchanged.
+
+### Pending
+- A fully accurate Riverglades/Farholdekeep Atlas map marker requires the separately planned Atlas overhaul; no schematic map coordinates were invented.
+- Chapter XIV remains unrecorded and unpublished.
+
+**Files affected:** `chapters.js`, `README.md`, `CHANGELOG.md`, `assets/chapter-13-plate-01.webp`, `assets/chapter-13-plate-02.webp`, `assets/chapter-13-plate-03.webp`.
+
 ## [v2.3.11] — 2026-11-21 — Publish Chapter XII and four illustrated story plates
 ### Added
 - Chapter XII — Of Black Stallions and Scarlet Halls (Day Twelve, played 2026-11-15), including the revised first-person Chronicle with Matt Shamon’s Desolace totem-quest assistance and gryphon flight.
