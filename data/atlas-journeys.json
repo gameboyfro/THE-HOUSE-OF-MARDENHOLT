@@ -1,8 +1,8 @@
 {
-  "schema": 2,
+  "schema": 3,
   "title": "House Mardenholt — Verified Travel Ledger",
   "source": "Explicit place visits compiled from published Chronicle chapter metadata, Chapters I–XVI (2026-11-04 to 2026-11-19). Never infer visits by keyword search in prose.",
-  "geoNote": "Locations mapped onto the WoW Forever continent map artwork at the original 1000×667 aspect ratio. Small-place marker offsets may be used to prevent overlap; these are not travel waypoints or exact instance entrances.",
+  "geoNote": "Exact continent map art and georeferenced client data; capitals, city points and classic instance markers are directly aligned. Regions are represented by their geographic center. Several Forever-only dungeons and event locations have documented area/guide-based positions, but an independently verified exact portal position is unavailable; see positionPrecision and positionNote.",
   "continents": [
     "Eastern Kingdoms",
     "Kalimdor"
@@ -12,34 +12,46 @@
       "id": "northshire",
       "name": "Northshire",
       "continent": "Eastern Kingdoms",
-      "x": 511,
-      "y": 482,
+      "x": 460.56,
+      "y": 465.79,
       "kind": "landmark",
       "major": false,
       "chapters": [
         1
-      ]
+      ],
+      "worldX": 734.99,
+      "worldY": 421.31,
+      "worldMapId": 0,
+      "positionSource": "client-place",
+      "positionPrecision": "named-place",
+      "positionNote": "Northshire Abbey is used as the representative landmark for Northshire."
     },
     {
       "id": "elwynn",
       "name": "Elwynn Forest",
       "continent": "Eastern Kingdoms",
-      "x": 496,
-      "y": 497,
+      "x": 461.15,
+      "y": 471.5,
       "kind": "zone",
       "major": false,
       "chapters": [
         1,
         12
-      ]
+      ],
+      "worldX": 735.45,
+      "worldY": 425.81,
+      "worldMapId": 0,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "stormwind",
       "name": "Stormwind City",
       "continent": "Eastern Kingdoms",
-      "x": 461,
-      "y": 497,
-      "kind": "settlement",
+      "x": 436.57,
+      "y": 457.1,
+      "kind": "capital",
       "major": true,
       "chapters": [
         1,
@@ -49,14 +61,20 @@
         7,
         9,
         12
-      ]
+      ],
+      "worldX": 716.09,
+      "worldY": 414.47,
+      "worldMapId": 0,
+      "positionSource": "client-subzone",
+      "positionPrecision": "subzone",
+      "positionNote": ""
     },
     {
       "id": "westfall",
       "name": "Westfall",
       "continent": "Eastern Kingdoms",
-      "x": 417,
-      "y": 516,
+      "x": 419.4,
+      "y": 513.34,
       "kind": "zone",
       "major": false,
       "chapters": [
@@ -64,151 +82,223 @@
         3,
         4,
         6
-      ]
+      ],
+      "worldX": 702.565,
+      "worldY": 458.765,
+      "worldMapId": 0,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "deadmines",
       "name": "Deadmines",
       "continent": "Eastern Kingdoms",
-      "x": 417,
-      "y": 535,
+      "x": 407.59,
+      "y": 531.59,
       "kind": "dungeon",
       "major": false,
       "chapters": [
         3
-      ]
+      ],
+      "worldX": 693.27,
+      "worldY": 473.14,
+      "worldMapId": 0,
+      "positionSource": "client-dungeon-marker",
+      "positionPrecision": "dungeon-entrance-marker",
+      "positionNote": ""
     },
     {
       "id": "ironforge",
       "name": "Ironforge",
       "continent": "Eastern Kingdoms",
-      "x": 487,
-      "y": 368,
-      "kind": "settlement",
+      "x": 479.2,
+      "y": 355.47,
+      "kind": "capital",
       "major": true,
       "chapters": [
         2,
         4,
         6,
         7
-      ]
+      ],
+      "worldX": 749.67,
+      "worldY": 334.42,
+      "worldMapId": 0,
+      "positionSource": "client-place",
+      "positionPrecision": "named-place",
+      "positionNote": ""
     },
     {
       "id": "dun-morogh",
       "name": "Dun Morogh",
       "continent": "Eastern Kingdoms",
-      "x": 469,
-      "y": 377,
+      "x": 474.26,
+      "y": 369.64,
       "kind": "zone",
       "major": false,
       "chapters": [
         6
-      ]
+      ],
+      "worldX": 745.775,
+      "worldY": 345.585,
+      "worldMapId": 0,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "hall-thanes",
       "name": "Hall of Thanes",
       "continent": "Eastern Kingdoms",
-      "x": 501,
-      "y": 376,
+      "x": 479.2,
+      "y": 355.47,
       "kind": "dungeon",
       "major": false,
       "chapters": [
         2
-      ]
+      ],
+      "worldX": 749.67,
+      "worldY": 334.42,
+      "worldMapId": 0,
+      "positionSource": "Ironforge capital location; Hall of Thanes lies beneath Old Ironforge. Entrance coordinates conflict between community guides.",
+      "positionPrecision": "city-level",
+      "positionNote": "The dungeon is beneath Old Ironforge. No defensible precise portal pin on the continent map."
     },
     {
       "id": "dalaran",
       "name": "Dalaran",
       "continent": "Eastern Kingdoms",
-      "x": 477,
-      "y": 237,
+      "x": 447.14,
+      "y": 205.2,
       "kind": "settlement",
       "major": false,
       "chapters": [
         3
-      ]
+      ],
+      "worldX": 724.42,
+      "worldY": 216.06,
+      "worldMapId": 0,
+      "positionSource": "client-subzone",
+      "positionPrecision": "subzone",
+      "positionNote": ""
     },
     {
       "id": "city-dalaran",
       "name": "City of Dalaran",
       "continent": "Eastern Kingdoms",
-      "x": 489,
-      "y": 233,
+      "x": 447.14,
+      "y": 205.2,
       "kind": "dungeon",
       "major": false,
       "chapters": [
         7
-      ]
+      ],
+      "worldX": 724.42,
+      "worldY": 216.06,
+      "worldMapId": 0,
+      "positionSource": "client-subzone",
+      "positionPrecision": "city-level",
+      "positionNote": "The new dungeon is located within Dalaran; exact sewer portal is not independently verified here."
     },
     {
       "id": "lordaeron",
       "name": "Ruins of Lordaeron",
       "continent": "Eastern Kingdoms",
-      "x": 478,
-      "y": 168,
+      "x": 449.1,
+      "y": 165.64,
       "kind": "dungeon",
       "major": false,
       "chapters": [
         3
-      ]
+      ],
+      "worldX": 725.96,
+      "worldY": 184.9,
+      "worldMapId": 0,
+      "positionSource": "client-subzone",
+      "positionPrecision": "subzone",
+      "positionNote": "Entrance is within the Ruins of Lordaeron above Undercity; portal not pinned separately."
     },
     {
       "id": "redridge",
       "name": "Redridge Mountains",
       "continent": "Eastern Kingdoms",
-      "x": 546,
-      "y": 495,
+      "x": 534.21,
+      "y": 477.25,
       "kind": "zone",
       "major": false,
       "chapters": [
         3
-      ]
+      ],
+      "worldX": 792.995,
+      "worldY": 430.34000000000003,
+      "worldMapId": 0,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "lakeshire",
       "name": "Lakeshire",
       "continent": "Eastern Kingdoms",
-      "x": 558,
-      "y": 507,
+      "x": 515.66,
+      "y": 474.76,
       "kind": "settlement",
       "major": false,
       "chapters": [
         3
-      ]
+      ],
+      "worldX": 778.39,
+      "worldY": 428.38,
+      "worldMapId": 0,
+      "positionSource": "client-subzone",
+      "positionPrecision": "subzone",
+      "positionNote": ""
     },
     {
       "id": "lake-everstill",
       "name": "Lake Everstill",
       "continent": "Eastern Kingdoms",
-      "x": 571,
-      "y": 515,
+      "x": 523.78,
+      "y": 479.45,
       "kind": "landmark",
       "major": false,
       "chapters": [
         3
-      ]
+      ],
+      "worldX": 784.78,
+      "worldY": 432.07,
+      "worldMapId": 0,
+      "positionSource": "client-subzone",
+      "positionPrecision": "subzone",
+      "positionNote": ""
     },
     {
       "id": "duskwood",
       "name": "Duskwood",
       "continent": "Eastern Kingdoms",
-      "x": 496,
-      "y": 530,
+      "x": 470.16,
+      "y": 514.76,
       "kind": "zone",
       "major": false,
       "chapters": [
         3,
         4,
         5
-      ]
+      ],
+      "worldX": 742.55,
+      "worldY": 459.885,
+      "worldMapId": 0,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "wetlands",
       "name": "Wetlands",
       "continent": "Eastern Kingdoms",
-      "x": 497,
-      "y": 347,
+      "x": 525.4,
+      "y": 312.92,
       "kind": "zone",
       "major": false,
       "chapters": [
@@ -216,51 +306,75 @@
         5,
         6,
         12
-      ]
+      ],
+      "worldX": 786.06,
+      "worldY": 300.905,
+      "worldMapId": 0,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "shadowfang",
       "name": "Shadowfang Keep",
       "continent": "Eastern Kingdoms",
-      "x": 411,
-      "y": 202,
+      "x": 410.72,
+      "y": 219.12,
       "kind": "dungeon",
       "major": false,
       "chapters": [
         6
-      ]
+      ],
+      "worldX": 695.73,
+      "worldY": 227.03,
+      "worldMapId": 0,
+      "positionSource": "client-dungeon-marker",
+      "positionPrecision": "dungeon-entrance-marker",
+      "positionNote": ""
     },
     {
       "id": "silverpine",
       "name": "Silverpine Forest",
       "continent": "Eastern Kingdoms",
-      "x": 419,
-      "y": 190,
+      "x": 417.03,
+      "y": 204.96,
       "kind": "zone",
       "major": false,
       "chapters": [
         4,
         6
-      ]
+      ],
+      "worldX": 700.7,
+      "worldY": 215.87,
+      "worldMapId": 0,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "menethil",
       "name": "Menethil Harbor",
       "continent": "Eastern Kingdoms",
-      "x": 452,
-      "y": 339,
+      "x": 478.01,
+      "y": 319.01,
       "kind": "settlement",
       "major": false,
       "chapters": [
         12
-      ]
+      ],
+      "worldX": 748.73,
+      "worldY": 305.7,
+      "worldMapId": 0,
+      "positionSource": "client-subzone",
+      "positionPrecision": "subzone",
+      "positionNote": ""
     },
     {
       "id": "booty-bay",
       "name": "Booty Bay",
       "continent": "Eastern Kingdoms",
-      "x": 477,
-      "y": 605,
+      "x": 441.48,
+      "y": 619.98,
       "kind": "settlement",
       "major": true,
       "chapters": [
@@ -268,86 +382,128 @@
         9,
         11,
         16
-      ]
+      ],
+      "worldX": 719.96,
+      "worldY": 542.76,
+      "worldMapId": 0,
+      "positionSource": "client-subzone",
+      "positionPrecision": "subzone",
+      "positionNote": ""
     },
     {
       "id": "darkmoon",
       "name": "Darkmoon Faire",
       "continent": "Eastern Kingdoms",
-      "x": 429,
-      "y": 509,
+      "x": 453.64,
+      "y": 482.41,
       "kind": "landmark",
       "major": false,
       "chapters": [
         6
-      ]
+      ],
+      "worldX": 729.54,
+      "worldY": 434.4,
+      "worldMapId": 0,
+      "positionSource": "client-place",
+      "positionPrecision": "nearby-town",
+      "positionNote": "The fair location is only mapped near Goldshire; its exact event tent entrance is not verified."
     },
     {
       "id": "stockade",
       "name": "The Stockade",
       "continent": "Eastern Kingdoms",
-      "x": 466,
-      "y": 510,
+      "x": 431.31,
+      "y": 461.98,
       "kind": "dungeon",
       "major": false,
       "chapters": [
         6
-      ]
+      ],
+      "worldX": 711.95,
+      "worldY": 418.31,
+      "worldMapId": 0,
+      "positionSource": "client-dungeon-marker",
+      "positionPrecision": "dungeon-entrance-marker",
+      "positionNote": ""
     },
     {
       "id": "excavation",
       "name": "Excavation Site: Wetlands",
       "continent": "Eastern Kingdoms",
-      "x": 514,
-      "y": 345,
+      "x": 521.87,
+      "y": 317.63,
       "kind": "dungeon",
       "major": false,
       "chapters": [
         6
-      ]
+      ],
+      "worldX": 783.28,
+      "worldY": 304.62,
+      "worldMapId": 0,
+      "positionSource": "Wetlands 47,56 guide estimate; independent sources disagree",
+      "positionPrecision": "guide-approximate",
+      "positionNote": "Dungeon near Whelgar's Excavation Site / Thelgen Rock. Published guide coordinates disagree; the portal is not exact."
     },
     {
       "id": "gnomeregan",
       "name": "Gnomeregan",
       "continent": "Eastern Kingdoms",
-      "x": 453,
-      "y": 383,
+      "x": 428.94,
+      "y": 359.51,
       "kind": "dungeon",
       "major": false,
       "chapters": [
         6
-      ]
+      ],
+      "worldX": 710.08,
+      "worldY": 337.6,
+      "worldMapId": 0,
+      "positionSource": "client-dungeon-marker",
+      "positionPrecision": "dungeon-entrance-marker",
+      "positionNote": ""
     },
     {
       "id": "hillsbrad",
       "name": "Hillsbrad Foothills",
       "continent": "Eastern Kingdoms",
-      "x": 486,
-      "y": 252,
+      "x": 470.64,
+      "y": 231.52,
       "kind": "zone",
       "major": false,
       "chapters": [
         7
-      ]
+      ],
+      "worldX": 742.925,
+      "worldY": 236.795,
+      "worldMapId": 0,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "southshore",
       "name": "Southshore",
       "continent": "Eastern Kingdoms",
-      "x": 474,
-      "y": 264,
+      "x": 472.19,
+      "y": 232.66,
       "kind": "settlement",
       "major": false,
       "chapters": [
         7
-      ]
+      ],
+      "worldX": 744.15,
+      "worldY": 237.69,
+      "worldMapId": 0,
+      "positionSource": "client-subzone",
+      "positionPrecision": "subzone",
+      "positionNote": ""
     },
     {
       "id": "stranglethorn",
       "name": "Stranglethorn Vale",
       "continent": "Eastern Kingdoms",
-      "x": 505,
-      "y": 567,
+      "x": 483.06,
+      "y": 591.02,
       "kind": "zone",
       "major": false,
       "chapters": [
@@ -357,212 +513,314 @@
         11,
         12,
         14
-      ]
+      ],
+      "worldX": 752.71,
+      "worldY": 519.95,
+      "worldMapId": 0,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "lake-nazferiti",
       "name": "Lake Nazferiti",
       "continent": "Eastern Kingdoms",
-      "x": 501,
-      "y": 549,
+      "x": 463.57,
+      "y": 552.11,
       "kind": "landmark",
       "major": false,
       "chapters": [
         9
-      ]
+      ],
+      "worldX": 737.36,
+      "worldY": 489.3,
+      "worldMapId": 0,
+      "positionSource": "client-subzone",
+      "positionPrecision": "subzone",
+      "positionNote": ""
     },
     {
       "id": "vile-reef",
       "name": "The Vile Reef",
       "continent": "Eastern Kingdoms",
-      "x": 441,
-      "y": 577,
+      "x": 435.32,
+      "y": 563.24,
       "kind": "landmark",
       "major": false,
       "chapters": [
         9
-      ]
+      ],
+      "worldX": 715.11,
+      "worldY": 498.07,
+      "worldMapId": 0,
+      "positionSource": "client-subzone",
+      "positionPrecision": "subzone",
+      "positionNote": ""
     },
     {
       "id": "western-plague",
       "name": "Western Plaguelands",
       "continent": "Eastern Kingdoms",
-      "x": 540,
-      "y": 161,
+      "x": 504.8,
+      "y": 157.52,
       "kind": "zone",
       "major": false,
       "chapters": [
         8
-      ]
+      ],
+      "worldX": 769.835,
+      "worldY": 178.505,
+      "worldMapId": 0,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "tirisfal",
       "name": "Tirisfal Glades",
       "continent": "Eastern Kingdoms",
-      "x": 460,
-      "y": 151,
+      "x": 433.43,
+      "y": 146.18,
       "kind": "zone",
       "major": false,
       "chapters": [
         8,
         12
-      ]
+      ],
+      "worldX": 713.615,
+      "worldY": 169.57999999999998,
+      "worldMapId": 0,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "scarlet",
       "name": "Scarlet Monastery",
       "continent": "Eastern Kingdoms",
-      "x": 469,
-      "y": 127,
+      "x": 478.55,
+      "y": 130.21,
       "kind": "dungeon",
       "major": true,
       "chapters": [
         8
-      ]
+      ],
+      "worldX": 749.16,
+      "worldY": 157,
+      "worldMapId": 0,
+      "positionSource": "client-dungeon-marker",
+      "positionPrecision": "dungeon-entrance-marker",
+      "positionNote": ""
     },
     {
       "id": "scarlet-cathedral",
       "name": "Scarlet Monastery Cathedral",
       "continent": "Eastern Kingdoms",
-      "x": 485,
-      "y": 138,
+      "x": 478.55,
+      "y": 130.21,
       "kind": "dungeon",
       "major": false,
       "chapters": [
         12,
         15
-      ]
+      ],
+      "worldX": 749.16,
+      "worldY": 157,
+      "worldMapId": 0,
+      "positionSource": "client-dungeon-marker",
+      "positionPrecision": "dungeon-entrance-marker",
+      "positionNote": ""
     },
     {
       "id": "drowned-city",
       "name": "The Drowned City",
       "continent": "Eastern Kingdoms",
-      "x": 442,
-      "y": 558,
+      "x": 430.38,
+      "y": 564.39,
       "kind": "dungeon",
       "major": false,
       "chapters": [
         10,
         12
-      ]
+      ],
+      "worldX": 711.22,
+      "worldY": 498.97,
+      "worldMapId": 0,
+      "positionSource": "Third-party guide: Stranglethorn Vale 21,28 (underwater cave)",
+      "positionPrecision": "reported-entrance",
+      "positionNote": "Guide-reported underwater entrance off west Stranglethorn Vale, near the Vile Reef. In-game confirmation pending."
     },
     {
       "id": "eastvale",
       "name": "Eastvale Logging Camp",
       "continent": "Eastern Kingdoms",
-      "x": 525,
-      "y": 484,
+      "x": 494.46,
+      "y": 481.9,
       "kind": "settlement",
       "major": false,
       "chapters": [
         12
-      ]
+      ],
+      "worldX": 761.69,
+      "worldY": 434,
+      "worldMapId": 0,
+      "positionSource": "client-subzone",
+      "positionPrecision": "subzone",
+      "positionNote": ""
     },
     {
       "id": "riverglades",
       "name": "Riverglades",
       "continent": "Eastern Kingdoms",
-      "x": 600,
-      "y": 455,
+      "x": 578.33,
+      "y": 442.65,
       "kind": "zone",
       "major": true,
       "chapters": [
         13,
         15,
         16
-      ]
+      ],
+      "worldX": 827.75,
+      "worldY": 403.085,
+      "worldMapId": 0,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "farholde",
       "name": "Farholde Keep",
       "continent": "Eastern Kingdoms",
-      "x": 611,
-      "y": 474,
+      "x": 601.21,
+      "y": 474.81,
       "kind": "settlement",
       "major": false,
       "chapters": [
         13
-      ]
+      ],
+      "worldX": 845.77,
+      "worldY": 428.42,
+      "worldMapId": 0,
+      "positionSource": "client-subzone",
+      "positionPrecision": "subzone",
+      "positionNote": ""
     },
     {
       "id": "kroldok",
       "name": "Krol'dok Stronghold",
       "continent": "Eastern Kingdoms",
-      "x": 594,
-      "y": 437,
+      "x": 574.09,
+      "y": 416.3,
       "kind": "dungeon",
       "major": false,
       "chapters": [
         16
-      ]
+      ],
+      "worldX": 824.41,
+      "worldY": 382.33,
+      "worldMapId": 0,
+      "positionSource": "client-subzone",
+      "positionPrecision": "subzone",
+      "positionNote": "Inside the client-mapped Krol'dok Stronghold subzone; exact dungeon portal position is not identified."
     },
     {
       "id": "swamp-sorrows",
       "name": "Swamp of Sorrows",
       "continent": "Eastern Kingdoms",
-      "x": 554,
-      "y": 528,
+      "x": 551.38,
+      "y": 508.18,
       "kind": "zone",
       "major": false,
       "chapters": [
         14
-      ]
+      ],
+      "worldX": 806.52,
+      "worldY": 454.7,
+      "worldMapId": 0,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "darkshore",
       "name": "Darkshore",
       "continent": "Kalimdor",
-      "x": 416,
-      "y": 222,
+      "x": 473.77,
+      "y": 181.07,
       "kind": "zone",
       "major": false,
       "chapters": [
         5,
         7
-      ]
+      ],
+      "worldX": 202.22500000000002,
+      "worldY": 193.69,
+      "worldMapId": 1,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "masters-glaive",
       "name": "The Master's Glaive",
       "continent": "Kalimdor",
-      "x": 409,
-      "y": 262,
+      "x": 459.04,
+      "y": 228.44,
       "kind": "landmark",
       "major": false,
       "chapters": [
         5
-      ]
+      ],
+      "worldX": 190.15,
+      "worldY": 232.54,
+      "worldMapId": 1,
+      "positionSource": "client-subzone",
+      "positionPrecision": "subzone",
+      "positionNote": ""
     },
     {
       "id": "ashenvale",
       "name": "Ashenvale",
       "continent": "Kalimdor",
-      "x": 485,
-      "y": 285,
+      "x": 496.92,
+      "y": 273.61,
       "kind": "zone",
       "major": true,
       "chapters": [
         5
-      ]
+      ],
+      "worldX": 221.20999999999998,
+      "worldY": 269.58,
+      "worldMapId": 1,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "bfd",
       "name": "Blackfathom Deeps",
       "continent": "Kalimdor",
-      "x": 404,
-      "y": 276,
+      "x": 444.33,
+      "y": 232.82,
       "kind": "dungeon",
       "major": false,
       "chapters": [
         5
-      ]
+      ],
+      "worldX": 178.08,
+      "worldY": 236.13,
+      "worldMapId": 1,
+      "positionSource": "client-dungeon-marker",
+      "positionPrecision": "dungeon-entrance-marker",
+      "positionNote": ""
     },
     {
       "id": "barrens",
       "name": "The Barrens",
       "continent": "Kalimdor",
-      "x": 496,
-      "y": 373,
+      "x": 531.24,
+      "y": 396.59,
       "kind": "zone",
       "major": false,
       "chapters": [
@@ -570,189 +828,299 @@
         8,
         10,
         14
-      ]
+      ],
+      "worldX": 249.35000000000002,
+      "worldY": 370.425,
+      "worldMapId": 1,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "ratchet",
       "name": "Ratchet",
       "continent": "Kalimdor",
-      "x": 571,
-      "y": 394,
+      "x": 564.25,
+      "y": 373.18,
       "kind": "settlement",
       "major": true,
       "chapters": [
         6
-      ]
+      ],
+      "worldX": 276.42,
+      "worldY": 351.23,
+      "worldMapId": 1,
+      "positionSource": "client-subzone",
+      "positionPrecision": "subzone",
+      "positionNote": ""
     },
     {
       "id": "wailing",
       "name": "Wailing Caverns",
       "continent": "Kalimdor",
-      "x": 483,
-      "y": 388,
+      "x": 524.85,
+      "y": 368.97,
       "kind": "dungeon",
       "major": false,
       "chapters": [
         6
-      ]
+      ],
+      "worldX": 244.11,
+      "worldY": 347.78,
+      "worldMapId": 1,
+      "positionSource": "client-dungeon-marker",
+      "positionPrecision": "dungeon-entrance-marker",
+      "positionNote": ""
     },
     {
       "id": "fray",
       "name": "Fray Island",
       "continent": "Kalimdor",
-      "x": 580,
-      "y": 411,
+      "x": 582.58,
+      "y": 393.95,
       "kind": "landmark",
       "major": false,
       "chapters": [
         6
-      ]
+      ],
+      "worldX": 291.45,
+      "worldY": 368.26,
+      "worldMapId": 1,
+      "positionSource": "client-place",
+      "positionPrecision": "named-place",
+      "positionNote": ""
     },
     {
       "id": "stonetalon",
       "name": "Stonetalon Mountains",
       "continent": "Kalimdor",
-      "x": 434,
-      "y": 349,
+      "x": 442.8,
+      "y": 313.43,
       "kind": "zone",
       "major": false,
       "chapters": [
         6,
         7
-      ]
+      ],
+      "worldX": 176.82999999999998,
+      "worldY": 302.235,
+      "worldMapId": 1,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "stonetalon-peak",
       "name": "Stonetalon Peak",
       "continent": "Kalimdor",
-      "x": 423,
-      "y": 329,
+      "x": 427.47,
+      "y": 281.28,
       "kind": "landmark",
       "major": false,
       "chapters": [
         7
-      ]
+      ],
+      "worldX": 164.26,
+      "worldY": 275.87,
+      "worldMapId": 1,
+      "positionSource": "client-subzone",
+      "positionPrecision": "subzone",
+      "positionNote": ""
     },
     {
       "id": "nijels-point",
       "name": "Nijel's Point",
       "continent": "Kalimdor",
-      "x": 417,
-      "y": 416,
+      "x": 428.42,
+      "y": 348.77,
       "kind": "settlement",
       "major": false,
       "chapters": [
         7
-      ]
+      ],
+      "worldX": 165.04,
+      "worldY": 331.21,
+      "worldMapId": 1,
+      "positionSource": "client-subzone",
+      "positionPrecision": "subzone",
+      "positionNote": ""
     },
     {
       "id": "desolace",
       "name": "Desolace",
       "continent": "Kalimdor",
-      "x": 419,
-      "y": 445,
+      "x": 410.64,
+      "y": 377.02,
       "kind": "zone",
       "major": false,
       "chapters": [
         7,
         12,
         14
-      ]
+      ],
+      "worldX": 150.455,
+      "worldY": 354.38,
+      "worldMapId": 1,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "rfk",
       "name": "Razorfen Kraul",
       "continent": "Kalimdor",
-      "x": 501,
-      "y": 468,
+      "x": 509.91,
+      "y": 469.95,
       "kind": "dungeon",
       "major": false,
       "chapters": [
         8
-      ]
+      ],
+      "worldX": 231.86,
+      "worldY": 430.58,
+      "worldMapId": 1,
+      "positionSource": "client-dungeon-marker",
+      "positionPrecision": "dungeon-entrance-marker",
+      "positionNote": ""
     },
     {
       "id": "rfd",
       "name": "Razorfen Downs",
       "continent": "Kalimdor",
-      "x": 507,
-      "y": 483,
+      "x": 533.75,
+      "y": 475.48,
       "kind": "dungeon",
       "major": false,
       "chapters": [
         10,
         14
-      ]
+      ],
+      "worldX": 251.41,
+      "worldY": 435.12,
+      "worldMapId": 1,
+      "positionSource": "client-dungeon-marker",
+      "positionPrecision": "dungeon-entrance-marker",
+      "positionNote": ""
     },
     {
       "id": "feralas",
       "name": "Feralas",
       "continent": "Kalimdor",
-      "x": 452,
-      "y": 501,
+      "x": 411.14,
+      "y": 476.04,
       "kind": "zone",
       "major": false,
       "chapters": [
         14
-      ]
+      ],
+      "worldX": 150.87,
+      "worldY": 435.57500000000005,
+      "worldMapId": 1,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "dustwallow",
       "name": "Dustwallow Marsh",
       "continent": "Kalimdor",
-      "x": 558,
-      "y": 451,
+      "x": 562.72,
+      "y": 451.53,
       "kind": "zone",
       "major": false,
       "chapters": [
         16
-      ]
+      ],
+      "worldX": 275.16999999999996,
+      "worldY": 415.48,
+      "worldMapId": 1,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "theramore",
       "name": "Theramore Isle",
       "continent": "Kalimdor",
-      "x": 590,
-      "y": 463,
+      "x": 585.23,
+      "y": 449.85,
       "kind": "settlement",
       "major": true,
       "chapters": [
         16
-      ]
+      ],
+      "worldX": 293.63,
+      "worldY": 414.1,
+      "worldMapId": 1,
+      "positionSource": "client-subzone",
+      "positionPrecision": "subzone",
+      "positionNote": ""
     },
     {
       "id": "tanaris",
       "name": "Tanaris",
       "continent": "Kalimdor",
-      "x": 540,
-      "y": 548,
+      "x": 564.59,
+      "y": 571.11,
       "kind": "zone",
       "major": false,
       "chapters": [
         16
-      ]
+      ],
+      "worldX": 276.7,
+      "worldY": 513.535,
+      "worldMapId": 1,
+      "positionSource": "client-zone-center",
+      "positionPrecision": "region-center",
+      "positionNote": ""
     },
     {
       "id": "gadgetzan",
       "name": "Gadgetzan",
       "continent": "Kalimdor",
-      "x": 536,
-      "y": 536,
+      "x": 566.11,
+      "y": 541.57,
       "kind": "settlement",
       "major": true,
       "chapters": [
         16
-      ]
+      ],
+      "worldX": 277.95,
+      "worldY": 489.31,
+      "worldMapId": 1,
+      "positionSource": "client-subzone",
+      "positionPrecision": "subzone",
+      "positionNote": ""
     }
   ],
   "mapReference": {
-    "viewport": [
-      1000,
-      667
+    "source": "WoW Forever client UIMap and map art, build 1.60.1.69913, exported 2026-09-22 by peligwen/peligaming",
+    "sourceDataset": "https://github.com/peligwen/peligaming/blob/main/public/tools/wow-forever/data/world-map/world-map.json",
+    "extraZoneValidation": "https://wowforevermap.com/",
+    "artCredit": "Blizzard Entertainment; game-client map artwork assembled by peligwen/peligaming",
+    "art": {
+      "Eastern Kingdoms": "assets/atlas/forever-eastern-kingdoms.jpg",
+      "Kalimdor": "assets/atlas/forever-kalimdor.jpg"
+    },
+    "frame": [
+      1002,
+      668
     ],
-    "easternKingdoms": "https://wowforeveratlas.com/media/forever-maps/eastern-kingdoms.webp",
-    "kalimdor": "https://wowforeveratlas.com/media/forever-maps/kalimdor.webp",
-    "credit": "Continent map artwork © Blizzard Entertainment; reproduced on Forever Atlas (wowforeveratlas.com). Preview references the original images.",
-    "alignment": "Markers are hand-positioned near corresponding zones on the Forever world maps. Major cities and regions approximate at continent scale; dungeon interior positions are not precise."
-  }
+    "bounds": {
+      "Eastern Kingdoms": [
+        372.23,
+        54.44,
+        1161.45,
+        580.58
+      ],
+      "Kalimdor": [
+        -186.28,
+        45.21,
+        635.39,
+        592.99
+      ]
+    },
+    "conversion": "(worldX-continentRect.left)/(rect.right-rect.left)*1002 and (worldY-rect.top)/(rect.bottom-rect.top)*668"
+  },
+  "lastGeographicAudit": "2026-11-22"
 }
