@@ -327,7 +327,6 @@ function placeInlineChapterPhotos(e){
  const items=Array.isArray(e.inlinePhotos)?e.inlinePhotos:[];
  const spread=$('#chronicleReader .book-spread');
  if(spread)spread.classList.toggle('inline-photo-chapter',items.length>0);
- if(!items.length)return;
  const headings=new Set(Array.isArray(e.headings)?e.headings:[]);
  for(const p of [...story.querySelectorAll('p')]){
   if(headings.has(p.textContent.trim())){
@@ -335,6 +334,7 @@ function placeInlineChapterPhotos(e){
    heading.textContent=p.textContent;p.replaceWith(heading);
   }
  }
+ if(!items.length)return;
  const pics=visitorPhotos(e);
  for(const [i,item] of items.entries()){
   const after=String(item.after||'').trim();
