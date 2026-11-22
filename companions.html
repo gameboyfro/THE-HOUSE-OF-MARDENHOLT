@@ -92,7 +92,7 @@ footer{text-align:center;color:#c4aa7b;padding:15px 20px 30px;border-top:1px sol
 </head>
 <body>
 <header>
-<nav aria-label="Archive navigation"><a href="./index.html">House Archive</a><a href="./index.html#journal">Chronicle</a><a href="./timeline.html">Journey Timeline</a><a href="./atlas.html">Azeroth Atlas</a></nav>
+<nav aria-label="Archive navigation"><a href="./index.html">House Archive</a><a href="./chronicle.html">Chronicle</a><a href="./timeline.html">Journey Timeline</a><a href="./atlas.html">Azeroth Atlas</a></nav>
 <div class="kicker">The Alliance · Plot Armor Crew</div>
 <h1>The Companions Ledger</h1>
 <p>The people whose paths crossed with Ser Atte Mardenholt — from the first road to the newest chapter.</p>
@@ -221,7 +221,7 @@ else{
 [...encounterByChapter.values()].sort((a,b)=>a.index-b.index).forEach(({chapter,index,summary})=>{
 const li=make('li','journey');
 const a=make('a','',chapter.title||('Chapter '+(index+1)));
-a.href='./index.html?chapter='+encodeURIComponent(index+1)+'#journal';
+a.href='./chronicle.html?chapter='+encodeURIComponent(index+1);
 const date=make('time','',chapter.date||'Date not recorded');
 if(chapter.date)date.dateTime=chapter.date;
 li.append(a,date);
