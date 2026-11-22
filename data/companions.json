@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 7,
   "companions": [
     {
       "id": "spagetoll-cuh",
@@ -281,6 +281,36 @@
         {
           "chapter": 12,
           "summary": "Atte helped Matt with a Shaman totem quest in Desolace. Both travelled by gryphon, with Atte flying above Matt."
+        }
+      ]
+    },
+    {
+      "id": "zelica-lockhart",
+      "name": "Zelica Lockhart",
+      "race": "Human",
+      "class": "Paladin",
+      "guildRank": "Initiate",
+      "biography": "",
+      "portrait": "assets/crew-2026/zelica-lockhart-2026-11-22.webp",
+      "encounters": [
+        {
+          "chapter": 14,
+          "summary": "Joined Atte as a paladin healer for a successful Razorfen Downs expedition, and was welcomed into the Plot Armor Crew."
+        }
+      ]
+    },
+    {
+      "id": "jane-doe",
+      "name": "Jàne Doe",
+      "race": "Dwarf",
+      "class": "Shaman",
+      "guildRank": "Initiate",
+      "biography": "",
+      "portrait": "assets/crew-2026/jane-doe-2026-11-22.webp",
+      "encounters": [
+        {
+          "chapter": 16,
+          "summary": "Accompanied Atte and their company into Krol'dok Stronghold in Riverglades; the dungeon was completed."
         }
       ]
     }
