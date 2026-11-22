@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="#101b1b" name="theme-color"/>
-<title>House Mardenholt | Visitor Archive</title>
+<title>House Mardenholt | The Wanderer’s Chronicle</title>
 <meta content="Explore the House Mardenholt family history, heraldry, ancestral home, and published travels of Ser Atte Mardenholt. Read-only Warcraft fan-lore archive." name="description"/>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHBhdGggZD0iTTcgNGg1MHYzMGMwIDE1LTExIDIzLTI1IDI3QzE4IDU3IDcgNDkgNyAzNFoiIGZpbGw9IiMxMjM0NGQiIHN0cm9rZT0iI2M2YTQ2YiIgc3Ryb2tlLXdpZHRoPSIzIi8+PHBhdGggZD0iTTEyIDloNDB2MjRjMCAxMi05IDE5LTIwIDIyLTExLTMtMjAtMTAtMjAtMjJaIiBmaWxsPSIjZjJlYWQ5Ii8+PHBhdGggZD0iTTMyIDQ2VjI0TTMyIDM0IDIwIDI1TTMyIDI4bDExLTEwTTMyIDM0bDE0LTYiIHN0cm9rZT0iIzY5NTEzNCIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMTcgMjZxLTYtMTMgNi0xNSA3LTkgMTUgMCAxMC01IDE0IDctMiAxNC0xMyAxNS0xNCAzLTIyLTdaIiBmaWxsPSIjMzY1YjNhIi8+PHBhdGggZD0iTTMyIDM0VjQ3IiBzdHJva2U9IiM3NDUxMzUiIHN0cm9rZS13aWR0aD0iNSIvPjxnIGZpbGw9IiNkYmI3NjEiPjxjaXJjbGUgY3g9IjIzIiBjeT0iMjUiIHI9IjQiLz48Y2lyY2xlIGN4PSI0MyIgY3k9IjI0IiByPSI0Ii8+PGNpcmNsZSBjeD0iMzMiIGN5PSIzNSIgcj0iNCIvPjwvZz48cGF0aCBkPSJNMjAgNDlRMzIgNDMgNDQgNDkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzM2NWIzYSIgc3Ryb2tlLXdpZHRoPSI1Ii8+PC9zdmc+Cg==">
 <style>
@@ -163,7 +163,86 @@
 .book-prose .inline-chronicle-plate{margin:36px auto 40px;max-width:760px;text-align:center;break-inside:avoid}
 .book-prose .inline-chronicle-plate img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
 .book-prose .inline-chronicle-plate figcaption{font:italic 14px/1.65 Georgia,serif;margin-top:12px;color:#79674b}
+
+/* Great Hall phase-one preview — all selectors scoped to .hm-* or #page-home. */
+#page-home{max-width:1540px;padding:22px 30px 66px}
+#page-home .hm-eyebrow{display:block;color:#93774c;font:700 10px/1.6 Arial,sans-serif;letter-spacing:.21em;text-transform:uppercase}
+#page-home .hm-gold{color:#e0bc79}
+#page-home .hm-hero{position:relative;overflow:hidden;isolation:isolate;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(300px,.85fr);align-items:center;min-height:560px;color:#f3e8d3;background:radial-gradient(circle at 82% 30%,#3c4d39 0%,#192b27 65%,#0d1819 100%);box-shadow:0 24px 50px #1a241c25;border:1px solid #8b7450}
+#page-home .hm-hero-landscape{position:absolute;z-index:-3;inset:0;width:100%;height:100%;object-fit:cover;opacity:.31;filter:saturate(.7)}
+#page-home .hm-hero-shade{position:absolute;z-index:-2;inset:0;background:linear-gradient(90deg,#0c1a1bee 0%,#152a29da 48%,#152b2944 100%),linear-gradient(0deg,#101c18c7,transparent 40%)}
+#page-home .hm-hero:after{content:"";position:absolute;inset:13px;border:1px solid #d1b78355;pointer-events:none}
+#page-home .hm-hero-copy{padding:55px 20px 51px clamp(34px,5.5vw,82px);z-index:2}
+#page-home .hm-hero-rule{display:block;color:#c5a871;letter-spacing:.28em;font:10px/1.4 Georgia,serif;margin:18px 0 16px}
+#page-home .hm-hero h1{font-weight:400;line-height:1.02;letter-spacing:-.047em;font-size:clamp(48px,5.1vw,79px);max-width:720px;color:#f7ecd9;margin:0 0 22px}
+#page-home .hm-hero h1 em{display:block;color:#d6b575;font-weight:400}
+#page-home .hm-hero-copy>p{max-width:565px;font:18px/1.65 Georgia,serif;color:#e1ded1;margin:0 0 29px}
+#page-home .hm-hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+#page-home .hm-button{display:inline-flex;align-items:center;justify-content:center;gap:16px;padding:14px 20px;min-height:49px;border:1px solid transparent;font:700 11px/1.3 Arial,sans-serif;letter-spacing:.08em;text-decoration:none;cursor:pointer;transition:transform .18s,background .18s,color .18s}
+#page-home .hm-button:hover{transform:translateY(-2px)}
+#page-home .hm-button-gold{background:#c9a768;color:#182922;border-color:#d7b779}
+#page-home .hm-button-gold:hover{background:#e3c588;color:#14221c}
+#page-home .hm-button-outline{background:#101d1d55;border-color:#d3b67a;color:#f1d7a3}
+#page-home .hm-button-outline:hover{background:#d5b57728}
+#page-home .hm-hero-footnote{margin-top:31px;font:10px/1.5 Arial,sans-serif;letter-spacing:.15em;color:#b3b7aa}
+#page-home .hm-hero-footnote span{margin:0 10px;color:#c9ac78}
+#page-home .hm-hero-art{align-self:stretch;min-width:0;position:relative;display:flex;align-items:center;justify-content:center;padding:35px 55px 51px 16px}
+#page-home .hm-portrait-border{position:relative;width:min(100%,370px);aspect-ratio:3/4.5;max-height:500px;overflow:hidden;border:5px solid #7b673e;outline:1px solid #c5a16b;box-shadow:0 18px 40px #0008;background:#10211e}
+#page-home .hm-portrait-border:after{content:"";position:absolute;inset:5px;border:1px solid #e2c68f66;pointer-events:none}
+#page-home .hm-portrait-border img{width:100%;height:100%;object-fit:cover;object-position:center 10%;display:block}
+#page-home .hm-portrait-label{position:absolute;right:45px;bottom:27px;color:#f0d9a6;font:700 9px Arial,sans-serif;letter-spacing:.12em;text-align:center;left:0}
+#page-home .hm-status-row{display:flex;align-items:stretch;justify-content:space-between;gap:0;background:#f0e5ce;border:1px solid #d6c6a5;border-top:0;min-height:92px}
+#page-home .hm-status-item{padding:20px 24px;display:flex;gap:12px;align-items:center;border-right:1px solid #d8c7a4}
+#page-home .hm-status-item strong{color:#23433b;font:38px/1 Georgia,serif;font-weight:400}
+#page-home .hm-status-item span{max-width:100px;color:#89744e;font:700 10px/1.4 Arial,sans-serif;letter-spacing:.11em}
+#page-home .hm-status-motto{display:flex;align-items:center;justify-content:flex-end;flex:1;padding:10px 25px;font:italic 17px Georgia,serif;color:#597065;text-align:right}
+#page-home .hm-intro-header,#page-home .hm-companions-header{display:flex;gap:18px;align-items:end;justify-content:space-between;margin:62px 0 20px}
+#page-home .hm-intro-header h2,#page-home .hm-companions-header h2,#page-home .hm-discover-title h2{font:400 clamp(33px,3.3vw,48px)/1.15 Georgia,serif;color:#233b33;letter-spacing:-.035em;margin:5px 0 9px}
+#page-home .hm-intro-header p,#page-home .hm-companions-header p,#page-home .hm-discover-title p{color:#746d5c;margin:0;font-size:15px;line-height:1.55}
+#page-home .hm-text-link{display:inline-flex;gap:12px;align-items:center;background:none;padding:4px 1px;border:none;border-bottom:1px solid #aa874b;color:#42614f;font:700 12px/1.5 Arial,sans-serif;white-space:nowrap;cursor:pointer;text-decoration:none}
+#page-home .hm-text-link:hover{color:#9a6c2f}
+#page-home .hm-latest-feature{min-height:375px;display:grid;grid-template-columns:minmax(250px,44%) minmax(0,56%);border:1px solid #c5b18c;background:#1d302c;box-shadow:0 12px 34px #283a3020}
+#page-home .hm-latest-image-box{position:relative;min-height:365px;overflow:hidden;background:#3c493f}
+#page-home .hm-latest-image-box img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover}
+#page-home .hm-image-stamp{position:absolute;bottom:17px;left:18px;z-index:1;padding:8px 12px;background:#192b29e8;border:1px solid #b99c64;color:#f5dfb2;font:700 10px Arial,sans-serif;letter-spacing:.1em}
+#page-home .hm-latest-copy{padding:36px 42px;color:#e9e0d0}
+#page-home .hm-latest-copy .hm-eyebrow{font-size:10px}
+#page-home .hm-separator{margin:0 7px;color:#a1ab8b}
+#page-home .hm-latest-chapter-id{color:#c1af8e;font:700 11px Arial,sans-serif;letter-spacing:.16em;margin:27px 0 8px}
+#page-home .hm-latest-copy h2{color:#fbedd8;font:400 clamp(29px,3.1vw,46px)/1.14 Georgia,serif;margin:0 0 12px;letter-spacing:-.035em}
+#page-home .hm-latest-location{font:11px/1.5 Arial,sans-serif;letter-spacing:.055em;color:#c6b482}
+#page-home .hm-latest-copy p{color:#d9d6c8;font:15px/1.65 Georgia,serif;margin:19px 0 24px;max-width:640px}
+#page-home .hm-discover-title{text-align:center;margin:70px auto 27px}
+#page-home .hm-discovery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+#page-home .hm-discovery-card{background:#f5ead4;border:1px solid #d5c4a0;padding:26px 28px 27px;display:flex;flex-direction:column;min-height:265px;box-shadow:0 7px 18px #5d604d0d}
+#page-home .hm-card-num{font:700 10px Arial,sans-serif;letter-spacing:.17em;color:#8f7345}
+#page-home .hm-card-symbol{font:35px/1 Georgia,serif;color:#ad955e;margin:16px 0 8px}
+#page-home .hm-discovery-card h3{font:400 27px/1.2 Georgia,serif;color:#253b33;margin:0 0 10px}
+#page-home .hm-discovery-card p{font:14px/1.55 Georgia,serif;color:#686759;margin:0 0 19px;flex:1}
+#page-home .hm-discovery-card .hm-text-link{align-self:start}
+#page-home .hm-crew-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+#page-home .hm-crew-card{display:flex;flex-direction:column;text-decoration:none;color:#233c33;border:1px solid #cfbd99;background:#f4e9d4;padding:8px 8px 19px;text-align:center;transition:transform .2s,box-shadow .2s}
+#page-home .hm-crew-card:hover{transform:translateY(-4px);box-shadow:0 15px 25px #283a3020}
+#page-home .hm-crew-frame{aspect-ratio:1.15/1;overflow:hidden;background:#203328}
+#page-home .hm-crew-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+#page-home .hm-crew-card strong{font:400 21px/1.2 Georgia,serif;margin:13px 5px 5px}
+#page-home .hm-crew-card span{font:700 9px/1.4 Arial,sans-serif;letter-spacing:.095em;color:#8b7346}
+#page-home .hm-closer{position:relative;overflow:hidden;text-align:center;background:linear-gradient(120deg,#182d2b,#29433a,#172a28);border:1px solid #ad915c;margin:64px 0 28px;padding:55px 18px 50px;color:#e9dece}
+#page-home .hm-closer:after{position:absolute;content:"";inset:9px;border:1px solid #af9e784f;pointer-events:none}
+#page-home .hm-closer h2{font:400 clamp(32px,4vw,52px)/1.2 Georgia,serif;color:#faedda;letter-spacing:-.04em;margin:7px 0 10px}
+#page-home .hm-closer p{margin:0 auto 25px;max-width:650px;color:#d2d2c3;font:16px/1.6 Georgia,serif}
+#page-home .hm-closer-ornament{display:block;color:#c5ab79;font-size:22px;margin:15px 0 -20px}
+#page-home button:focus-visible,#page-home a:focus-visible{outline:3px solid #cf9b3f;outline-offset:3px}
+@media(max-width:1140px){#page-home .hm-hero{grid-template-columns:minmax(0,1.3fr) minmax(230px,.65fr)}#page-home .hm-hero-art{padding-right:35px}#page-home .hm-hero-copy{padding-left:38px}#page-home .hm-status-motto{display:none}#page-home .hm-status-item{flex:1;justify-content:center}#page-home .hm-portrait-label{right:18px}}
+@media(max-width:860px){#page-home{padding:16px 15px 45px}#page-home .hm-hero{grid-template-columns:1fr;min-height:auto}#page-home .hm-hero-copy{padding:48px 28px 34px}#page-home .hm-hero-art{padding:0 28px 47px}#page-home .hm-portrait-border{max-width:290px;max-height:335px;aspect-ratio:1/1.12}#page-home .hm-portrait-label{bottom:24px;left:0;right:0}#page-home .hm-latest-feature{grid-template-columns:1fr}#page-home .hm-latest-image-box{min-height:290px}#page-home .hm-discovery-grid{grid-template-columns:1fr}#page-home .hm-discovery-card{min-height:0}#page-home .hm-crew-card strong{font-size:18px}}
+@media(max-width:560px){#page-home .hm-hero h1{font-size:44px}#page-home .hm-hero-copy>p{font-size:16px}#page-home .hm-hero-actions{flex-direction:column;align-items:stretch}#page-home .hm-status-row{flex-direction:column}#page-home .hm-status-item{justify-content:space-between;padding:13px 23px;border-bottom:1px solid #d8c7a4;border-right:0}#page-home .hm-status-item span{max-width:none}#page-home .hm-intro-header,#page-home .hm-companions-header{display:block;margin:46px 0 20px}#page-home .hm-intro-header .hm-text-link,#page-home .hm-companions-header .hm-text-link{margin-top:15px}#page-home .hm-latest-image-box{min-height:210px}#page-home .hm-latest-copy{padding:27px 23px}#page-home .hm-crew-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}#page-home .hm-crew-card{padding:5px 5px 12px}#page-home .hm-crew-card strong{font-size:18px;margin-top:8px}#page-home .hm-crew-card span{font-size:9px;letter-spacing:.03em}#page-home .hm-crew-frame{aspect-ratio:1/1.08}#page-home .hm-closer{padding:44px 20px}}
+@media(prefers-reduced-motion:reduce){#page-home .hm-button,#page-home .hm-crew-card{transition:none}}
 </style>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="House Mardenholt — The Wanderer’s Chronicle"/>
+<meta property="og:description" content="A knight without a kingdom. Follow the recorded adventures of Ser Atte Mardenholt through Azeroth."/>
+<meta property="og:image" content="https://gameboyfro.github.io/THE-HOUSE-OF-MARDENHOLT/assets/estate-scenic.webp"/>
+<meta name="twitter:card" content="summary_large_image"/>
 </head>
 <body>
 <div class="app-shell">
@@ -194,16 +273,53 @@
 <header class="topbar"><button aria-label="Open navigation" class="icon-button menu-button" id="menuButton">☰</button><div class="topbar-breadcrumb">THE CHRONICLES <span>/</span> <strong id="pageCrumb">THE GREAT HALL</strong></div><div class="topbar-right"><span class="small-seal">✥</span><span class="save-status" id="saveStatus">PUBLIC · READ ONLY</span></div></header>
 <main id="mainContent">
 <section aria-label="The Great Hall" class="page active" id="page-home">
-<div class="home-hero"><img alt="A clean panoramic view of Greybough Hall with its fortified gatehouse, oak tree and woodland hills" src="assets/estate-scenic.webp"/><div class="hero-veiling"></div><div class="hero-content"><span class="eyebrow light">THE CHRONICLES OF HOUSE MARDENHOLT</span><h1>Roots in Lordaeron.<br/><em>Honor beyond its fall.</em></h1><div class="hero-line"></div><p>The story of a fallen house, a wandering knight, and an oath that endures when kingdoms do not.</p><button class="button gold" data-go="atte">Explore the House <span>↗</span></button></div><div class="hero-corner">WEST OF HEARTHGLEN · LORDAERON</div></div>
-<div class="welcome-ribbon"><span class="ornament">❧</span><div><span class="eyebrow dark">THE HOUSE MOTTO</span><h2>“The Oath Outlives the Crown.”</h2></div><span class="ornament mirrored">❧</span></div>
-<div class="overview-grid">
-<article class="feature-card feature-story"><span class="eyebrow dark">THE LAST HEIR</span><h3>Ser Atte Mardenholt</h3><p>A knight of Lordaeron without a kingdom, serving the Alliance by choice and bound by the promise of his ancestors.</p><button class="text-link" data-go="atte">Read the character dossier <span>→</span></button><img alt="Guardian Oak shield" src="assets/shield.webp"/></article>
-<article class="feature-card"><span class="eyebrow dark">THE FAMILY SEAT</span><h3>Greybough Hall</h3><p>A small fortified woodland manor west of Hearthglen. The house is fallen, but its ancient oak endures.</p><button class="text-link" data-go="estate">Explore the estate <span>→</span></button></article>
-<article class="feature-card"><span class="eyebrow dark">THE LIVING STORY</span><h3>The Wanderer's Chronicle</h3><p>Follow Atte’s future journeys: the roads, companions, battles and decisions recorded from actual gameplay.</p><button class="text-link" data-go="journal">Read published chapters →</button></article>
-</div>
-<div class="section-topline"><div><span class="eyebrow dark">THE ARCHIVE AT A GLANCE</span><h2>From the first watch to the open road</h2></div><button class="text-link" data-go="history">View complete timeline →</button></div>
-<div class="home-milestones"><div><span>BEFORE THE DARK PORTAL</span><strong>The Long Watch</strong><p>The origins of a woodland warden's oath.</p></div><div><span>YEAR 20–21</span><strong>The Fall</strong><p>Lordaeron breaks; Greybough is lost.</p></div><div><span>YEAR 23</span><strong>A Knight Is Made</strong><p>Service and sacrifice in Redridge.</p></div><div><span>YEAR 25</span><strong>The Road Awaits</strong><p>Atte's Vanilla story begins.</p></div></div>
-<div class="notice-note"><strong>Canon &amp; continuity</strong><span>Greybough Hall, House Mardenholt, and its family events are original Warcraft fan lore. Drafted details are marked separately from settled family facts.</span></div>
+  <div class="hm-hero" aria-labelledby="hm-hero-heading">
+    <img class="hm-hero-landscape" src="assets/estate-scenic.webp" alt="" aria-hidden="true" />
+    <div class="hm-hero-shade"></div>
+    <div class="hm-hero-copy">
+      <span class="hm-eyebrow hm-gold">A LIVING WORLD OF WARCRAFT CHRONICLE</span>
+      <span class="hm-hero-rule" aria-hidden="true">✦ &nbsp; THE GUARDIAN OAK &nbsp; ✦</span>
+      <h1 id="hm-hero-heading">A Knight Without <em>a Kingdom.</em></h1>
+      <p>From the ashes of Lordaeron, Ser Atte Mardenholt carries an oath that no fallen crown can break. His road is written by real adventures across Azeroth.</p>
+      <div class="hm-hero-actions">
+        <button type="button" class="hm-button hm-button-gold" data-go="journal">Begin the Chronicle <span aria-hidden="true">↗</span></button>
+        <button type="button" class="hm-button hm-button-outline" id="hmLatestHero">Read Latest Chapter <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="hm-hero-footnote">THE OATH OUTLIVES THE CROWN <span aria-hidden="true">·</span> HOUSE MARDENHOLT</div>
+    </div>
+    <div class="hm-hero-art"><div class="hm-portrait-border"><img src="assets/atte-dossier-portrait.webp" alt="Ser Atte Mardenholt in his green traveling cloak and armor" loading="eager"/></div><span class="hm-portrait-label">SER ATTE MARDENHOLT · THE LAST HEIR</span></div>
+  </div>
+
+  <div class="hm-status-row" aria-label="The living archive at a glance">
+    <div class="hm-status-item"><strong id="hmHomeChapterCount">16</strong><span>PUBLISHED CHAPTERS</span></div>
+    <div class="hm-status-item"><strong>2</strong><span>CONTINENTS EXPLORED</span></div>
+    <div class="hm-status-item"><strong>1</strong><span>UNBROKEN OATH</span></div>
+    <div class="hm-status-motto">“The Oath Outlives the Crown.”</div>
+  </div>
+
+  <div class="hm-intro-header"><div><span class="hm-eyebrow">THE WANDERER'S CHRONICLE</span><h2>The road does not wait.</h2><p>New to the House? Follow the story as it unfolds, or start with its origins.</p></div><button class="hm-text-link" data-go="atte">Meet Ser Atte <span aria-hidden="true">→</span></button></div>
+
+  <div class="hm-latest-feature" aria-label="Latest published adventure">
+    <div class="hm-latest-image-box"><img src="assets/chapter-16-editor-booty-bay.webp" id="hmLatestImage" loading="lazy" alt="Illustration from the latest Wanderer's Chronicle"/><span class="hm-image-stamp">THE LATEST CHAPTER</span></div>
+    <div class="hm-latest-copy"><span class="hm-eyebrow hm-gold">FRESH FROM THE ROAD <span class="hm-separator">✦</span> <span id="hmLatestDate">19 NOVEMBER 2026</span></span><div class="hm-latest-chapter-id" id="hmLatestNumber">CHAPTER XVI</div><h2 id="hmLatestTitle">Of Ogres, Old Friends, and Honest Craft</h2><div class="hm-latest-location" id="hmLatestZone">Riverglades · Booty Bay · Tanaris · Theramore Isle</div><p id="hmLatestExcerpt">Discover the latest recorded adventures of Ser Atte Mardenholt.</p><button type="button" class="hm-button hm-button-gold" id="hmLatestRead">Read This Chapter <span aria-hidden="true">→</span></button></div>
+  </div>
+
+  <div class="hm-discover-title"><span class="hm-eyebrow">YOUR PATH THROUGH THE ARCHIVE</span><h2>Choose your road.</h2><p>Every corner of House Mardenholt holds another part of its story.</p></div>
+  <div class="hm-discovery-grid">
+    <article class="hm-discovery-card"><span class="hm-card-num">I · THE HOUSE</span><div class="hm-card-symbol" aria-hidden="true">♜</div><h3>The Fallen House</h3><p>Discover the family, the ancient oak, and what remains of Greybough Hall.</p><button data-go="family" class="hm-text-link">Explore the Lore <span aria-hidden="true">→</span></button></article>
+    <article class="hm-discovery-card"><span class="hm-card-num">II · THE JOURNEY</span><div class="hm-card-symbol" aria-hidden="true">◈</div><h3>The Azeroth Atlas</h3><p>See where Atte has actually traveled, with every recorded chapter tied to its places.</p><a href="./atlas.html" class="hm-text-link">Explore the Atlas <span aria-hidden="true">→</span></a></article>
+    <article class="hm-discovery-card"><span class="hm-card-num">III · THE FELLOWSHIP</span><div class="hm-card-symbol" aria-hidden="true">⚔</div><h3>Companions of the Road</h3><p>Meet the allies who fought, traveled, and shared the fire with Atte.</p><a href="./companions.html" class="hm-text-link">Meet the Companions <span aria-hidden="true">→</span></a></article>
+  </div>
+
+  <div class="hm-companions-header"><div><span class="hm-eyebrow">PLOT ARMOR CREW</span><h2>No oath is carried alone.</h2><p>Faces from the adventures, preserved in the companions' ledger.</p></div><a href="./companions.html" class="hm-text-link">Full Companion Ledger <span aria-hidden="true">→</span></a></div>
+  <div class="hm-crew-grid">
+    <a class="hm-crew-card" href="./companions.html#companion-quillb-picklepocket"><div class="hm-crew-frame"><img src="assets/crew-2026/quillb-picklepocket-2026-11-19.webp" loading="lazy" alt="Approved portrait of Quillb Picklepocket"/></div><strong>Quillb Picklepocket</strong><span>HUMAN ROGUE · GUILD MASTER</span></a>
+    <a class="hm-crew-card" href="./companions.html#companion-thundrus-buccaklapper"><div class="hm-crew-frame"><img src="assets/crew-2026/thundrus-buccaklapper-2026-11-19.webp" loading="lazy" alt="Approved portrait of Thundrus Buccaklapper"/></div><strong>Thundrus Buccaklapper</strong><span>HUMAN WARRIOR · OFFICER</span></a>
+    <a class="hm-crew-card" href="./companions.html#companion-furrassic-maul"><div class="hm-crew-frame"><img src="assets/crew-2026/furrassic-maul-2026-11-19.webp" loading="lazy" alt="Approved portrait of Furrassic Maul"/></div><strong>Furrassic Maul</strong><span>NIGHT ELF DRUID · VETERAN</span></a>
+  </div>
+
+  <div class="hm-closer"><span class="hm-eyebrow hm-gold">THE STORY CONTINUES</span><h2>All roads lead to the Chronicle.</h2><p>Sixteen chapters of real adventures, with more pages waiting to be written.</p><button type="button" class="hm-button hm-button-gold" data-go="journal">Read the Wanderer's Chronicle <span aria-hidden="true">→</span></button><span class="hm-closer-ornament" aria-hidden="true">❦</span></div>
+  <div class="notice-note"><strong>Canon &amp; continuity</strong><span>House Mardenholt and Greybough Hall are original Warcraft fan lore. Atte's published adventures are based on recorded WoW Forever gameplay; proposed family details are marked separately.</span></div>
 </section>
 <section aria-label="Character dossier" class="page" id="page-atte"><div class="page-head"><span class="eyebrow dark">CHARACTER DOSSIER · THE LAST HEIR</span><h1>Ser Atte Mardenholt</h1><p>Human warrior. Son of Lordaeron. Knight without a kingdom.</p></div>
 <figure style="margin:0 auto 24px;max-width:580px;text-align:center"><img src="assets/atte-dossier-portrait.webp" alt="Ser Atte Mardenholt in field armor with green cloak, sword and shield" data-lightbox="assets/atte-dossier-portrait.webp" loading="lazy" style="display:block;width:100%;height:auto;border:3px solid #ac8e55;box-shadow:0 12px 30px #0006"/><figcaption style="margin-top:8px;color:#796846">SER ATTE MARDENHOLT · APPROVED CHARACTER ILLUSTRATION</figcaption></figure>
@@ -353,6 +469,36 @@ function placeInlineChapterPhotos(e){
 let activeReaderIndex=-1;
 function openVisitorReader(i){if(i<0||i>=published.length)return;activeReaderIndex=i;const e=published[i];$('#readerProgress').textContent=`${i+1} / ${published.length}`;$('#readerPrev').disabled=i===0;$('#readerNext').disabled=i===published.length-1;$('#readerChapterNumber').textContent='CHAPTER '+String(i+1).padStart(2,'0');$('#readerChapterTitle').textContent=e.title;$('#readerChapterDate').textContent=[prettyDate(e.date),e.zone].filter(Boolean).join('  ·  ');textParagraphs($('#readerChapterStory'),e.story);placeInlineChapterPhotos(e);chapterNotes(e);const photos=$('#readerChapterPhotos');photos.replaceChildren();const pics=visitorPhotos(e);if(Array.isArray(e.inlinePhotos)&&e.inlinePhotos.length){photos.replaceChildren();}else if(!pics.length){photos.innerHTML='<div class="book-empty-plate">The ink is dry, but no illustration has yet been placed upon this page.</div>'}else pics.forEach((p,j)=>{const fig=document.createElement('figure');fig.className='book-plate';const num=document.createElement('div');num.className='book-plate-number';num.textContent='PLATE '+String(j+1).padStart(2,'0');const img=document.createElement('img');img.src=p.src;img.alt=p.caption||`Illustration ${j+1} from ${e.title}`;img.loading='lazy';img.addEventListener('click',()=>openImage(p.src,img.alt));const cap=document.createElement('figcaption');cap.textContent=p.caption||'From the travels of Ser Atte Mardenholt';fig.append(num,img,cap);photos.append(fig)});const d=$('#chronicleReader');if(!d.open)d.showModal();d.querySelector('.reader-surface').scrollTop=0}
 $('#readerClose').addEventListener('click',()=>$('#chronicleReader').close());$('#readerPrev').addEventListener('click',()=>openVisitorReader(activeReaderIndex-1));$('#readerNext').addEventListener('click',()=>openVisitorReader(activeReaderIndex+1));
+/* Great Hall feature: pick the latest published chapter automatically. */
+(function initializeGreatHall(){
+  const recent = published.length ? published.length - 1 : -1;
+  const feature = recent >= 0 ? published[recent] : null;
+  const $home = (id) => document.getElementById(id);
+  $home('hmHomeChapterCount').textContent = String(published.length);
+  const openNewest = () => { if (recent < 0) return; pageSwitch('journal'); openVisitorReader(recent); };
+  $home('hmLatestHero').addEventListener('click', openNewest);
+  $home('hmLatestRead').addEventListener('click', openNewest);
+  if (!feature) {
+    $home('hmLatestHero').disabled = true;
+    $home('hmLatestRead').disabled = true;
+    $home('hmLatestTitle').textContent = 'The next road awaits';
+    $home('hmLatestExcerpt').textContent = 'New adventures will appear here as soon as they are published.';
+    return;
+  }
+  $home('hmLatestNumber').textContent = 'CHAPTER ' + String(recent + 1).padStart(2, '0');
+  $home('hmLatestTitle').textContent = String(feature.title || 'Untitled Chapter').replace(/^Chapter\s+[IVXLC]+\s*[—-]\s*/i,'');
+  $home('hmLatestDate').textContent = prettyDate(feature.date).toUpperCase();
+  $home('hmLatestZone').textContent = String(feature.zone || 'Azeroth');
+  let lead = String(feature.story || '').trim().replace(/\s+/g, ' ');
+  $home('hmLatestExcerpt').textContent = lead.length > 265 ? lead.slice(0, 262).replace(/\s+\S*$/, '') + '…' : lead || 'Read the newest chapter of Atte’s adventures.';
+  const images = visitorPhotos(feature);
+  if (images.length) {
+    const img = $home('hmLatestImage');
+    img.src = assetUrl(images[0].src);
+    img.alt = images[0].caption || 'Illustration from ' + String(feature.title || 'the latest chapter');
+    img.onerror = () => {img.onerror = null; img.src='assets/estate-scenic.webp'};
+  }
+})();
 published.forEach((e,i)=>{const card=document.createElement('article');card.className='journal-card reader-chapter';const images=visitorPhotos(e);const preview=String(e.story||'').replace(/\s+/g,' ').slice(0,330);card.innerHTML=`<div class="journal-card-top"><div><span class="chapter-number">CHAPTER ${String(i+1).padStart(2,'0')}</span><h3>${escapeHtml(e.title)}</h3><div class="meta">${escapeHtml(prettyDate(e.date))}${e.zone?' · '+escapeHtml(e.zone):''}</div></div><span style="color:#ad9561;font-size:27px">❧</span></div>${e.companions?`<div class="journal-card-extra"><strong>Traveling with:</strong> ${escapeHtml(e.companions)}</div>`:''}<p class="chronicle-preview">${escapeHtml(preview)}${e.story?.length>330?'…':''}</p><div class="chapter-photo-count">✥ ${images.length} illustration${images.length===1?'':'s'}</div><button class="chronicle-read-button" type="button" data-read-public="${i}">Read this chapter →</button>`;shelf.appendChild(card)});
 shelf.addEventListener('click',e=>{const b=e.target.closest('[data-read-public]');if(b)openVisitorReader(Number(b.dataset.readPublic))});
 // Direct links from the Timeline, Atlas and Companions Ledger open the selected chapter.
