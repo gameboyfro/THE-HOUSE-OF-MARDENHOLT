@@ -262,7 +262,7 @@
 </nav>
 <div class="nav-label second-label">THE LIVING CHRONICLE</div>
 <nav aria-label="Published chronicles navigation" class="main-nav">
-<button class="nav-link journal-nav" data-page="journal"><span class="nav-icon">✎</span> Wanderer's Chronicle <span class="count-chip" id="navCount">0</span></button>
+<a class="nav-link journal-nav" href="./chronicle.html" style="text-decoration:none"><span class="nav-icon">✎</span> Wanderer's Chronicle <span class="count-chip" id="navCount">0</span></a>
 <a class="nav-link" href="./timeline.html" style="text-decoration:none;display:flex;align-items:center"><span class="nav-icon">⌛</span> Journey Timeline</a>
 <a class="nav-link" href="./atlas.html" style="text-decoration:none;display:flex;align-items:center"><span class="nav-icon">◈</span> Azeroth Atlas</a>
 <a class="nav-link" href="./companions.html" style="text-decoration:none;display:flex;align-items:center"><span class="nav-icon">⚔</span> Companions Ledger</a>
@@ -414,7 +414,7 @@ if(window.MARDENHOLT_ASSETS)document.querySelectorAll('img[src^="assets/"]').for
 const escapeHtml=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function closeNav(){$('#sidebar').classList.remove('open');$('#navShade').hidden=true;}
 function pageSwitch(page){if(!pages[page])page='home';$$('.page').forEach(el=>el.classList.toggle('active',el.id==='page-'+page));$$('.nav-link').forEach(el=>{const a=el.dataset.page===page;el.classList.toggle('active',a);a?el.setAttribute('aria-current','page'):el.removeAttribute('aria-current')});$('#pageCrumb').textContent=pages[page];closeNav();window.scrollTo({top:0,behavior:'instant'});}
-function go(page){if(location.hash.slice(1)!==page)location.hash=page;else pageSwitch(page)}
+function go(page){if(page==='journal'){location.assign('./chronicle.html');return;}if(location.hash.slice(1)!==page)location.hash=page;else pageSwitch(page)}
 $$('[data-page]').forEach(el=>el.addEventListener('click',()=>go(el.dataset.page)));
 $$('[data-go]').forEach(el=>el.addEventListener('click',()=>go(el.dataset.go)));
 window.addEventListener('hashchange',()=>pageSwitch(location.hash.slice(1)));
@@ -475,7 +475,7 @@ $('#readerClose').addEventListener('click',()=>$('#chronicleReader').close());$(
   const feature = recent >= 0 ? published[recent] : null;
   const $home = (id) => document.getElementById(id);
   $home('hmHomeChapterCount').textContent = String(published.length);
-  const openNewest = () => { if (recent < 0) return; pageSwitch('journal'); openVisitorReader(recent); };
+  const openNewest = () => { if (recent < 0) return; location.assign('./chronicle.html?chapter='+String(recent+1)); };
   $home('hmLatestHero').addEventListener('click', openNewest);
   $home('hmLatestRead').addEventListener('click', openNewest);
   if (!feature) {
@@ -505,8 +505,9 @@ shelf.addEventListener('click',e=>{const b=e.target.closest('[data-read-public]'
 const linkedChapter = new URLSearchParams(location.search).get('chapter');
 const linkedNumber = linkedChapter === null ? NaN : Number(linkedChapter);
 if (Number.isInteger(linkedNumber) && linkedNumber >= 1 && linkedNumber <= published.length) {
-  pageSwitch('journal');
-  openVisitorReader(linkedNumber - 1);
+  location.replace('./chronicle.html?chapter='+linkedNumber);
+} else if (location.hash.replace('#','')==='journal') {
+  location.replace('./chronicle.html');
 } else {
   pageSwitch(location.hash.replace('#','')||'home');
 }
