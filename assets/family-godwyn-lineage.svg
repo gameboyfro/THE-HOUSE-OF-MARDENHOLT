@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 950" role="img" aria-labelledby="title desc">
+<title id="title">House Mardenholt family tree including the Godwyn bloodline</title>
+<desc id="desc">Lady Aveline Godwyn, wife of Ser Edric Mardenholt, is the sister of Lieutenant Blake Godwyn, the Ancestral Sword's last bearer. Aveline and Edric's sons are Halric and Corvin; Halric and Maera have Atte, while Corvin and Elsbeth have Lucan and Elira.</desc>
+<defs><linearGradient id="paper" x2="0" y2="1"><stop stop-color="#f4e4c3"/><stop offset="1" stop-color="#d5b88d"/></linearGradient><linearGradient id="card" x2="0" y2="1"><stop stop-color="#143a32"/><stop offset="1" stop-color="#0a2421"/></linearGradient><filter id="texture" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="3" seed="11" result="noise"/><feColorMatrix in="noise" type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".08"/></feComponentTransfer><feBlend in="SourceGraphic" mode="multiply"/></filter></defs>
+<rect width="1440" height="950" fill="url(#paper)"/>
+<rect width="1440" height="950" filter="url(#texture)" fill="transparent"/>
+<rect x="25" y="24" width="1390" height="898" rx="14" fill="none" stroke="#8d6831" stroke-width="5"/>
+<rect x="42" y="42" width="1356" height="864" rx="8" fill="none" stroke="#ac8c52" stroke-width="1.7"/>
+<g fill="#1d3e33" text-anchor="middle" font-family="Georgia,serif">
+<text x="720" y="92" font-size="45" font-weight="bold">THE FAMILY OF THE GUARDIAN OAK</text>
+<text x="720" y="128" font-size="20" letter-spacing="4">HOUSE MARDENHOLT • HOUSE GODWYN • LORDAERON</text>
+</g>
+<path d="M544 146 L896 146" stroke="#9b7539" stroke-width="2"/><g fill="#9b7539"><circle cx="540" cy="146" r="4"/><circle cx="900" cy="146" r="4"/></g>
+<text x="720" y="191" font-family="Georgia,serif" font-size="22" text-anchor="middle" fill="#73542c" letter-spacing="2">FIRST GENERATION</text>
+<!-- first generation -->
+<rect x="100" y="215" width="600" height="173" rx="13" fill="url(#card)" stroke="#c49b55" stroke-width="4"/>
+<text x="400" y="247" fill="#d8b879" text-anchor="middle" font-family="Georgia,serif" font-size="17" letter-spacing="3">MARRIED · HEARTHGLEN</text>
+<text x="400" y="283" fill="#f7ebce" text-anchor="middle" font-family="Georgia,serif" font-size="28" font-weight="bold">Ser Edric Mardenholt</text>
+<text x="400" y="321" fill="#f7ebce" text-anchor="middle" font-family="Georgia,serif" font-size="28" font-weight="bold">Lady Aveline Godwyn</text>
+<text x="400" y="350" fill="#d8b879" text-anchor="middle" font-family="Georgia,serif" font-size="18">Atte's paternal grandparents</text>
+<rect x="853" y="215" width="486" height="173" rx="13" fill="url(#card)" stroke="#b7a074" stroke-width="4"/>
+<text x="1096" y="247" fill="#d8b879" text-anchor="middle" font-family="Georgia,serif" font-size="17" letter-spacing="3">HOUSE GODWYN · FIRST WAR</text>
+<text x="1096" y="298" fill="#f7ebce" text-anchor="middle" font-family="Georgia,serif" font-size="29" font-weight="bold">Lt. Blake Godwyn</text>
+<text x="1096" y="337" fill="#d8b879" text-anchor="middle" font-family="Georgia,serif" font-size="20">Aveline's brother · Atte's great-uncle</text>
+<text x="1096" y="366" fill="#e9d4ac" text-anchor="middle" font-family="Georgia,serif" font-size="17">Last bearer of the Ancestral Sword</text>
+<path d="M700 297 L853 297" stroke="#725226" stroke-width="4"/>
+<rect x="713" y="274" width="126" height="43" rx="8" fill="#f5e5ca" stroke="#a17a44" stroke-width="1.5"/>
+<text x="776" y="292" fill="#4e3920" text-anchor="middle" font-family="Georgia,serif" font-size="14">GODWYN</text><text x="776" y="308" fill="#4e3920" text-anchor="middle" font-family="Georgia,serif" font-size="14">SIBLINGS</text>
+<!-- generations links -->
+<g stroke="#977440" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M400 388 V432 H1082"/><path d="M400 432 H350 V478"/><path d="M1082 432 V478"/></g>
+<text x="720" y="468" font-family="Georgia,serif" fill="#73542c" text-anchor="middle" font-size="20" letter-spacing="2">SECOND GENERATION</text>
+<rect x="88" y="488" width="538" height="145" rx="12" fill="#fff3dc" stroke="#93713e" stroke-width="3"/>
+<text x="357" y="523" fill="#1a483b" font-family="Georgia,serif" font-size="26" text-anchor="middle" font-weight="bold">Ser Halric Mardenholt</text>
+<text x="357" y="556" fill="#765329" font-family="Georgia,serif" font-size="19" text-anchor="middle">Married Lady Maera Harrowfield</text>
+<text x="357" y="590" fill="#473825" font-family="Georgia,serif" font-size="17" text-anchor="middle">Elder son · Warrior of Lordaeron</text>
+<rect x="808" y="488" width="538" height="145" rx="12" fill="#fff3dc" stroke="#93713e" stroke-width="3"/>
+<text x="1077" y="523" fill="#1a483b" font-family="Georgia,serif" font-size="26" text-anchor="middle" font-weight="bold">Ser Corvin Mardenholt</text>
+<text x="1077" y="556" fill="#765329" font-family="Georgia,serif" font-size="19" text-anchor="middle">Married Lady Elsbeth Renwick</text>
+<text x="1077" y="590" fill="#473825" font-family="Georgia,serif" font-size="17" text-anchor="middle">Younger son · Fate unresolved</text>
+<g stroke="#977440" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M357 633 V713"/><path d="M1077 633 V690 H965 V713"/><path d="M1077 690 H1204 V713"/></g>
+<text x="720" y="688" font-family="Georgia,serif" fill="#73542c" text-anchor="middle" font-size="20" letter-spacing="2">THIRD GENERATION</text>
+<rect x="135" y="725" width="455" height="128" rx="12" fill="url(#card)" stroke="#d2a35d" stroke-width="4"/>
+<text x="363" y="776" fill="#f9e9c8" font-family="Georgia,serif" text-anchor="middle" font-size="32" font-weight="bold">Ser Atte Mardenholt</text>
+<text x="363" y="814" fill="#d3af6f" font-family="Georgia,serif" text-anchor="middle" font-size="20">Only child of Halric and Maera</text>
+<rect x="775" y="725" width="322" height="128" rx="12" fill="url(#card)" stroke="#d2a35d" stroke-width="4"/>
+<text x="936" y="776" fill="#f9e9c8" font-family="Georgia,serif" text-anchor="middle" font-size="28" font-weight="bold">Lucan Mardenholt</text>
+<text x="936" y="814" fill="#d3af6f" font-family="Georgia,serif" text-anchor="middle" font-size="18">Corvin's son</text>
+<rect x="1115" y="725" width="272" height="128" rx="12" fill="url(#card)" stroke="#d2a35d" stroke-width="4"/>
+<text x="1251" y="776" fill="#f9e9c8" font-family="Georgia,serif" text-anchor="middle" font-size="28" font-weight="bold">Elira Mardenholt</text>
+<text x="1251" y="814" fill="#d3af6f" font-family="Georgia,serif" text-anchor="middle" font-size="18">Corvin's daughter</text>
+<text x="720" y="889" font-family="Georgia,serif" fill="#6e4c26" text-anchor="middle" font-style="italic" font-size="19">The Godwyn sibling bond is original House Mardenholt lore · The Oath Outlives the Crown</text>
+</svg>
